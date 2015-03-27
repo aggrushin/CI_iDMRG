@@ -51,7 +51,7 @@ Emergence of the Chern insulator state.
 
 \section{Model and Method}
 %
-Method\\
+Method \noteAG{If we use it, we might want to define the entanglement spectrum here}\\
 %
 In this work we focus on spinless electrons in a honeycomb lattice with real  nearest neighbor hopping $t$ and nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$. 
@@ -113,14 +113,20 @@ In what follows we describe their corresponding charge and bond ordering pattern
 %
 \subsection{Semimetal phase}
 %
-We start by discussing the phase diagram at small $\left\lbrace V_{1},V_{2}\right\rbrace$.
+We start by discussing the phase diagram in the region where $\left\lbrace V_{1},V_{2}\right\rbrace < t$.
 %
-In this region we find that the groundstate is a semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
+In this part we find that the groundstate is a semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
 %
-It is connected to the gapless non-interacting state $V_{1}=V_{2}=0$ and it generically presents a uniform renormalization of the hopping strength 
-$t$ by interactions.
+This phase is characterised by a uniform renormalization of the hopping strength 
+$t$ by interactions and is therefore smoothly connected to the gapless non-interacting state $V_{1}=V_{2}=0$.
 %
-As such, it is a single particle gapless phase that lacks both charge and bond order.
+As the latter it is a single particle gapless phase that lacks both charge and bond order and described by a low energy theory in terms of two massless Dirac cones.
+%
+In this latter low energy picture and within the renormalisation group approach the stability of the semimetal phase for small $\left\lbrace V_{1},V_{2}\right\rbrace$ is expected.
+%
+Short range interactions are irrelevant~\cite{Shankar?} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
+%
+Accordingly we find that the semimetal is stable within this region of phase space.
 
 Within the iDMRG algorithm we have characterised the semimetal phase in three distinct ways.
 %
@@ -146,19 +152,20 @@ t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,
 \end{eqnarray}
 %
 For $i,j$ being nearest neighbours we find a small ($10^{-?}$) asymmetry
-between bonds pointing along and around the cylinder axis which should vanish for a perfect semimetalic phase.
+between bonds pointing along and around the cylinder axis.
 %
-In fact, the asymmetry is reduced as the bond dimension $\chi$ is increased.
+Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
-This suggests that the observed asymmetry can be attributed to the cylinder geometry that is implemented in iDMRG.
+This suggests that the explanation for the asymmetry is indeed the cylinder geometry implemented in iDMRG, that artificially differentiates bonds in its two perpendicular directions.
 %
-Moreover, the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
 
 %
-This leads to the second way that we use to characterise this phase that makes use of the mentioned criticality.
+Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
 %
-For a critical phase such as the semimetal the entanglement entropy is expected to show a logarithmic growth
-with the correlation length.
+This leads us to the second approach to characterise the semimetal phase that makes use of the its criticality.
+%
+For a critical phase the entanglement entropy is expected to show a logarithmic growth with the correlation length.
+\noteAG{eqn needed}
 %
 The proportionality constant $c/3$ defines the central charge of the theory $c$. 
 %
@@ -168,24 +175,20 @@ In the appendix...
 \noteAG{This last paragraph can be removed if we don't need it}
 
 %
-Lastly 
+Lastly a very accessible
 
 
 
-%
-In the renormalisation group sense short range interactions are irrelevant~\cite{Shankar?} and 
-therefore, interactions can only drive order when they are comparable to the nearest neighbour hopping strength $t$.
-%
-Accordingly we find that the semimetal is stable within this region of phase space.
+
 %
 
 
 
 \subsection{Charge density wave}
 %
-Classically, for large $V_{1}\gg t$ the energy is minimised by charge imbalance between the two sub lattices.
+Classically, for large $V_{1}\gg t$ the energy is minimised by a charge imbalance between the two sub lattices.
 %
-The resulting phase, the staggered charge density wave state, has a two site unit cell that is characterised by the order parameter
+The resulting phase, a sublattice staggered charge density wave state (CDW), has a two site unit cell that is characterised by the order parameter
 %
 \begin{equation}
 \label{eq:CDW}
