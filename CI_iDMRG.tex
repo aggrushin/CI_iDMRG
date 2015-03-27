@@ -44,6 +44,11 @@ This is an abstract. \noteAG{There are specific commands to leave comments like 
 %
 The Haldane model~\cite{H88} is amazing.
 %
+
+%
+Emergence of the Chern insulator state.
+
+
 \section{Model and Method}
 %
 Method\\
@@ -54,19 +59,21 @@ $\left\lbrace V_{1},V_{2}\right\rbrace$.
 The Hamiltonian for this system can be written as
  %
 \begin{eqnarray}
+\nonumber
 %
-H:=-t\sum_{\left\langle i,j\right\rangle }(c^{\dagger}_{i}c_{j}+h.c.)
+H&:=&-t\sum_{\left\langle i,j\right\rangle ,s,s'}(c^{\dagger}_{i,s}c_{j,s'}+h.c.)\\
 %
-\;+
-V_{1}\sum_{\left\langle i,j\right\rangle }n_{i}n_{j}+
+\;&+&
+V_{1}\sum_{\left\langle i,j\right\rangle ,s }n_{i,s}n_{j,\bar{s}}+
 %
-V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle }n_{i}n_{j}\,
+V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}\,
 %
 \label{eq:H}
 %
 \end{eqnarray}
 %
-here $c_{i}$ $(c^{\dagger}_{i})$  annihilates (creates) an electron at the $i$-th site of the honeycomb lattice. 
+here $c_{i,s}$ $(c^{\dagger}_{i,s})$  annihilates (creates) an electron at the $i$-th unit cell of the honeycomb lattice
+in sublattice $s=A,B$ and $s\neq\bar{s}$. 
 %
 Each of the two triangular sublattices A and B is spanned by the basis vectors
 $\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and 
@@ -74,7 +81,7 @@ $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest n
 $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.
 
 \begin{figure}
- \includegraphics[width=\columnwidth]{pdf/unit_cell_small.pdf}
+ %\includegraphics[width=\columnwidth]{pdf/unit_cell_small.pdf}
  \caption{Left: Hoppings and interactions of Hamiltonian \eqref{eq:H}. Right: Honeycomb lattice of $3 \times 2$ unit cells. The unit cell used for the iDMRG calculations consists of $3 \times 6$ honeycomb unit cells which yields a total circumference of 12 sites. \label{fig:Defs}}
 \end{figure}
 %
@@ -88,9 +95,15 @@ $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as
 \section{Phase diagram}
 %
 We have used the iDMRG method presented in the previous section
-to find the groundstate of the half-filled graphene lattice 
-The main result of this work is the phase diagram presented in Fig.~\ref{fig:phase diagram} obtained
-via the iDMRG method.
+to find the groundstate of the half-filled graphene lattice in the presence of 
+$\left\lbrace V_{1},V_{2}\right\rbrace$ interactions
+%
+Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
+%
+As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different ordered phases and none of them correspond to the Haldane Chern insulator.
+%
+In what follows we describe their corresponding charge and bond ordering patterns and analyse the different phase transitions that occur between them.
+%
 
 \begin{figure}
  \includegraphics[width=\columnwidth]{pdf/phase_diagram.pdf}
@@ -100,8 +113,89 @@ via the iDMRG method.
 %
 \subsection{Semimetal phase}
 %
+We start by discussing the phase diagram at small $\left\lbrace V_{1},V_{2}\right\rbrace$.
+%
+In this region we find that the groundstate is a semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
+%
+It is connected to the gapless non-interacting state $V_{1}=V_{2}=0$ and it generically presents a uniform renormalization of the hopping strength 
+$t$ by interactions.
+%
+As such, it is a single particle gapless phase that lacks both charge and bond order.
+
+Within the iDMRG algorithm we have characterised the semimetal phase in three distinct ways.
+%
+Firstly we compute the charge and bond ground state expectation values.
+%
+On the one hand, at each site the charge expectation value is defined by 
+%
+\begin{eqnarray}
+\label{eq:charge}
+n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,  
+\end{eqnarray}
+%
+where $s=A,B$ is the sublattice index.
+%
+To numerical accuracy we find that $n_{i,A}=n_{i,B}=1/2$, indicating that this phase is not charge ordered.
+%
+
+The bond ground state expectation value on the other hand is defined as
+%
+\begin{eqnarray}
+\label{eq:charge}
+t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,  
+\end{eqnarray}
+%
+For $i,j$ being nearest neighbours we find a small ($10^{-?}$) asymmetry
+between bonds pointing along and around the cylinder axis which should vanish for a perfect semimetalic phase.
+%
+In fact, the asymmetry is reduced as the bond dimension $\chi$ is increased.
+% 
+This suggests that the observed asymmetry can be attributed to the cylinder geometry that is implemented in iDMRG.
+%
+Moreover, the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
+
+%
+This leads to the second way to describe this phase which makes use of the mentioned criticality.
+%
+For a critical phase such as the semimetal the entanglement entropy is expected to show a logarithmic growth
+with the correlation length.
+%
+The proportionality constant $c/3$ defines the central charge of the theory $c$. 
+%
+For a system with two Dirac cones, $c=2$ which is 
+%
+\noteAG{This last paragraph can be removed if we don't need it}
+
+A second way the entanglement spectrum of the semimetal phase with the ana
+
+
+
+
+%
+In the renormalisation group sense short range interactions are irrelevant~\cite{Shankar?} and 
+therefore, interactions can only drive order when they are comparable to the nearest neighbour hopping strength $t$.
+%
+Accordingly we find that the semimetal is stable within this region of phase space.
+%
+
+
+
 \subsection{Charge density wave}
 %
+Classically, for large $V_{1}\gg t$ the energy is minimised by an unequal occupation of the two sub lattices.
+%
+The resulting phase, the staggered charge density wave state, has a two site unit cell that is characterised by the order parameter
+%
+\begin{equation}
+\label{eq:CDW}
+%
+M=\left\langle n_{A} \right\rangle-\left\langle n_{B}\right\rangle
+%
+\end{equation}
+%
+where $n_{A}$ and $n_{B}$ are the density of electrons in the $A$ and $B$ sublattice sites of the two site unit cell respectively.
+%
+
 
 \subsection{Charge modulated phase}
 %
