@@ -82,11 +82,11 @@ $\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and
 $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
 $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
-%
-To find the ground state as a function in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
+
+In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
 we use the infinite density matrix renormalzation group method (iDMRG). 
 %
-\noteAG{If we use it, we might want to define the entanglement spectrum here}\\
+\noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
 \noteAG{Define correlation length as well}
 %
 
@@ -95,13 +95,13 @@ we use the infinite density matrix renormalzation group method (iDMRG).
  \caption{Left: Hoppings and interactions of Hamiltonian \eqref{eq:H}. Right: Honeycomb lattice of $3 \times 2$ unit cells. The unit cell used for the iDMRG calculations consists of $3 \times 6$ honeycomb unit cells which yields a total circumference of 12 sites. \label{fig:Defs}}
 \end{figure}
 %
-\begin{figure*}[tb]
- \includegraphics[scale=0.2]{Fig1.eps}
- \caption{ 
-  }
-  \label{fig:honeycomblattice}
-\end{figure*} 
-% 
+%\begin{figure*}[tb]
+% \includegraphics[scale=0.2]{Fig1.eps}
+% \caption{ 
+%  }
+%  \label{fig:honeycomblattice}
+%\end{figure*} 
+%% 
 \section{Phase diagram}
 %
 We have used the iDMRG method presented in the previous section
@@ -156,7 +156,7 @@ To numerical accuracy we find that $n_{i,A}=n_{i,B}=1/2$, indicating that this p
 The bond ground state expectation value on the other hand is defined as
 %
 \begin{eqnarray}
-\label{eq:charge}
+\label{eq:bond}
 t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,  
 \end{eqnarray}
 %
@@ -216,9 +216,23 @@ Indeed, it has been found in a mean field approximation~\cite{Raghu,Franz,us}, e
 %
 
 
-\subsection{Charge modulated phase}
+\subsection{Sub-lattice charge modulated phase}
 %
 For large $V_{2}\ll t$ the ground state is classically degenerate. 
+%
+Within mean field it was shown that as long $V_{2}>V_{1}$
+the system chose a charge ordered pattern with charge modulation over different sub lattices and termed CMs phase~\cite{CMs}.
+%
+Such order, schematically shown in Fig.~\ref{}, has a six site unit cell, and minimises the large cost
+attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost
+determined by $V_{1}$.
+%
+Within in exact diagonalization two studies has shown that the CMs state survives quantum fluctuations 
+but its nature was challenged in Ref.~\onlinecite{daghofer} suggesting that a pinball like state cannot be ruled out.
+%
+Within iDMRG (see Fig.~\cite{s}) we find that the CMs state occurs directly above the semimetallic phase with exactly the right type of order.
+%
+The calculated charge pattern obtained from \eqref{eq:charge} is shown in Fig.~\cite{} panel. 
 
 
 
