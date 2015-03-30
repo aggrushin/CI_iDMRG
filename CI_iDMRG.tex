@@ -42,19 +42,21 @@ This is an abstract. \noteAG{There are specific commands to leave comments like 
 
 \section{Introduction}
 %
-The Haldane model~\cite{H88} is amazing.
+Interactions and topological statesl~\cite{H88} is amazing.\\
 %
 
 %
-Emergence of the Chern insulator state.
+Emergence of the Chern insulator state.\\
+%
+
+%
+This work.\\
 
 
 \section{Model and Method}
 %
-Method \noteAG{If we use it, we might want to define the entanglement spectrum here}\\
-%
-In this work we focus on spinless electrons in a honeycomb lattice with real  nearest neighbor hopping $t$ and nearest and next to nearest neighbor interactions 
-$\left\lbrace V_{1},V_{2}\right\rbrace$. 
+In this work we focus on spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
+$\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
 %
 The Hamiltonian for this system can be written as
  %
@@ -78,7 +80,15 @@ in sublattice $s=A,B$ and $s\neq\bar{s}$.
 Each of the two triangular sublattices A and B is spanned by the basis vectors
 $\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and 
 $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
-$\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.
+$\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
+%
+%
+To find the ground state as a function in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
+we use the infinite density matrix renormalzation group method (iDMRG). 
+%
+\noteAG{If we use it, we might want to define the entanglement spectrum here}\\
+\noteAG{Define correlation length as well}
+%
 
 \begin{figure}
  %\includegraphics[width=\columnwidth]{pdf/unit_cell_small.pdf}
@@ -96,11 +106,11 @@ $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as
 %
 We have used the iDMRG method presented in the previous section
 to find the groundstate of the half-filled graphene lattice in the presence of 
-$\left\lbrace V_{1},V_{2}\right\rbrace$ interactions
+$\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
 %
-As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different ordered phases and none of them correspond to the Haldane Chern insulator.
+As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases and none of them correspond to the Haldane Chern insulator.
 %
 In what follows we describe their corresponding charge and bond ordering patterns and analyse the different phase transitions that occur between them.
 %
@@ -113,16 +123,15 @@ In what follows we describe their corresponding charge and bond ordering pattern
 %
 \subsection{Semimetal phase}
 %
-We start by discussing the phase diagram in the region where $\left\lbrace V_{1},V_{2}\right\rbrace < t$.
+We start by discussing the phase diagram in the region where 
+the groundstate is a semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
 %
-In this part we find that the groundstate is a semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
+This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
+it is a uniform renormalization of the hopping strength $t$ by interactions.
 %
-This phase is characterised by a uniform renormalization of the hopping strength 
-$t$ by interactions and is therefore smoothly connected to the gapless non-interacting state $V_{1}=V_{2}=0$.
+Therefore we identify this state as a single particle gapless phase that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
 %
-As the latter it is a single particle gapless phase that lacks both charge and bond order and described by a low energy theory in terms of two massless Dirac cones.
-%
-In this latter low energy picture and within the renormalisation group approach the stability of the semimetal phase for small $\left\lbrace V_{1},V_{2}\right\rbrace$ is expected.
+We note that in such low energy picture and within the renormalisation group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace < t$ is expected.
 %
 Short range interactions are irrelevant~\cite{Shankar?} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
 %
@@ -151,7 +160,7 @@ The bond ground state expectation value on the other hand is defined as
 t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,  
 \end{eqnarray}
 %
-For $i,j$ being nearest neighbours we find a small ($10^{-?}$) asymmetry
+For $i,j$ being nearest neighbours we find a small ($10^{-?}$ \noteAG{number needed}) asymmetry
 between bonds pointing along and around the cylinder axis.
 %
 Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
@@ -175,20 +184,18 @@ In the appendix...
 \noteAG{This last paragraph can be removed if we don't need it}
 
 %
-Lastly a very accessible
-
-
-
-
+Lastly we find that the low energy structure of the many-body 
+entanglement spectrum of this phase exactly coincides with that of the parent non-interacting critical state.\\ 
 %
 
-
+%
+We note finally that this state extends beyond 
 
 \subsection{Charge density wave}
 %
-Classically, for large $V_{1}\gg t$ the energy is minimised by a charge imbalance between the two sub lattices.
+The second state we identify is the charge density wave state, labelled CDW in the phase diagram of Fig.~\ref{}.
 %
-The resulting phase, a sublattice staggered charge density wave state (CDW), has a two site unit cell that is characterised by the order parameter
+This state has a two site unit cell that is characterised by a finite order parameter
 %
 \begin{equation}
 \label{eq:CDW}
@@ -199,12 +206,23 @@ M=\left\langle n_{A} \right\rangle-\left\langle n_{B}\right\rangle
 %
 where $n_{A}$ and $n_{B}$ are the density of electrons in the $A$ and $B$ sublattice sites of the two site unit cell respectively.
 %
+We find that the magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
+%
+
+For large $V_{1}\gg t$ such a state is a natural instability since the energy is minimised by a charge imbalance between the two sub lattices.
+%
+Indeed, it has been found in a mean field approximation~\cite{Raghu,Franz,us}, exact diagnoalization~\cite{us,daghofer,herbut}, and quantum Monte Carlo simulations
+\cite{QMC}.
+%
 
 
 \subsection{Charge modulated phase}
 %
+For large $V_{2}\ll t$ the ground state is classically degenerate. 
 
-\subsection{Kekulé}
+
+
+\subsection{Kekul\'{e} bond order}
 %
 
 \subsection{Twelve site charge density wave}
