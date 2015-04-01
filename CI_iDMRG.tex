@@ -44,7 +44,7 @@ This is an abstract.
 
 \section{Introduction}
 %
-Although in the last decade
+%
 
 Interactions and topological states~\cite{H88}.\\
 %
@@ -60,7 +60,7 @@ research area.
 In this work we revisit the controversies left unsolved by previous works using the infinite density matrix renormalzation group method (iDMRG). \\
 
 
-\section{Model and Method}
+\section{\label{sec:modandmeth}Model and Method}
 %
 In this work we focus on spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
@@ -102,13 +102,6 @@ we use the infinite density matrix renormalzation group method (iDMRG).
  \includegraphics[scale=0.2]{pdf/unit_cell.pdf}
  \caption{Left: Hoppings and interactions of Hamiltonian \eqref{eq:H}. Right: Honeycomb lattice of $3 \times 2$ unit cells. The unit cell used for the iDMRG calculations consists of $3 \times 6$ honeycomb unit cells which yields a total circumference of 12 sites. \label{fig:Defs}}
 \end{figure}
-%
-\begin{figure*}[tb]
- \includegraphics[scale=0.2]{Fig1.eps}
- \caption{ 
-  }
-  \label{fig:honeycomblattice}
-\end{figure*} 
 %% 
 \section{Phase diagram}
 %
@@ -304,7 +297,7 @@ This phase transition has been previously addressed with the quantum Monte-Carlo
 and was determined to be of second order character.
 %
 The transition point with divergent correlation length was determined to be at $V_{1}=$ via finite size scaling.
-\noteAG{need number and polishing, Johannes?}\\
+\noteAG{need number and polishing, Johannes?}
 %
 In Fig.~\ref{} we show the correlation length as a function of $V_{1}$ 
 for different values of the bond dimension $\chi$ and cylinder with $L=12$ circumference.
@@ -325,21 +318,53 @@ quantum Monte Carlo studies.
 %
 With iDMRG it is however not possible to pin point the exact value of $V_{1}$ 
 where the transition happens via finite size scaling due to the few cylinder sizes 
-we have available \footnote{}.
+we have available, as discussed in section \ref{sec:modandmeth}.
 %
-From Fig.~\ref{} it is however possible to define a crossover region $1.4 \leq V_{1}\geq 2$,
+However, from Fig.~\ref{} it is however possible to define a crossover region $1.4 \leq V_{1}\geq 2$,
 consistent with the quantum Monte Carlo data, where the transition occurs.
 
 \subsection{Cut B: SM--CMs}
 %
-A cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
+The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
 probes the transition between the semimetal phase and the CMs phases.
 %
-In Fig.~\ref{} we present the entanglement entropy $S$ as a function of 
+In Fig.~\ref{} we present the entanglement entropy $S$ as a function of $V_{2}$
+, the interaction that drives the phase transition.
+%
+As expected from the previous analysis the entanglement entropy of 
+the semimetal phase depends strongly on the MPS bond dimension $\chi$.
+%
+At $V_{2}\approx $ \noteAG{need value} we observe a sharp transition
+to a decaying entanglement entropy that does not depend strongly on $\chi$
+as $V_{2}$ is increased from the transtion.
+%
+This evidence is suggestive of a first order phase transition between
+the semimetal and CMs phases.
+%
+The correlation length (not shown) also shows a discontinuity but not
+as pronounced as the entanglement entropy.
+%
+\noteAG{Do we have a theory of why $S$ is better than $\chi$ sometimes?}
+
+\subsection{Cut C: CMs--CDW-II}
+
+In cut C we fix $V_{2}=3.6$ and study the phase transition between
+the CMs and the CDW-II phases.
+%
+The entanglement entropy is shown in Fig.~\ref{} 
+as a function of $V_{1}$.
+%
+This quantity shows a clear jump at $V_{2}\approx$ signalling a direct first order
+phase transition between these two phases.
+%
+\noteAG{Is this expected semiclassically somehow?}
+
+\subsection{Cut D: CDW-I--Kekul\'{e}--SM--CDW-II}
 
 
 
 
+\subsection{Cut E: SM--CDW-III}
 
 
 \begin{figure}
@@ -351,7 +376,7 @@ In Fig.~\ref{} we present the entanglement entropy $S$ as a function of
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
  \label{fig:cut_V2_0}
  \caption{Correlation length at $V_2=0$.  \noteAG{could it be useful to show the order parameter M
- as a function of $V_{1}$ in the same plot (using the right vertical axis?, or it might be to crowded)}}
+ as a function of $V_{1}$ in the same plot (using the right vertical axis?). It might get to crowded)}}
 \end{figure}
 
 \begin{figure}
