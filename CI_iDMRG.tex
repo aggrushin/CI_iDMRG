@@ -95,6 +95,7 @@ we use the infinite density matrix renormalzation group method (iDMRG).
 %
 \noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
 \noteAG{Define correlation length as well}
+\noteAG{We might want to discuss which cylinder sizes we use and why. Namely L=6,12 include the K points while L=8,10 don't.}
 %
 
 \begin{figure}
@@ -256,7 +257,7 @@ Within this approach, the hopping can be introduced as a perturbation $t$ to fin
 
 \subsection{Kekul\'{e} bond order}
 %
-The next type of order we identify is the Kekul\'{e}
+The next phase we identify is the Kekul\'{e}
 bond order.
 %
 Like the CMs, it has a six site unit cell depicted schematically in Fig.~\ref{}
@@ -269,17 +270,77 @@ the evidence supporting its occurrence is far from conclusive.
 
 
 
-\subsection{Twelve site charge density wave}
+\subsection{Charge density wave - II}
 %
-\noteAG{We need better names}
+All phases that we have described so far don't differ
+from those predicted by mean field and exact diagonalization.
 %
-\subsection{Twelve site charge density wave II}
+We have identified
 %
-\noteAG{We need a better name}
+\subsection{Charge density wave - III}
+%
+
+
 
 \section{Phase transitons}
 %
-some phase transitions?
+A crucial advantage of the iDMRG method is that, unlike finite
+size methods such as exact diagonalization it can characterize the order of phase transitions.
+%
+In order to unravel the character of the phase transitions between
+the phases described above we now study two quantities that are sensitive
+to a phase change, the entanglement entropy $S$ and the correlation length $\xi$.
+%
+In Fig.~\ref{}  and Fig.~\ref{} we show how these quantities change along
+the horizontal and vertical cuts depicted in Fig.~\ref{fig:phase diagram} respectively.
+%
+
+\subsection{Cut A: SM--CDW-I}
+
+The first horizontal cut, labelled A addresses the character of the phase transition between the semi-metallic
+phase and the simplest charge density wave (CDW-I) by fixing $V_{2}=0$.
+%
+This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{papers} 
+and was determined to be of second order character.
+%
+The transition point with divergent correlation length was determined to be at $V_{1}=$ via finite size scaling.
+\noteAG{need number and polishing, Johannes?}\\
+%
+In Fig.~\ref{} we show the correlation length as a function of $V_{1}$ 
+for different values of the bond dimension $\chi$ and cylinder with $L=12$ circumference.
+%
+Firstly, for $V_{1}\leq 1.5t$ we observe that the correlation length diverges as the bond
+dimension of the MPS is increased.
+%
+This behaviour is expected for a critical state such as the semimetal phase;  
+the logarithmic divergence of entanglement of a metallic state requires an MPS with $\chi\to\infty$.
+%
+For $V_{1}\geq 1.5t$ the correlation length drops significantly and has no longer a significant 
+dependence on $\chi$.
+%
+This is characteristic of a gapped phase such as the charge density wave.
+%
+The crossover is smooth, signalling a second order phase transition, in agreement with 
+quantum Monte Carlo studies.
+%
+With iDMRG it is however not possible to pin point the exact value of $V_{1}$ 
+where the transition happens via finite size scaling due to the few cylinder sizes 
+we have available \footnote{}.
+%
+From Fig.~\ref{} it is however possible to define a crossover region $1.4 \leq V_{1}\geq 2$,
+consistent with the quantum Monte Carlo data, where the transition occurs.
+
+\subsection{Cut B: SM--CMs}
+%
+A cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
+probes the transition between the semimetal phase and the CMs phases.
+%
+In Fig.~\ref{} we present the entanglement entropy $S$ as a function of 
+
+
+
+
+
 
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_3.6}.pdf}
@@ -288,7 +349,9 @@ some phase transitions?
 
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
- \caption{Correlation length at $V_2=0$. \label{fig:cut_V2_0}}
+ \label{fig:cut_V2_0}
+ \caption{Correlation length at $V_2=0$.  \noteAG{could it be useful to show the order parameter M
+ as a function of $V_{1}$ in the same plot (using the right vertical axis?, or it might be to crowded)}}
 \end{figure}
 
 \begin{figure}
@@ -306,7 +369,15 @@ some phase transitions?
 %
 \section{Discussion and Conclusions}
 %
-awesome conclusions
+No CI phase\\
+%
+Two new phases not seen before\\
+%
+What determines if $S$ or $\xi$ gives better signatures of phase transitions. 
+
+\section{Acknowledgements}
+
+We thank A. Lauchli for discussions and sharing results prior to publication.
 
 \bibliography{CI_iDMRG.bib}
 
