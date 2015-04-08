@@ -59,6 +59,10 @@ research area.
 %
 In this work we revisit the controversies left unsolved by previous works using the infinite density matrix renormalzation group method (iDMRG). \\
 
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
+ \caption{Different orders. (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. \label{fig:orders}}
+\end{figure}
 
 \section{\label{sec:modandmeth}Model and Method}
 %
@@ -99,8 +103,8 @@ we use the infinite density matrix renormalzation group method (iDMRG).
 %
 
 \begin{figure}
- \includegraphics[scale=0.2]{pdf/unit_cell.pdf}
- \caption{Left: Hoppings and interactions of Hamiltonian \eqref{eq:H}. Right: Honeycomb lattice of $3 \times 2$ unit cells. The unit cell used for the iDMRG calculations consists of $3 \times 6$ honeycomb unit cells which yields a total circumference of 12 sites. \label{fig:Defs}}
+ \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
+ \caption{Unit cell used in the iDMRG calculations. It consists of $3 \times 6$ lattice unit cells which yields a cylinder with a circumference of 12 sites. The hoppings and and interactions of Hamiltonian \eqref{eq:H} are shown in the gray inset.  \label{fig:Defs}}
 \end{figure}
 %% 
 \section{Phase diagram}
@@ -110,16 +114,18 @@ to find the groundstate of the half-filled graphene lattice in the presence of
 $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
+
+\begin{figure*}
+ \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
+ \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$. Right: Density patterns in the different phases. The area of the blue circles is proportional to the particle number expectation value on the respective site. The unit cells are depicted by the red polygons. (a) Charge modulated (CMs) phase with $V_1 = 0.8, V_2 = 3.2 $, (b) Charge density wave II (CDW II) with $V_1 = 5.6, V_2 = 3.2$,  (c) Charge density wave III (CDW III) with $V_1 = 9.2, V_2 = 2.5$, (d) Charge density wave I (CDW I) with $V_1 = 4.0, V_2 = 0.4 $. Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase. The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}}
+\end{figure*}
+
 %
 As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases and none of them correspond to the Haldane Chern insulator.
 %
 In what follows we describe their corresponding charge and bond ordering patterns and analyse the different phase transitions that occur between them.
 %
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{pdf/phase_diagram.pdf}
- \caption{Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$. \label{fig:phase diagram}}
-\end{figure}
 
 %
 \subsection{Semimetal phase (SM)}
@@ -136,6 +142,7 @@ We note that in such low energy picture and within the renormalisation group app
 Short range interactions are irrelevant~\cite{Shankar?} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
 %
 Accordingly we find that the semimetal is stable within this region of phase space.
+
 
 Within the iDMRG algorithm we have characterised the semimetal phase in three distinct ways.
 %
@@ -299,8 +306,15 @@ and was determined to be of second order character.
 The transition point with divergent correlation length was determined to be at $V_{1}=$ via finite size scaling.
 \noteAG{need number and polishing, Johannes?}
 %
-In Fig.~\ref{} we show the correlation length as a function of $V_{1}$ 
+In Fig.~\ref{fig:cut_V2_0} we show the correlation length as a function of $V_{1}$ 
 for different values of the bond dimension $\chi$ and cylinder with $L=12$ circumference.
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
+ \label{fig:cut_V2_0}
+ \caption{Correlation length at $V_2=0$.  \noteAG{could it be useful to show the order parameter M
+ as a function of $V_{1}$ in the same plot (using the right vertical axis?). It might get to crowded)}}
+\end{figure}
+% 
 %
 Firstly, for $V_{1}\leq 1.5t$ we observe that the correlation length diverges as the bond
 dimension of the MPS is increased.
@@ -328,8 +342,13 @@ consistent with the quantum Monte Carlo data, where the transition occurs.
 The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
 probes the transition between the semimetal phase and the CMs phases.
 %
-In Fig.~\ref{} we present the entanglement entropy $S$ as a function of $V_{2}$
+In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$
 , the interaction that drives the phase transition.
+
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
+ \caption{Entanglement entropy at $V_1=0.4$. \label{fig:cut_V1_0.4}}
+\end{figure}
 %
 As expected from the previous analysis the entanglement entropy of 
 the semimetal phase depends strongly on the MPS bond dimension $\chi$.
@@ -351,8 +370,13 @@ as pronounced as the entanglement entropy.
 In cut C we fix $V_{2}=3.6$ and study the phase transition between
 the CMs and the CDW-II phases.
 %
-The entanglement entropy is shown in Fig.~\ref{} 
+The entanglement entropy is shown in Fig.~\ref{fig:cut_V2_3.6} 
 as a function of $V_{1}$.
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_3.6}.pdf}
+ \caption{Entanglement entropy at $V_2=3.6$. \label{fig:cut_V2_3.6}}
+\end{figure}
+% 
 %
 This quantity shows a clear jump at $V_{2}\approx$ signalling a direct first order
 phase transition between these two phases.
@@ -361,33 +385,20 @@ phase transition between these two phases.
 
 \subsection{Cut D: CDW-I--Kekul\'{e}--SM--CDW-II}
 
-
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_6}.pdf}
+ \caption{Correlation length at $V_1=6$. \label{fig:cut_V1_6}}
+\end{figure}
 
 
 \subsection{Cut E: SM--CDW-III}
 
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_3.6}.pdf}
- \caption{Entanglement entropy at $V_2=3.6$. \label{fig:cut_V2_3.6}}
-\end{figure}
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
- \label{fig:cut_V2_0}
- \caption{Correlation length at $V_2=0$.  \noteAG{could it be useful to show the order parameter M
- as a function of $V_{1}$ in the same plot (using the right vertical axis?). It might get to crowded)}}
-\end{figure}
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
- \caption{Entanglement entropy at $V_1=0.4$. \label{fig:cut_V1_0.4}}
-\end{figure}
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_6}.pdf}
- \caption{Correlation length at $V_1=6$. \label{fig:cut_V1_6}}
-\end{figure}
+% 
+
 
 
 
@@ -402,7 +413,7 @@ What determines if $S$ or $\xi$ gives better signatures of phase transitions.
 
 \section{Acknowledgements}
 
-We thank A. Lauchli for discussions and sharing results prior to publication.
+We thank A. Läuchli for discussions and sharing results prior to publication.
 
 \bibliography{CI_iDMRG.bib}
 
