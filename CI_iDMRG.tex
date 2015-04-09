@@ -50,17 +50,24 @@ governed by topological invariants and thus many of their most important propert
 Such topologically protected responses result in intrinsically novel phenomena that find no straight forward analogue in trivial states
 of matter, including frationalisation of quantum numbers or transport governed by quantum anomalies.
 %
-These exotic properties allow for diverse prospective applications, from quantum computation to spintronics.
+These exotic properties have inspired proposals of diverse prospective applications, ranging from quantum computation to spintronics.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
 these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them and determine when and how can they emerge.
 %
-The later problem is further motivated by the fact that topological states are far less common than trivial states
+Importantly, the later problem can be further motivated by the fact that topological states are far less common than trivial states
 and therefore, finding alternative routes to engineer topological structure from trivial matter is a pressing open question.\\
 %
 
 This work is concerned with one of the possible ways to induce a topological state from a trivial state
 via strong interactions.
+%
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
+ %
+ \caption{Different orders. (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. \label{fig:orders}}
+ %
+\end{figure}
 %
 One prominent example is the realisation of the Chern insulator phases triggered by short-range electron-electron interactions in tight binding models.
 %
@@ -75,7 +82,7 @@ with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ res
 displayed a Chern insulator phase with the exact features predicted by Haldane.
 %
 Such Chern insulator phase has complex nearest neighbour hopings (see Fig.~\ref{fig:orders}(g))
-and therefore within the mean field paraidgm occurs appeared in the region where $V_{2}>V_{1}$.
+and therefore within the mean field paradigm occurs appeared in the region where $V_{2}>V_{1}$.
 %
 Although necessary to realise the precise Haldane phase, this condition 
 was shown not to be a necessary requirement; Chern insulator phases can be realized 
@@ -83,48 +90,42 @@ in mean field with only $V_{1}$ at the expense of enlarging the unit cell and do
 %
 In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{Franz}.\\
 
-An important open question is whether this interaction induced Chern state survives the effect of quantum fluctuations.
+An important open question is wether the interaction induced Chern state survives the effect of quantum fluctuations.
 %
-Within the mean field paradigm, that neglects these quantum effects, the Haldane Chern insulator phase
-competes with more conventional but also interesting orders, depicted schematically in Fig.~\ref{fig:orders}(a)-(d).
+In particular the Haldane Chern insulator phase competes with more conventional but also interesting orders, 
+depicted schematically in Fig.~\ref{fig:orders}(a)-(d).
 %
-From a renormalisation point of view, the semimetal state at $V_{1}=V_{2}=0$ 
-is expected to be stable up to interactions of the order of
-the hopping strength, since short-range interactions are irrelevant. 
+On the one hand high $V_{1} \gg V_{2}$ limit in the honeycomb lattice, a charge ordered state depicted in Fig.~\ref{fig:orders}(b) is expected, 
+where the A and B sub lattices are populated differently.
 %
-High $V_{1}\gg t,V_{2}$ favour a charge ordered state
+Being connected to the classically ground state at $V_{1}/t \to \infty$ this state has been found to be very robust both in mean field an exact diagonalization.
+%
+For $V_{2}\gg V_{1}$ on the other hand it was shown in mean field that the phase space originally attributed to the Haldane Chern insulator 
+was severely reduced by the presence of a sublattice charge modulated state (or CMs) Fig.~\ref{fig:orders}(c).
+%
+Such phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within \noteAG{Herbuts technique}.
+%
+However, its existence was questioned by Ref.~\cite{} where it was argued that a pinball liquid state -- a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites -- cannot be discarded. 
+%
+At $V_{1}\sim V_{2}$
 
-%
-%Topological sates of matter show protected edge states as well as robust and unusual 
-%phenomenology. 
-%%
-%Such phases are far less common than trivial states of matter, a fact that
-%motivates the quest for routes that can interpolate between the topological and trivial classes of states, ideally
-%via experimetnally controllable parameters.
-%%
-%There are several ways in which topological states can be induced from trivial states --for instance
-%a 
-%such as that have been proposed such as 
-%two of the most significantly studied have been interactions
-%
-%
-%Interactions and topological states~\cite{H88}.\\
-%%
-%
-%%
-%Due to its singular importance and historical significance, 
-%the emergence of the Chern insulator state via interactions in the honeycomb lattice is an active
-%research area. 
-%
+
 
 
 %
 In this work we revisit the controversies left unsolved by previous works using the infinite density matrix renormalization group method (iDMRG). \\
+%
+Our main findings are the following. 
+%
+First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
+%
+Second, we provide evidence for the existence and stability of the CMs state, not only from iDMRG method numerics but also from
+from robust semiclassical arguments.
+%
+Third, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
+of these to occur.
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
- \caption{Different orders. (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. \label{fig:orders}}
-\end{figure}
+
 
 \section{\label{sec:modandmeth}Model and Method}
 %
@@ -292,7 +293,7 @@ For large $V_{2}\ll t$ the ground state is classically degenerate.
 Within mean field it was shown that as long $V_{2}>V_{1}$
 the system chose a charge ordered pattern with charge modulation over different sub lattices and termed CMs phase~\cite{CMs}.
 %
-Such order, schematically shown in Fig.~\ref{}, has a six site unit cell, and minimises the large cost
+Such order, schematically shown in Fig.~\ref{fig:orders}(c), has a six site unit cell, and minimises the large cost
 attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost
 determined by $V_{1}$.
 %
