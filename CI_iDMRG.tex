@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage[pdftex]{color}
@@ -78,7 +79,7 @@ In this work we revisit the controversies left unsolved by previous works using 
 
 \section{\label{sec:modandmeth}Model and Method}
 %
-We focus on spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
+We investigate a system of spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
 %
 The Hamiltonian for this system can be written as
@@ -91,13 +92,13 @@ H&:=&-t\sum_{\left\langle i,j\right\rangle ,s,s'}(c^{\dagger}_{i,s}c_{j,s'}+h.c.
 \;&+&
 V_{1}\sum_{\left\langle i,j\right\rangle ,s }n_{i,s}n_{j,\bar{s}}+
 %
-V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}\,
+V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}.
 %
 \label{eq:H}
 %
 \end{eqnarray}
 %
-here $c_{i,s}$ $(c^{\dagger}_{i,s})$  annihilates (creates) an electron at the $i$-th unit cell of the honeycomb lattice
+Here $c_{i,s}$ $(c^{\dagger}_{i,s})$  annihilates (creates) an electron at the $i$-th unit cell of the honeycomb lattice
 in sublattice $s=A,B$ and $s\neq\bar{s}$. 
 %
 Each of the two triangular sublattices A and B is spanned by the basis vectors
@@ -105,9 +106,18 @@ $\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and
 $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
 $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
+In the non-interacting case, this model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K'$ points.
 
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
-we use the infinite density matrix renormalzation group method (iDMRG). 
+we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}. Traditionally a method for finding the ground state fo one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
+
+A generic quantum state on a chain of length $N$ can be represented by a matrix product state (MPS) in the following form
+\begin{equation}
+ \ket{\psi} = \sum_{j_1, \ldots, j_N} A^{1 \left[j_1\right]} A^{2 \left[j_2\right]} \ldots A^{N \left[j_N\right]} \ket{j_1, \ldots, j_N}
+\end{equation}
+where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix and $\ket{j_n}$ are the local basis states on site $n$. The $\chi_n$ are called bond dimensions. In the iDMRG method the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. However, if there is translational invariance along the chain, the matrices repeat themselves after translating the system by the length of one unit cell. The bond dimension needed to represent a state strongly depends on its entanglement. \noteJM{Scaling and references}
+
+We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. This size secures that all the possible orders   Since our system is finite in one dimension, it is important that we choose a system size that includes the $K$ points of the Brillouin zone. 
 %
 \noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
 \noteAG{Define correlation length as well}
@@ -142,7 +152,7 @@ In what follows we describe their corresponding charge and bond ordering pattern
 %
 \subsection{Semimetal phase (SM)}
 %
-We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
+We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{phase diagram}.
 %
 This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
 it is a uniform renormalization of the hopping strength $t$ by interactions.
@@ -230,8 +240,8 @@ We find that the magnitude of $M$ increases with $V_{1}$ and to numerical accura
 
 For large $V_{1}\gg t$ such a state is a natural instability since the energy is minimised by a charge imbalance between the two sub lattices.
 %
-Indeed, it has been found in a mean field approximation~\cite{Raghu,Franz,us}, exact diagnoalization~\cite{us,daghofer,herbut}, and quantum Monte Carlo simulations
-\cite{QMC}.
+Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCCdJVV13}, exact diagnoalization~\cite{GGNVC13,DH14,DCH14}, and quantum Monte Carlo simulations
+\cite{WCT14}.
 %
 
 
@@ -312,7 +322,7 @@ the horizontal and vertical cuts depicted in Fig.~\ref{fig:phase diagram} respec
 The first horizontal cut, labelled A addresses the character of the phase transition between the semi-metallic
 phase and the simplest charge density wave (CDW-I) by fixing $V_{2}=0$.
 %
-This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{papers} 
+This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{WCT14} 
 and was determined to be of second order character.
 %
 The transition point with divergent correlation length was determined to be at $V_{1}=$ via finite size scaling.
@@ -351,7 +361,7 @@ consistent with the quantum Monte Carlo data, where the transition occurs.
 
 \subsection{Cut B: SM--CMs}
 %
-The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
+The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phase diagram}, 
 probes the transition between the semimetal phase and the CMs phases.
 %
 In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$
