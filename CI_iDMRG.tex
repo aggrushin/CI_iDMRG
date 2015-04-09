@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage[pdftex]{color}
@@ -60,7 +61,7 @@ and therefore, finding alternative routes to engineer topological structure from
 %
 
 %
-\begin{figure}
+\begin{figure}[b]
  \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
  %
  \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
@@ -146,40 +147,54 @@ of these to occur.
 
 \section{\label{sec:modandmeth}Model and Method}
 %
-We focus on spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
+We investigate a system of spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
 %
 The Hamiltonian for this system can be written as
  %
-\begin{eqnarray}
-\nonumber
+% \begin{eqnarray}
+% \nonumber
 %
-H&:=&-t\sum_{\left\langle i,j\right\rangle ,s,s'}(c^{\dagger}_{i,s}c_{j,s'}+h.c.)\\
+% H&:=&-t\sum_{\left\langle i,j\right\rangle ,s,s'}(c^{\dagger}_{i,s}c_{j,s'}+h.c.)\\
+% %
+% \;&+&
+% V_{1}\sum_{\left\langle i,j\right\rangle ,s }n_{i,s}n_{j,\bar{s}}+
+% %
+% V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}.
 %
-\;&+&
-V_{1}\sum_{\left\langle i,j\right\rangle ,s }n_{i,s}n_{j,\bar{s}}+
-%
-V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}\,
-%
+% \end{eqnarray}
+\begin{equation}
+ H:=-t\sum_{\left\langle i,j\right\rangle}(c^{\dagger}_{i}c^{\vphantom{\dagger}}_{j}+ \mathrm{h.c.})+
+V_{1}\sum_{\left\langle i,j\right\rangle }n_{i}n_{j}+
+V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle }n_{i}n_{j}.
 \label{eq:H}
+\end{equation}
 %
-\end{eqnarray}
+where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an electron at the $i$-th site of the honeycomb lattice.
+% in sublattice $s=A,B$ and $s\neq\bar{s}$. 
 %
-here $c_{i,s}$ $(c^{\dagger}_{i,s})$  annihilates (creates) an electron at the $i$-th unit cell of the honeycomb lattice
-in sublattice $s=A,B$ and $s\neq\bar{s}$. 
-%
-Each of the two triangular sublattices A and B is spanned by the basis vectors
-$\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and 
-$\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
-$\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
+% Each of the two triangular sublattices A and B is spanned by the basis vectors
+% $\bs{a}_{1}=\bs{\delta}_{2}-\bs{\delta}_{3}$ and 
+% $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
+% $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
 
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
-we use the infinite density matrix renormalzation group method (iDMRG). 
+we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}. Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
+
+A generic quantum state on a chain of length $N$ can be written as a matrix product state (MPS) in the following form
+\begin{equation}
+ \ket{\psi} = \sum_{j_1, \ldots, j_N} A^{1 \left[j_1\right]} A^{2 \left[j_2\right]} \ldots A^{N \left[j_N\right]} \ket{j_1, \ldots, j_N}
+\end{equation}
+where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions. On an infinite chain, the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. However, if the chain is translationally invariant, the matrices repeat themselves after translating the system by the length of one unit cell. Hence, specifying the set of matrices in one unit cell already completely represents the state. For an arbitrary state on an infinite chain, the bond dimensions are generically also infinite. Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}
+
+We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. This size secures that all the possible orders that occur in the range of our study are commensurate with the iMPS unit cell. Another reason to choose this size originates from the single particle momentum discretization in the $y$-direction around the cylinder. In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$. Only if these two points are allowed momenta of the investigated system, the low energy physics can be captured correctly. This means that from the feasible system sizes only $L=6$ and $12$ are well suited for our purposes whereas $L=8$ and $10$ do not include the momenta of the $K$ and $K^{\prime}$ points.
 %
+
+
+
 \noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
 \noteAG{Define correlation length as well}
-\noteAG{We might want to discuss which cylinder sizes we use and why. Namely L=6,12 include the K points while L=8,10 don't.}
 %
 
 \begin{figure}
@@ -210,7 +225,7 @@ In what follows we describe their corresponding charge and bond ordering pattern
 %
 \subsection{Semimetal phase (SM)}
 %
-We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{}.
+We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{phase diagram}.
 %
 This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
 it is a uniform renormalization of the hopping strength $t$ by interactions.
@@ -298,8 +313,8 @@ We find that the magnitude of $M$ increases with $V_{1}$ and to numerical accura
 
 For large $V_{1}\gg t$ such a state is a natural instability since the energy is minimised by a charge imbalance between the two sub lattices.
 %
-Indeed, it has been found in a mean field approximation~\cite{Raghu,Franz,us}, exact diagnoalization~\cite{us,daghofer,herbut}, and quantum Monte Carlo simulations
-\cite{QMC}.
+Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCCdJVV13}, exact diagnoalization~\cite{GGNVC13,DH14,DCH14}, and quantum Monte Carlo simulations
+\cite{WCT14}.
 %
 
 
@@ -380,7 +395,7 @@ the horizontal and vertical cuts depicted in Fig.~\ref{fig:phase diagram} respec
 The first horizontal cut, labelled A addresses the character of the phase transition between the semi-metallic
 phase and the simplest charge density wave (CDW-I) by fixing $V_{2}=0$.
 %
-This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{papers} 
+This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{WCT14} 
 and was determined to be of second order character.
 %
 The transition point with divergent correlation length was determined to be at $V_{1}=$ via finite size scaling.
@@ -419,7 +434,7 @@ consistent with the quantum Monte Carlo data, where the transition occurs.
 
 \subsection{Cut B: SM--CMs}
 %
-The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phasediagram}, 
+The cut at $V_{1}=0.4$, labelled cut B in Fig.~\ref{fig:phase diagram}, 
 probes the transition between the semimetal phase and the CMs phases.
 %
 In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$
