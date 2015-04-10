@@ -45,88 +45,133 @@ This is an abstract.
 
 \section{Introduction}
 %
-Topological phases of matter are remarkably robust states; their response to external fields is
+Topological phases of matter are remarkably robust states; their responses to external fields are
 governed by topological invariants and thus many of their most important properties are insensitive to local perturbations.
 %
-Such topologically protected responses result in intrinsically novel phenomena that find no straight forward analogue in trivial states
+Topologically protected responses result in intrinsically novel phenomena that can find no straight forward analogue in trivial states
 of matter, including frationalisation of quantum numbers or transport governed by quantum anomalies.
 %
 These exotic properties have inspired proposals of diverse prospective applications, ranging from quantum computation to spintronics.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
-these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them and determine when and how can they emerge.
-%
-Importantly, the later problem can be further motivated by the fact that topological states are far less common than trivial states
-and therefore, finding alternative routes to engineer topological structure from trivial matter is a pressing open question.\\
+these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them and determine when and how can they emerge.\\
 %
 
-This work is concerned with one of the possible ways to induce a topological state from a trivial state
-via strong interactions.
+This work addresses the latter problem, in particular the possibility to induce a topological state from a trivial state via strong interactions.
 %
-\begin{figure}[b]
- \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
- %
- \caption{Different orders. (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. \label{fig:orders}}
- %
-\end{figure}
-%
-One prominent example is the realisation of the Chern insulator phases triggered by short-range electron-electron interactions in tight binding models.
+The concrete question that we consider has so far
+remained controversial: the realisation of the Chern insulator phases triggered by short-range electron-electron interactions in tight binding models.
 %
 The Chern insulator state, first identified by Haldane~\cite{H88} in the particular case of the honeycomb lattice, is a zero field analogue of the
 integer quantum Hall effect; the Hall conductivity contribution of each band is quantised in integer units of $e^2/h$ and determined by a topological invariant, the Chern number.
 %
-However, realising a Chern insulator in nature is not an trivial task since time-reversal must be broken in such a way that
-the resulting magnetic flux has to average to zero over the unit cell, and thus over the entire sample.
+Realising a Chern insulator in nature is not a trivial task; time-reversal must be broken with
+the resulting magnetic flux averaging to zero over the unit cell, and thus over the entire sample.
 %
-A set of mean field studies~\cite{Raghu,Franz,Castro} showed that the fermonic half-filled honeycomb lattice tight binding model
-with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively, 
-displayed a Chern insulator phase with the exact features predicted by Haldane.
+In a remarkable proof of principle, a set of mean field studies~\cite{Raghu,Franz,Castro} discussed how the Chern insulator can 
+occur from electron-electron interactions. 
 %
-Such Chern insulator phase has complex nearest neighbour hopings (see Fig.~\ref{fig:orders}(g))
+It was shown that spiness electrons hoping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively, 
+displayed a Chern insulator phase as described by Haldane.
+%
+This particular realization of the Chern insulator phase has complex nearest neighbour hopings [see Fig.~\ref{fig:orders}(g)]
 and therefore within the mean field paradigm occurs appeared in the region where $V_{2}>V_{1}$.
 %
-Although necessary to realise the precise Haldane phase, this condition 
-was shown not to be a necessary requirement; Chern insulator phases can be realized 
+The latter condition 
+was shown not to be a generic requirement; Chern insulator phases can be realized 
 in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system.
 %
-In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{Franz}.\\
+In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{Franz}.
+%
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
+ %
+ \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
+ % 
+ (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
+ %
+ Phases (a)-(d) and (g) where found within mean field theory by Refs.~\cite{Raghu,Franz,us}.
+ %
+The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization in periodic boundary conditions
+by Refs.~\cite{us2,Maria} but found in Ref.~\cite{DCH14} for open boundary conditions.
+ %
+ The existence of phase (c) was challenged with exact diagonalization by Ref.~\cite{}.
+ %
+ \label{fig:orders}}
+ %
+\end{figure}
+%
+\\
 
-An important open question is wether the interaction induced Chern state survives the effect of quantum fluctuations.
+The important question that still remains to be answered is wether the interaction induced Chern state survives 
+after the effect of quantum fluctuations is included.
 %
-In particular the Haldane Chern insulator phase competes with more conventional but also interesting orders, 
-depicted schematically in Fig.~\ref{fig:orders}(a)-(d).
+The Haldane Chern insulator phase competes with more conventional but also interesting orders, 
+that can jeopardise its emergence and are depicted schematically in Fig.~\ref{fig:orders}.
 %
-On the one hand high $V_{1} \gg V_{2}$ limit in the honeycomb lattice, a charge ordered state depicted in Fig.~\ref{fig:orders}(b) is expected, 
+On the one hand, in the $V_{1} \gg V_{2}$ limit, a charge ordered state depicted in Fig.~\ref{fig:orders}(b) is expected, 
 where the A and B sub lattices are populated differently.
 %
-Being connected to the classically ground state at $V_{1}/t \to \infty$ this state has been found to be very robust both in mean field an exact diagonalization.
+Being connected to the classical ground state at $V_{1}/t \to \infty$ with only one occupied sublattice, this state (CDW-I) has been found to be very robust both in mean field an exact diagonalization.
 %
-For $V_{2}\gg V_{1}$ on the other hand it was shown in mean field that the phase space originally attributed to the Haldane Chern insulator 
-was severely reduced by the presence of a sublattice charge modulated state (or CMs) Fig.~\ref{fig:orders}(c).
+For $V_{2}\gg V_{1}$ on the other hand it was shown~\cite{us} in mean field that the phase space originally attributed to the Haldane Chern insulator 
+was severely reduced by the presence of a sublattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
-Such phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within \noteAG{Herbuts technique}.
+The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within \noteAG{Herbuts technique}.
 %
-However, its existence was questioned by Ref.~\cite{} where it was argued that a pinball liquid state -- a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites -- cannot be discarded. 
+However, its existence was questioned by Ref.~\cite{} where it was argued that a pinball liquid state --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
-At $V_{1}\sim V_{2}$
+At intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
+was found to be stable within mean field theory.
+%
+Although numerical evidence consistent with such bond order was found~\ref{us} in exact diagonalization, further insights are needed to corroborate its existence in the thermodynamic limit.
+%
+Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable within mean field, was found however to be absent in exact diagonalization with periodic boundary conditions~\ref{us,dag} and \noteAG{ Daghofers technique} suggesting that quantum fluctuations indeed can destabilize its emergence.
+%
+Nonetheless, this interpretation was challenged by Ref.~\ref{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and  \noteAG{Herbuts technique}.\\
 
-
-
-
 %
-In this work we revisit the controversies left unsolved by previous works using the infinite density matrix renormalization group method (iDMRG). \\
+The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
+that includes quantum fluctuations while minimizing finite size effects.
 %
-Our main findings are the following. 
+In this work we therefore revisit the controversies left unsolved by previous studies using the infinite density matrix renormalization group method (iDMRG)~\cite{People}. 
+%
+This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
+what is achievable in exact diagonalization.
+%
+We have mapped a $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for such an infinite cylinder geometry and our main findings are as follows.
 %
 First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
 %
-Second, we provide evidence for the existence and stability of the CMs state, not only from iDMRG method numerics but also from
-from robust semiclassical arguments.
-%
-Third, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
+Second, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
 of these to occur.
+%
+Third, we provide numerical support for the existence and stability of the all the competing orders found previously within mean field.
+%
+In particular we characterise the more controversial CMs state and Kekul\'{e} states by computing bond and charge expectation values via the iDMRG method 
+and present argue that the existence of the former can be explained from the semiclassical large interaction limit.
+%
+Fourth, we determine the first or second order character of the relevant phase transitions.
+%
+Concretely we address this issue by identifying the features that the correlation length $\xi$ and the entanglement entropy $S$ present as a function of $\left\lbrace V_{1},V_{2}\right\rbrace$.\\
 
-
+This work is organized as follows. 
+%
+After describing the method and model in section~\ref{sec:modandmeth} we
+characterise the different phases that we find in section~\ref{sec:phasediagram}.
+%
+The different phase transitions among them are analyzed in section~\ref{sec:phasediagram}
+and we end with a discussion and prospect of our results in section~\ref{sec:discconc}
+%
+\begin{figure}
+%
+ \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
+ %
+ \caption{Unit cell used in the iDMRG calculations. It consists of $3 \times 6$ lattice unit cells which yields a cylinder with a circumference of 12 sites. 
+ %
+ The hoppings and and interactions of Hamiltonian \eqref{eq:H} are shown in the gray inset.  \label{fig:Defs}}
+\end{figure}
+%% 
 
 \section{\label{sec:modandmeth}Model and Method}
 %
@@ -135,21 +180,14 @@ $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively.
 %
 The Hamiltonian for this system can be written as
  %
-% \begin{eqnarray}
-% \nonumber
-%
-% H&:=&-t\sum_{\left\langle i,j\right\rangle ,s,s'}(c^{\dagger}_{i,s}c_{j,s'}+h.c.)\\
-% %
-% \;&+&
-% V_{1}\sum_{\left\langle i,j\right\rangle ,s }n_{i,s}n_{j,\bar{s}}+
-% %
-% V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle ,s }n_{i,s}n_{j,s}.
-%
-% \end{eqnarray}
 \begin{equation}
+%
  H:=-t\sum_{\left\langle i,j\right\rangle}(c^{\dagger}_{i}c^{\vphantom{\dagger}}_{j}+ \mathrm{h.c.})+
+ %
 V_{1}\sum_{\left\langle i,j\right\rangle }n_{i}n_{j}+
+%
 V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle }n_{i}n_{j}.
+%
 \label{eq:H}
 \end{equation}
 %
@@ -161,31 +199,46 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 % $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
 % $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
-
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
 we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}. Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
 
 A generic quantum state on a chain of length $N$ can be written as a matrix product state (MPS) in the following form
-\begin{equation}
- \ket{\psi} = \sum_{j_1, \ldots, j_N} A^{1 \left[j_1\right]} A^{2 \left[j_2\right]} \ldots A^{N \left[j_N\right]} \ket{j_1, \ldots, j_N}
-\end{equation}
-where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions. On an infinite chain, the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. However, if the chain is translationally invariant, the matrices repeat themselves after translating the system by the length of one unit cell. Hence, specifying the set of matrices in one unit cell already completely represents the state. For an arbitrary state on an infinite chain, the bond dimensions are generically also infinite. Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}
-
-We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. This size secures that all the possible orders that occur in the range of our study are commensurate with the iMPS unit cell. Another reason to choose this size originates from the single particle momentum discretization in the $y$-direction around the cylinder. In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$. Only if these two points are allowed momenta of the investigated system, the low energy physics can be captured correctly. This means that from the feasible system sizes only $L=6$ and $12$ are well suited for our purposes whereas $L=8$ and $10$ do not include the momenta of the $K$ and $K^{\prime}$ points.
 %
+\begin{equation}
+%
+ \ket{\psi} = \sum_{j_1, \ldots, j_N} A^{1 \left[j_1\right]} A^{2 \left[j_2\right]} \ldots A^{N \left[j_N\right]} \ket{j_1, \ldots, j_N}
+ %
+\end{equation}
+%
+where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions. 
+%
+On an infinite chain, the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. 
+%
+However, if the chain is translationally invariant, the matrices repeat themselves after translating the system by the length of one unit cell. 
+%
+Hence, specifying the set of matrices in one unit cell already completely represents the state. 
+%
+For an arbitrary state on an infinite chain, the bond dimensions are generically also infinite. 
+%
+Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}
 
-
-
+We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. 
+%
+This size secures that all the possible orders that occur in the range of our study are commensurate with the iMPS unit cell. 
+%
+Another reason to choose this size originates from the single particle momentum discretization in the $y$-direction around the cylinder. 
+%
+In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$. 
+%
+Only if these two points are allowed momenta of the investigated system, the low energy physics can be captured correctly. 
+%
+This means that from the feasible system sizes only $L=6$ and $12$ are well suited for our purposes whereas $L=8$ and $10$ do not include the momenta of the $K$ and $K^{\prime}$ points.
+%
 \noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
 \noteAG{Define correlation length as well}
 %
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
- \caption{Unit cell used in the iDMRG calculations. It consists of $3 \times 6$ lattice unit cells which yields a cylinder with a circumference of 12 sites. The hoppings and and interactions of Hamiltonian \eqref{eq:H} are shown in the gray inset.  \label{fig:Defs}}
-\end{figure}
-%% 
-\section{Phase diagram}
+\section{\label{sec:phasediagram}Phase diagram}
 %
 We have used the iDMRG method presented in the previous section
 to find the groundstate of the half-filled graphene lattice in the presence of 
@@ -195,7 +248,19 @@ Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
- \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$. Right: Density patterns in the different phases. The area of the blue circles is proportional to the particle number expectation value on the respective site. The unit cells are depicted by the red polygons. (a) Charge modulated (CMs) phase with $V_1 = 0.8, V_2 = 3.2 $, (b) Charge density wave II (CDW II) with $V_1 = 5.6, V_2 = 3.2$,  (c) Charge density wave III (CDW III) with $V_1 = 9.2, V_2 = 2.5$, (d) Charge density wave I (CDW I) with $V_1 = 4.0, V_2 = 0.4 $. Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase. The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}}
+ \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$. 
+ %
+ Right: Density patterns in the different phases. 
+ %
+ The area of the blue circles is proportional to the particle number expectation value on the respective site. 
+ %
+ The unit cells are depicted by the red polygons. 
+ %
+ (a) Charge modulated (CMs) phase with $V_1 = 0.8, V_2 = 3.2 $, (b) Charge density wave II (CDW II) with $V_1 = 5.6, V_2 = 3.2$,  (c) Charge density wave III (CDW III) with $V_1 = 9.2, V_2 = 2.5$, (d) Charge density wave I (CDW I) with $V_1 = 4.0, V_2 = 0.4 $. 
+ %
+ Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase. 
+ %
+ The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}}
 \end{figure*}
 
 %
@@ -360,7 +425,7 @@ We have identified
 
 
 
-\section{Phase transitons}
+\section{\label{sec:phasetransitions} Phase transitons}
 %
 A crucial advantage of the iDMRG method is that, unlike finite
 size methods such as exact diagonalization it can characterize the order of phase transitions.
@@ -481,7 +546,7 @@ phase transition between these two phases.
 
 
 %
-\section{Discussion and Conclusions}
+\section{\label{sec:discconc}Discussion and Conclusions}
 %
 
 
