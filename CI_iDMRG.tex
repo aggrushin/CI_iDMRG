@@ -208,7 +208,7 @@ In what follows we describe their corresponding charge and bond ordering pattern
 %
 \subsection{Semimetal phase (SM)}
 %
-We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{phase diagram}.
+We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{fig:phase diagram}.
 %
 This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
 it is a uniform renormalization of the hopping strength $t$ by interactions.
@@ -245,7 +245,7 @@ The bond ground state expectation value on the other hand is defined as
 t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,  
 \end{eqnarray}
 %
-For $i,j$ being nearest neighbours we find a small ($10^{-?}$ \noteAG{number needed}) asymmetry
+For $i,j$ being nearest neighbours we find a small ($10^{-2}$ \noteAG{number needed}) asymmetry
 between bonds pointing along and around the cylinder axis.
 %
 Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
@@ -253,6 +253,7 @@ Such asymmetry should vanish in a perfect semimetalic phase and indeed it is sev
 This suggests that the explanation for the asymmetry is indeed the cylinder geometry implemented in iDMRG, that artificially differentiates bonds in its two perpendicular directions.
 %
 
+\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
 %
 Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
 %
@@ -278,7 +279,7 @@ We note finally that this state extends beyond
 
 \subsection{Charge density wave (CDW)}
 %
-The second state we identify is the charge density wave state, labelled CDW in the phase diagram of Fig.~\ref{}.
+The second state we identify is the charge density wave state, labelled CDW I in the phase diagram of Fig.~\ref{fig:phase diagram}.
 %
 This state has a two site unit cell that is characterised by a finite order parameter
 %
@@ -312,13 +313,12 @@ Such order, schematically shown in Fig.~\ref{fig:orders}(c), has a six site unit
 attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost
 determined by $V_{1}$.
 %
-Within in exact diagonalization two studies has shown that the CMs state survives quantum fluctuations 
+Within exact diagonalization two studies have shown that the CMs state survives quantum fluctuations 
 but its nature was challenged in Ref.~\onlinecite{daghofer} suggesting that a pinball like state cannot be ruled out.\\
 
 With the iDMRG method (see Fig.~\ref{s}) we find that directly above the semimetallic phase the CMs occurs with the right type of order.
 %
-The calculated charge pattern obtained from \eqref{eq:charge} is shown in Fig.~\ref{} panel, which resembles the expected
-CMs pattern.
+The calculated charge pattern obtained from \eqref{eq:charge} is shown in Fig.~\ref{fig:phase diagram}, panel (a), which resembles the expected CMs pattern.
 %
 The six-site unit cell is depicted as a red hexagon for clarity. 
 %
