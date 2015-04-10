@@ -46,15 +46,16 @@ This is an abstract.
 \section{Introduction}
 %
 Topological phases of matter are remarkably robust states; their responses to external fields are
-governed by topological invariants and thus many of their most important properties are insensitive to local perturbations.
+governed by topological invariants and thus many of their most important properties are insensitive to local perturbations~\cite{HK10,QZ11}.
 %
 Topologically protected responses result in intrinsically novel phenomena that can find no straight forward analogue in trivial states
-of matter, including frationalisation of quantum numbers or transport governed by quantum anomalies.
+of matter, including frationalisation of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}.
 %
-These exotic properties have inspired proposals of diverse prospective applications, ranging from quantum computation to spintronics.
+These exotic properties have inspired proposals of diverse prospective applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008} .
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
-these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them and determine when and how can they emerge.\\
+these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them 
+and determine when and how can they emerge~\cite{HK10,QZ11}.\\
 %
 
 This work addresses the latter problem, in particular the possibility to induce a topological state from a trivial state via strong interactions.
@@ -68,7 +69,7 @@ integer quantum Hall effect; the Hall conductivity contribution of each band is 
 Realising a Chern insulator in nature is not a trivial task; time-reversal must be broken with
 the resulting magnetic flux averaging to zero over the unit cell, and thus over the entire sample.
 %
-In a remarkable proof of principle, a set of mean field studies~\cite{Raghu,Franz,Castro} discussed how the Chern insulator can 
+In a remarkable proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} discussed how the Chern insulator can 
 occur from electron-electron interactions. 
 %
 It was shown that spiness electrons hoping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively, 
@@ -90,12 +91,12 @@ In addition, analogous topological phases have been obtained in other lattices s
  % 
  (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
  %
- Phases (a)-(d) and (g) where found within mean field theory by Refs.~\cite{Raghu,Franz,us}.
+ Phases (a)-(d) and (g) where found within mean field theory by Refs.~\cite{RQHZ08,WF10,GCC13}.
  %
 The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization in periodic boundary conditions
-by Refs.~\cite{us2,Maria} but found in Ref.~\cite{DCH14} for open boundary conditions.
+by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
  %
- The existence of phase (c) was challenged with exact diagonalization by Ref.~\cite{}.
+ The existence of phase (c) was challenged with exact diagonalization by Ref.~\cite{DH14}.
  %
  \label{fig:orders}}
  %
@@ -117,24 +118,24 @@ Being connected to the classical ground state at $V_{1}/t \to \infty$ with only 
 For $V_{2}\gg V_{1}$ on the other hand it was shown~\cite{us} in mean field that the phase space originally attributed to the Haldane Chern insulator 
 was severely reduced by the presence of a sublattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
-The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within \noteAG{Herbuts technique}.
+The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within a variational Monte Carlo approach~\cite{DCH14}.
 %
-However, its existence was questioned by Ref.~\cite{} where it was argued that a pinball liquid state --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
+However, its existence was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
 At intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
 %
-Although numerical evidence consistent with such bond order was found~\ref{us} in exact diagonalization, further insights are needed to corroborate its existence in the thermodynamic limit.
+Although numerical evidence consistent with such bond order was found~\cite{GGNVC13} in exact diagonalization, further insights are needed to corroborate its existence in the thermodynamic limit.
 %
-Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable within mean field, was found however to be absent in exact diagonalization with periodic boundary conditions~\ref{us,dag} and \noteAG{ Daghofers technique} suggesting that quantum fluctuations indeed can destabilize its emergence.
+Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable within mean field, was found however to be absent in exact diagonalization with periodic boundary conditions~\cite{GGNVC13,DH14} and cluster perturbation theory~\cite{DH14} suggesting that quantum fluctuations indeed can destabilize its emergence.
 %
-Nonetheless, this interpretation was challenged by Ref.~\ref{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and  \noteAG{Herbuts technique}.\\
+Nonetheless, this interpretation was challenged by Ref.~\cite{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and variational Monte Carlo.\\
 
 %
 The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
 that includes quantum fluctuations while minimizing finite size effects.
 %
-In this work we therefore revisit the controversies left unsolved by previous studies using the infinite density matrix renormalization group method (iDMRG)~\cite{People}. 
+In this work we therefore revisit the controversies left unsolved by previous studies using the infinite density matrix renormalization group method (iDMRG)~\cite{M08,W92,KZM13}. 
 %
 This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
 what is achievable in exact diagonalization.
