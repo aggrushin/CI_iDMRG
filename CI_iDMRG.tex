@@ -80,9 +80,9 @@ and therefore within the mean field paradigm occurs appeared in the region where
 %
 The latter condition 
 was shown not to be a generic requirement; Chern insulator phases can be realized 
-in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system.
+in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system~\cite{CGV11,GCC13}.
 %
-In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{Franz}.
+In addition, analogous topological phases have been obtained in other lattices such as the square lattice~ \cite{WF10,JGC13}.
 %
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
@@ -111,18 +111,18 @@ The Haldane Chern insulator phase competes with more conventional but also inter
 that can jeopardise its emergence and are depicted schematically in Fig.~\ref{fig:orders}.
 %
 On the one hand, in the $V_{1} \gg V_{2}$ limit, a charge ordered state depicted in Fig.~\ref{fig:orders}(b) is expected, 
-where the A and B sub lattices are populated differently.
+where the A and B sub lattices are populated differently~\cite{RQHZ08} \noteAG{cite Monte Carlo refs}.
 %
 Being connected to the classical ground state at $V_{1}/t \to \infty$ with only one occupied sublattice, this state (CDW-I) has been found to be very robust both in mean field an exact diagonalization.
 %
-For $V_{2}\gg V_{1}$ on the other hand it was shown~\cite{us} in mean field that the phase space originally attributed to the Haldane Chern insulator 
+For $V_{2}\gg V_{1}$ on the other hand it was shown~\cite{GCC13} in mean field that the phase space originally attributed to the Haldane Chern insulator 
 was severely reduced by the presence of a sublattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
-The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization \cite{us} and within a variational Monte Carlo approach~\cite{DCH14}.
+The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14}.
 %
 However, its existence was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
-At intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
+At intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
 %
 Although numerical evidence consistent with such bond order was found~\cite{GGNVC13} in exact diagonalization, further insights are needed to corroborate its existence in the thermodynamic limit.
@@ -161,8 +161,8 @@ This work is organized as follows.
 After describing the method and model in section~\ref{sec:modandmeth} we
 characterise the different phases that we find in section~\ref{sec:phasediagram}.
 %
-The different phase transitions among them are analyzed in section~\ref{sec:phasediagram}
-and we end with a discussion and prospect of our results in section~\ref{sec:discconc}
+The different phase transitions among them are analyzed in section~\ref{sec:phasetransitions}
+and we end with a discussion and prospect of our results in section~\ref{sec:discconc}.
 %
 \begin{figure}
 %
@@ -201,7 +201,9 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 % $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
-we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}. Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
+we use the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13}.
+%
+Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}. 
 
 A generic quantum state on a chain of length $N$ can be written as a matrix product state (MPS) in the following form
 %
@@ -246,6 +248,13 @@ to find the groundstate of the half-filled graphene lattice in the presence of
 $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
+%
+As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases, 
+including two novel charge order phases (CDW-I and CDW-II) together with the previously 
+reported Kekul\'{e}, CMs, CDW and semimetal phases.
+%
+In what follows we describe their corresponding charge and bond ordering patterns.
+%
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
@@ -264,30 +273,25 @@ Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase
  The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}}
 \end{figure*}
 
-%
-As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases and none of them correspond to the Haldane Chern insulator.
-%
-In what follows we describe their corresponding charge and bond ordering patterns and analyse the different phase transitions that occur between them.
-%
+
 
 
 %
 \subsection{Semimetal phase (SM)}
 %
-We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{phase diagram}.
+We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{fig:phase diagram}.
 %
 This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
 it is a uniform renormalization of the hopping strength $t$ by interactions.
 %
-Therefore we identify this state as a single particle gapless phase that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
+Therefore it is a a single particle gapless state that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
 %
-We note that in such low energy picture and within the renormalisation group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace < t$ is expected.
+In such low energy picture and within the renormalisation group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace \leq t$ is expected.
 %
-Short range interactions are irrelevant~\cite{Shankar?} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
+Short range interactions are irrelevant~\cite{S94} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.\\
 %
-Accordingly we find that the semimetal is stable within this region of phase space.
 
-
+%
 Within the iDMRG algorithm we have characterised the semimetal phase in three distinct ways.
 %
 Firstly we compute the charge and bond ground state expectation values.
@@ -404,14 +408,25 @@ Within this approach, the hopping can be introduced as a perturbation $t$ to fin
 The next phase we identify is the Kekul\'{e}
 bond order.
 %
-Like the CMs, it has a six site unit cell depicted schematically in Fig.~\ref{}
-and uniform charge order.
+Like the CMs, it has a six site unit cell depicted schematically in Fig.~\ref{fig:orders}(d)
+with uniform charge order and strong and weak bonds.
 %
 In mean field the state arises close to the $V_{1}\eqsim V_{2}$.
 %
 Although in exact diagonalization hints of this state are also observed,
-the evidence supporting its occurrence is far from conclusive.
+the evidence supporting its occurrence is far from conclusive~\cite{GGNVC13}.
+%
 
+Within iDMRG we find that these state is stable in a smaller but finite region compared to both 
+exact diagnolization and mean field.
+%
+We show a representative of the state's charge and bond order patterns in Fig.~\cite{}(e) and (d) 
+calculated with \eqref{eq:charge} \eqref{eq:bond} respectively.
+%
+The state has indeed two types of bonds (weak and strong) arranged as in Fig.~\ref{fig:orders}(d) 
+and no charge order.
+%
+Compared to mean field, this state occurs
 
 
 \subsection{Charge density wave - II}
