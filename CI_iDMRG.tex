@@ -34,7 +34,21 @@
 %
 \begin{abstract}
 %
-This is an abstract.
+%
+The emergence of the Haldane Chern insulator state due to strong short range electron-electron interactions in the half-filled spineless honeycomb lattice
+model has been proposed and challenged with different methods since its proposal.
+%
+In this work we revisit the problem using the infinite density matrix renormalisation group method to go beyond existing mean field theory and exact
+diagonalization studies that remain inconclusive so far.
+%
+We report numerical evidence supporting 
+i) the absence of the Chern insulator state, 
+ii) two previously unnoticed charge ordered phases, 
+iii) the existence and stability of all the non-topological competing orders that were found previously within mean field.
+iv) the first or second order character of the relevant phase transitions.
+%
+Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
+towards the absence of Chern insulator phase for this model.
 %
 \noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
 %
@@ -49,7 +63,7 @@ Topological phases of matter are remarkably robust states; their responses to ex
 governed by topological invariants and thus many of their most important properties are insensitive to local perturbations~\cite{HK10,QZ11}.
 %
 Topologically protected responses result in intrinsically novel phenomena
-including frationalisation of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
+including frationalization of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
 and can lead to diverse applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
@@ -82,7 +96,7 @@ The latter condition
 was shown not to be a generic requirement; Chern insulator phases can be realized 
 in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system~\cite{CGV11,GCC13}.
 %
-In addition, analogous topological phases have been obtained in other lattices such as the square lattice~ \cite{WF10,JGC13}.
+In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{WF10,JGC13}.
 %
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
@@ -96,7 +110,7 @@ In addition, analogous topological phases have been obtained in other lattices s
 The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization in periodic boundary conditions
 by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
  %
- The existence of phase (c) was challenged with exact diagonalization by Ref.~\cite{DH14}.
+ The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
  %
  \label{fig:orders}}
  %
@@ -582,8 +596,6 @@ phase transition between these two phases.
 
 
 
-
-
 % 
 
 
@@ -593,19 +605,49 @@ phase transition between these two phases.
 \section{\label{sec:discconc}Discussion and Conclusions}
 %
 
+The spontaneous emergence of the Chern insulator phase due to interactions in the half-filled spineless honeycomb lattice
+model has been proposed and challenged with different methods since its proposal~\cite{RQHZ08,WF10,GCC13,GGNVC13,DH14,DCH14}.
+%
+In this work we have gone beyond mean field and exact diagnoalization by using the iDMRG method that allows for quantum fluctuations
+to play a role but minimising the finite size effects due its intrinsic infinite cylinder geometry.\\
+
+One of our main results is the absence of the Haldane Chern insulator state in this model.
+%
+It seems therefore that quantum fluctuations indeed jeopardize its emergence and work against
+the naive mean field expectations.
+%
+Although there is no reason to believe that the situation is different for the $\pi-$flux model, that also hosts a
+mean field Chern insulating phase that is absent in exact diagonalization~\cite{WF10,JGC13}, 
+there is more hope for other frustrated models.
+%
+In particular, the interacting Kagome lattice hosts a Chern insulator state when the filling is tuned to
+the quadratic band point touching between the flat band and one of the two dispersive bands.
+%
+Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} and thus not finding this state 
+can only be attributed to an artefact of the method.\\
+
+In this work we have theoretically predicted two novel competing phases, the CDW-II and CDW-III.
+%
+These states are topologically trivial charge ordered states that have a twelve site unit cell.
+%
+The latter fact results in them being more elusive for exact diagonalization and mean field studies to identify them
+and explains why they have not been reported before.
+%
+The CDW-II in particular can be understood...
+
+We have understood the CMs phase state as occurring from perturbation theory
+%
 
 
-No CI phase\\
+
+
+\noteAG{We might want to comment what determines if $S$ or $\xi$ gives better signatures of phase transitions. \\}
 %
-Two new phases not seen before\\
 %
-What determines if $S$ or $\xi$ gives better signatures of phase transitions. \\
-%
-Expect the same to happen in square lattice.
 
 \section{Acknowledgements}
 
-We thank A. Läuchli for discussions and sharing results prior to publication.
+We thank A. Lauchli for discussions and sharing results prior to publication.
 
 \bibliography{CI_iDMRG.bib}
 
