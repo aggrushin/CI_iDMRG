@@ -56,6 +56,7 @@ These exotic properties have inspired proposals of diverse prospective applicati
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
 these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them 
 and determine when and how can they emerge~\cite{HK10,QZ11}.\\
+\noteAG{Shorten, add other refs}
 %
 
 This work addresses the latter problem, in particular the possibility to induce a topological state from a trivial state via strong interactions.
@@ -203,9 +204,9 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
 we use the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13}.
 %
-Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}. 
+Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}\noteAG{maybe we want to move this to the intro and be more specific with examples}. 
 
-A generic quantum state on a chain of length $N$ can be written as a matrix product state (MPS) in the following form
+A generic quantum state on a chain of length $N$~\noteAG{What chain? feels a bit of a jump in the explanation} can be written as a matrix product state (MPS) in the following form
 %
 \begin{equation}
 %
@@ -213,7 +214,8 @@ A generic quantum state on a chain of length $N$ can be written as a matrix prod
  %
 \end{equation}
 %
-where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions. 
+where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions
+\noteAG{Here we define bond dimensions but then we refer to a single bond dimension. Maybe we need to clarify this a bit}. 
 %
 On an infinite chain, the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. 
 %
@@ -222,9 +224,14 @@ However, if the chain is translationally invariant, the matrices repeat themselv
 Hence, specifying the set of matrices in one unit cell already completely represents the state. 
 %
 For an arbitrary state on an infinite chain, the bond dimensions are generically also infinite. 
+\noteAG{the last three sentences try to explain something that either needs more space to be explained for it to be clear
+or not be mentioned at all and referred to an iDMRG paper like Jonas's, Frank's and Jens's for details}
 %
-Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}
+Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}\noteAG{Can we try to explain briefly why this is so?}
 
+\noteAG{I think this next paragraph can benefit from a topic sentence, i.e. a sentence that kind of summaries the paragraph before going into details.
+Also, we might want to reconsider how we say things. I would say first that we can do any size from L=6 to L=12, then say that some of them allow for K and K', then that we use 
+L=6,12. In other words, explaining from the more general things to the more particular choice we compute, right now is the opposite.}
 We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. 
 %
 This size secures that all the possible orders that occur in the range of our study are commensurate with the iMPS unit cell. 
