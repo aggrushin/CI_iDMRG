@@ -48,10 +48,9 @@ This is an abstract.
 Topological phases of matter are remarkably robust states; their responses to external fields are
 governed by topological invariants and thus many of their most important properties are insensitive to local perturbations~\cite{HK10,QZ11}.
 %
-Topologically protected responses result in intrinsically novel phenomena that can find no straight forward analogue in trivial states
-of matter, including frationalisation of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}.
-%
-These exotic properties have inspired proposals of diverse prospective applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008} .
+Topologically protected responses result in intrinsically novel phenomena
+including frationalisation of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
+and can lead to diverse applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
 these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them 
@@ -73,11 +72,11 @@ the resulting magnetic flux averaging to zero over the unit cell, and thus over 
 In a remarkable proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} discussed how the Chern insulator can 
 occur from electron-electron interactions. 
 %
-It was shown that spiness electrons hoping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively, 
+It was shown that spinless electrons hoping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively, 
 displayed a Chern insulator phase as described by Haldane.
 %
 This particular realization of the Chern insulator phase has complex nearest neighbour hopings [see Fig.~\ref{fig:orders}(g)]
-and therefore within the mean field paradigm occurs appeared in the region where $V_{2}>V_{1}$.
+and therefore within the mean field paradigm occurs in the region where $V_{2}>V_{1}$.
 %
 The latter condition 
 was shown not to be a generic requirement; Chern insulator phases can be realized 
@@ -112,21 +111,21 @@ The Haldane Chern insulator phase competes with more conventional but also inter
 that can jeopardise its emergence and are depicted schematically in Fig.~\ref{fig:orders}.
 %
 On the one hand, in the $V_{1} \gg V_{2}$ limit, a charge ordered state depicted in Fig.~\ref{fig:orders}(b) is expected, 
-where the A and B sub lattices are populated differently~\cite{RQHZ08} \noteAG{cite Monte Carlo refs}.
+where the A and B sub lattices are populated differently~\cite{RQHZ08,WCT14} \noteAG{cite Monte Carlo refs}.
 %
 Being connected to the classical ground state at $V_{1}/t \to \infty$ with only one occupied sublattice, this state (CDW-I) has been found to be very robust both in mean field an exact diagonalization.
 %
-For $V_{2}\gg V_{1}$ on the other hand it was shown~\cite{GCC13} in mean field that the phase space originally attributed to the Haldane Chern insulator 
+For $V_{2}\gg V_{1}$ on the other hand it was shown under the mean field paradigm~\cite{GCC13} that the phase space originally attributed to the Haldane Chern insulator 
 was severely reduced by the presence of a sublattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
 The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14}.
 %
-However, its existence was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
+However, its exact nature was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
-At intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
+In addition, at intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
 %
-Although numerical evidence consistent with such bond order was found~\cite{GGNVC13} in exact diagonalization, further insights are needed to corroborate its existence in the thermodynamic limit.
+Although numerical evidence consistent with such bond order was found in exact diagonalization~\cite{GGNVC13}, further insights are needed to corroborate its existence in the thermodynamic limit.
 %
 Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable within mean field, was found however to be absent in exact diagonalization with periodic boundary conditions~\cite{GGNVC13,DH14} and cluster perturbation theory~\cite{DH14} suggesting that quantum fluctuations indeed can destabilize its emergence.
 %
@@ -141,23 +140,23 @@ In this work we therefore revisit the controversies left unsolved by previous st
 This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
 what is achievable in exact diagonalization.
 %
-We have mapped a $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for such an infinite cylinder geometry and our main findings are as follows.
+We have mapped a $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for the half-filled honeycomb lattice in such an infinite cylinder geometry and our main findings are as follows.
 %
 First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
 %
 Second, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
 of these to occur.
 %
-Third, we provide numerical support for the existence and stability of the all the competing orders found previously within mean field.
+Third, we provide numerical support for the existence and stability of all the competing orders that were found previously within mean field.
 %
-In particular we characterise the more controversial CMs state and Kekul\'{e} states by computing bond and charge expectation values via the iDMRG method 
-and present argue that the existence of the former can be explained from the semiclassical large interaction limit.
+In particular we characterise the two more controversial states, the CMs and Kekul\'{e} states, by computing bond and charge expectation values via the iDMRG method 
+and present further arguments of the existence of the former from the semiclassical large interaction limit.
 %
 Fourth, we determine the first or second order character of the relevant phase transitions.
 %
 Concretely we address this issue by identifying the features that the correlation length $\xi$ and the entanglement entropy $S$ present as a function of $\left\lbrace V_{1},V_{2}\right\rbrace$.\\
 
-This work is organized as follows. 
+This work is structured as follows. 
 %
 After describing the method and model in section~\ref{sec:modandmeth} we
 characterise the different phases that we find in section~\ref{sec:phasediagram}.
@@ -178,7 +177,7 @@ and we end with a discussion and prospect of our results in section~\ref{sec:dis
 \section{\label{sec:modandmeth}Model and Method}
 %
 We investigate a system of spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
-$\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
+$\left\lbrace V_{1},V_{2}\right\rbrace$ respectively [see Fig.~\ref{fig:Defs}]. 
 %
 The Hamiltonian for this system can be written as
  %
@@ -251,7 +250,7 @@ This means that from the feasible system sizes only $L=6$ and $12$ are well suit
 \section{\label{sec:phasediagram}Phase diagram}
 %
 We have used the iDMRG method presented in the previous section
-to find the groundstate of the half-filled graphene lattice in the presence of 
+to find the groundstate of the half-filled honeycomb lattice in the presence of 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
@@ -260,7 +259,8 @@ As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different p
 including two novel charge order phases (CDW-II and CDW-III) together with the previously 
 reported Kekul\'{e}, CMs, CDW-I and semimetal phases.
 %
-In what follows we describe their corresponding charge and bond ordering patterns.
+We describe next their corresponding charge and bond ordering patterns and how these
+are characterised within the iDMRG method.
 %
 
 \begin{figure*}
@@ -273,11 +273,12 @@ In what follows we describe their corresponding charge and bond ordering pattern
  %
  The unit cells are depicted by the red polygons. 
  %
- (a) Charge modulated (CMs) phase with $V_1 = 0.8, V_2 = 3.2 $, (b) Charge density wave II (CDW II) with $V_1 = 5.6, V_2 = 3.2$,  (c) Charge density wave III (CDW III) with $V_1 = 9.2, V_2 = 2.5$, (d) Charge density wave I (CDW I) with $V_1 = 4.0, V_2 = 0.4 $. 
+ (a) Charge modulated (CMs) phase with $V_1/t = 0.8, V_2/t = 3.2 $, (b) Charge density wave II (CDW II) with $V_1/t = 5.6, V_2/t = 3.2$,  (c) Charge density wave III (CDW III) with $V_1/t = 9.2, V_2/t = 2.5$, (d) Charge density wave I (CDW I) with $V_1/t = 4.0, V_2/t = 0.4 $. 
  %
- Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase. 
+ Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase \noteAG{Values of the interaction strengths?}. 
  %
- The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}}
+ The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}
+ \noteAG{The axes of the figure should be $V_{1,2}/t$}}
 \end{figure*}
 
 
@@ -293,13 +294,13 @@ it is a uniform renormalization of the hopping strength $t$ by interactions.
 %
 Therefore it is a a single particle gapless state that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
 %
-In such low energy picture and within the renormalisation group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace \leq t$ is expected.
+In such low energy picture and within the renormalisation group approach, the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace \lesssim t$ is expected.
 %
 Short range interactions are irrelevant~\cite{S94} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.\\
 %
 
 %
-Within the iDMRG algorithm we have characterised the semimetal phase in three distinct ways.
+Within the iDMRG algorithm we have characterised the semimetal phase in two distinct ways.
 %
 Firstly we compute the charge and bond ground state expectation values.
 %
@@ -319,7 +320,7 @@ The bond ground state expectation value on the other hand is defined as
 %
 \begin{eqnarray}
 \label{eq:bond}
-t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,  
+t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle.
 \end{eqnarray}
 %
 For $i,j$ being nearest neighbours we find a small ($10^{-?}$ \noteAG{number needed}) asymmetry
@@ -327,31 +328,36 @@ between bonds pointing along and around the cylinder axis.
 %
 Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
-This suggests that the explanation for the asymmetry is indeed the cylinder geometry implemented in iDMRG, that artificially differentiates bonds in its two perpendicular directions.
+This suggests that the cylinder geometry implemented in iDMRG artificially differentiates bonds in its two perpendicular directions,
+since it vanishes as $\chi$ is reduced, and is not a physical effect.
 %
+The uniform bond and charge distribution is consistent with the semimetalic state.
 
 %
-Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
-%
-This leads us to the second approach to characterise the semimetal phase that makes use of the its criticality.
-%
-For a critical phase the entanglement entropy is expected to show a logarithmic growth with the correlation length.
-\noteAG{eqn needed}
-%
-The proportionality constant $c/3$ defines the central charge of the theory $c$. 
-%
-The semimetal has two Dirac cones and therefore it is expected that $c=2$. 
-%
-In the appendix...
-\noteAG{This last paragraph can be removed if we don't need it}
+Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
+entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
+
+%%
+%Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
+%%
+%This leads us to the second approach to characterise the semimetal phase that makes use of the its criticality.
+%%
+%For a critical phase the entanglement entropy is expected to show a logarithmic growth with the correlation length.
+%\noteAG{eqn needed}
+%%
+%The proportionality constant $c/3$ defines the central charge of the theory $c$. 
+%%
+%The semimetal has two Dirac cones and therefore it is expected that $c=2$. 
+%%
+%In the appendix...
+%\noteAG{This last paragraph can be removed if we don't need it}
+
 
 %
-Lastly we find that the low energy structure of the many-body 
-entanglement spectrum of this phase exactly coincides with that of the parent non-interacting critical state.\\ 
+We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
+higher interaction strengths.
 %
-
-%
-We note finally that this state extends beyond 
+We leave the discussion regarding this difference for the discussion in section \ref{sec:discconc}.
 
 \subsection{Charge density wave (CDW-I)}
 %
@@ -362,19 +368,24 @@ This state has a two site unit cell that is characterised by a finite order para
 \begin{equation}
 \label{eq:CDW}
 %
-M=\left\langle n_{A} \right\rangle-\left\langle n_{B}\right\rangle
+M=\left\langle n_{A} \right\rangle-\left\langle n_{B}\right\rangle,
 %
 \end{equation}
 %
 where $n_{A}$ and $n_{B}$ are the density of electrons in the $A$ and $B$ sublattice sites of the two site unit cell respectively.
 %
-We find that the magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
+We show a representative charge pattern of this phase Fig.~\ref{fig:phase diagram}(d) for $V_{1}/t = 4$ and $V_{2}/t = 0.4$ 
+calculated numerically using \eqref{eq:charge}.
+%
+As evident from this figure there is an appreciable sublattice charge imbalance, i.e. $M\neq 0$, that we observe throughout this phase.
+%
+The magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
 %
 
 For large $V_{1}\gg t$ such a state is a natural instability since the energy is minimised by a charge imbalance between the two sub lattices.
 %
-Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCCdJVV13}, exact diagnoalization~\cite{GGNVC13,DH14,DCH14}, and quantum Monte Carlo simulations
-\cite{WCT14}.
+Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCC13}, exact diagonalization~\cite{GGNVC13,DH14,DCH14}, 
+and quantum Monte Carlo simulations~\cite{WCT14}.
 %
 
 
@@ -383,23 +394,22 @@ Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCCdJV
 For large $V_{2}\ll t$ the ground state is classically degenerate. 
 %
 Within mean field it was shown that as long $V_{2}>V_{1}$
-the system chose a charge ordered pattern with charge modulation over different sub lattices and termed CMs phase~\cite{CMs}.
+the system chose a charge ordered pattern with charge modulation over different sub lattices, termed the CMs phase~\cite{GCC13}.
 %
 Such order, schematically shown in Fig.~\ref{fig:orders}(c), has a six site unit cell, and minimises the large cost
 attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost
 determined by $V_{1}$.
 %
-Within in exact diagonalization two studies has shown that the CMs state survives quantum fluctuations 
-but its nature was challenged in Ref.~\onlinecite{daghofer} suggesting that a pinball like state cannot be ruled out.\\
+Within exact diagonalization it has been argued that the CMs state survives quantum fluctuations~\cite{GGNVC13,DH14,DCH14} 
+but its nature was challenged in Ref.~\onlinecite{DH14} suggesting that a pinball like state~\cite{HF06,MRF13} cannot be ruled out.\\
 
-With the iDMRG method (see Fig.~\ref{s}) we find that directly above the semimetallic phase the CMs occurs with the right type of order.
+With the iDMRG method we find that directly above the semimetallic phase the CMs occurs [see Fig.~\ref{fig:phase diagram}] .
 %
-The calculated charge pattern obtained from \eqref{eq:charge} is shown in Fig.~\ref{} panel, which resembles the expected
-CMs pattern.
+A sample of the six site unit cell charge pattern for obtained from \eqref{eq:charge} for $V_1/t = 0.8, V_2/t = 3.2 $ is shown in Fig.~\ref{fig:phase diagram}(a).
 %
-The six-site unit cell is depicted as a red hexagon for clarity. 
+We find that this pattern, with the bond ordering associated to the charge order survives in the region labelled CMs of the phase diagram.
 %
-Such a state also presents bond ordering associated to the charge patterns.
+Such a state coincides with that obtained within mean field theory~\cite{GCC13} depicted schematically in Fig.~\ref{fig:orders}(c).
 
 % 
 Moreover, we now show that the CMs state is expected from a semi-classical analysis as well.
@@ -407,7 +417,7 @@ Moreover, we now show that the CMs state is expected from a semi-classical analy
 For instance, for a given cluster, it is possible to find the number and energy of all the degenerate classical states, assuming $V_{2}\gg t$.
 %
 Within this approach, the hopping can be introduced as a perturbation $t$ to find how the degeneracy is lifted.
-\noteAG{Maybe Fernando can rewrite this part better...} \noteFdJ{Test comment}
+\noteAG{Maybe Fernando can rewrite these two paragraphs better. We may want to be more specific about order parameters etc.} 
 
 
 \subsection{Kekul\'{e} bond order}
@@ -418,21 +428,23 @@ bond order.
 Like the CMs, it has a six site unit cell depicted schematically in Fig.~\ref{fig:orders}(d)
 with uniform charge order and strong and weak bonds.
 %
-In mean field the state arises between the CMs and the CDW-I state.
+Under the mean field approximation the state arises between the CMs and the CDW-I state.
 %
 Although in exact diagonalization hints of this state are also observed,
-the evidence supporting its occurrence is far from conclusive~\cite{GGNVC13}.
+the evidence supporting its occurrence is far from conclusive~\cite{GGNVC13} since
+its tripled unit cell turns the analysis of larger clusters problematic.
 %
 
 Within iDMRG we find that these state is stable in a smaller but finite region compared to both 
-exact diagnolization and mean field.
+exact diagonalization and mean field.
 %
-We show the state's numerically obtained charge and bond order patterns in Fig.~\cite{fig:phase diagram}(e) and (d) 
+We show the state's numerically obtained charge and bond order patterns in Fig.~\ref{fig:phase diagram}(e) and (d) 
 calculated with \eqref{eq:charge} \eqref{eq:bond} respectively.
 %
 The state has indeed two types of bonds (weak and strong) arranged as in Fig.~\ref{fig:orders}(d) 
 and no charge order.
 %
+For instance for $V_{1}/t=$ and $V_{2}/t=$
 
 
 
