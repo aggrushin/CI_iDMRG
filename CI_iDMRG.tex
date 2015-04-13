@@ -205,6 +205,7 @@ we use the infinite density matrix renormalization group algorithm (iDMRG) \cite
 %
 Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}\noteAG{maybe we want to move this to the intro and be more specific with examples}. 
 
+
 A generic quantum state on a chain of length $N$~\noteAG{What chain? feels a bit of a jump in the explanation} can be written as a matrix product state (MPS) in the following form
 %
 \begin{equation}
@@ -323,16 +324,17 @@ The bond ground state expectation value on the other hand is defined as
 t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle.
 \end{eqnarray}
 %
-For $i,j$ being nearest neighbours we find a small ($10^{-?}$ \noteAG{number needed}) asymmetry
+For $i,j$ being nearest neighbours we find a small ($10^{-2}$ \noteAG{number needed}) asymmetry
 between bonds pointing along and around the cylinder axis.
 %
-Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
+Such asymmetry should vanish in a perfect semimetallic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
 This suggests that the cylinder geometry implemented in iDMRG artificially differentiates bonds in its two perpendicular directions,
 since it vanishes as $\chi$ is reduced, and is not a physical effect.
 %
 The uniform bond and charge distribution is consistent with the semimetalic state.
 
+\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
 %
 Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
 entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
@@ -402,7 +404,7 @@ determined by $V_{1}$.
 %
 Within exact diagonalization it has been argued that the CMs state survives quantum fluctuations~\cite{GGNVC13,DH14,DCH14} 
 but its nature was challenged in Ref.~\onlinecite{DH14} suggesting that a pinball like state~\cite{HF06,MRF13} cannot be ruled out.\\
-
+%
 With the iDMRG method we find that directly above the semimetallic phase the CMs occurs [see Fig.~\ref{fig:phase diagram}] .
 %
 A sample of the six site unit cell charge pattern for obtained from \eqref{eq:charge} for $V_1/t = 0.8, V_2/t = 3.2 $ is shown in Fig.~\ref{fig:phase diagram}(a).
