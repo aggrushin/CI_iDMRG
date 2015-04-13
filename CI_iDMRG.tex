@@ -541,7 +541,8 @@ With iDMRG it is however not possible to pin point the exact value of $V_{1}$
 where the transition happens via finite size scaling due to the few cylinder sizes 
 we have available, as discussed in section \ref{sec:modandmeth}.
 %
-However, from Fig.~\ref{} it is however possible to define a crossover region $1.4 \leq V_{1}\geq 2$,
+However, from Fig.~\ref{} it is however possible to define a crossover region $1.4 \lesssim V_{1}\lesssim 2$, 
+\noteAG{this region ideally should coincide with color coding in the figure}
 consistent with the quantum Monte Carlo data, where the transition occurs.
 
 \subsection{Cut B: SM--CMs}
@@ -614,8 +615,11 @@ phase transition between these two phases.
 The spontaneous emergence of the Chern insulator phase due to interactions in the half-filled spineless honeycomb lattice
 model has been questioned by different methods since its proposal~\cite{RQHZ08,WF10,GCC13,GGNVC13,DH14,DCH14}.
 %
-In this work we have gone beyond mean field and exact diagnoalization by using the iDMRG method that allows for quantum fluctuations
-to play a role but minimising the finite size effects due its intrinsic infinite cylinder geometry.\\
+In this work we have gone beyond mean field and exact diagonalization by using the iDMRG, a method that allows for quantum fluctuations
+to play a role but minimises the finite size effects due its intrinsic infinite cylinder geometry.
+%
+We note that all disputed phases are gapped and therefore ideal for iDMRG to asses since correlation lengths and
+entanglement decay rapidly in gapped phases.\\
 
 One of our main results is the absence of the Haldane Chern insulator state in this model.
 %
@@ -629,30 +633,42 @@ there is more hope for other frustrated models.
 In particular, the interacting Kagome lattice hosts a Chern insulator state when the filling is tuned to
 the quadratic band point touching between the flat band and one of the two dispersive bands.
 %
-Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} and thus not finding this state 
-can only be attributed to an artefact of the method.\\
-
-In this work we have theoretically predicted two novel competing phases, the CDW-II and CDW-III.
+Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which should guarantee
+its robustness at sufficiently low interaction strength.\\
+%
+In addition we have theoretically predicted two novel competing phases, the CDW-II and CDW-III.
 %
 These states are topologically trivial charge ordered states that have a twelve site unit cell.
 %
-The latter fact results in them being more elusive for exact diagonalization and mean field studies to identify them
-and explains why they have not been reported before.
+Such a large unit cell turns their identification within exact diagonalization or mean field studies 
+challenging and highlights the advantages of the iDMRG method.
 %
 The CDW-II in particular can be understood from...
 
-Importantly we have also understood the CMs phase state as occurring from first
-order perturbation theory of an otherwise classically degenerate ground state.
+From the evidence presented in this work we can now understand the CMs phase state as occurring from first
+order perturbation theory in powers of $t/V_{2}$ of an otherwise classically degenerate ground state.
 %
 This part of our work establishes the existence and robustness 
-of this order beyond any numerical result.
+of this single particle charge order, beyond numerical approximations.
+%
+Our semiclassical analysis, corroborated by the iDMRG numerical evidence presented here,
+provides an explanation of why this phase has a many-body gap of the order of the hopping strength $t/V_{2}$ 
+rather than determined by $V_{2}$ as was noticed previously~\cite{GCC13,DH14,DCH14}.
 %
 
+Finally, we have used an important advantage offered by the iDMRG method to analyse 
+phase transitions using several distinct quantities, in particular the entanglement entropy $S$ and $\xi$.
+%
+Importantly we have provided evidence that suggests that the semimetal to CMs phase transition is of a direct character, consistent with
+the absence of the Haldane Chern insulator phase.\\
+%
 
-
-
-
-\noteAG{We might want to comment what determines if $S$ or $\xi$ gives better signatures of phase transitions. \\}
+To conclude we have established the phase diagram of spinless electrons hoping on the half-filled honey comb lattice
+with nearest and next to nearest hopping interactions.
+%
+Our results provide solid evidence that Chern insulating phases are far more elusive than previously thought and
+so alternative routes are necessary to drive these kind of topological states from strong electronic correlations in general.
+\noteAG{We might want to comment what determines if $S$ or $\xi$ gives better signatures of phase transitions.}
 %
 %
 
