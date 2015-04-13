@@ -128,7 +128,7 @@ Although numerical evidence consistent with such bond order was found~\ref{us} i
 %
 Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable within mean field, was found however to be absent in exact diagonalization with periodic boundary conditions~\ref{us,dag} and \noteAG{ Daghofers technique} suggesting that quantum fluctuations indeed can destabilize its emergence.
 %
-Nonetheless, this interpretation was challenged by Ref.~\ref{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and  \noteAG{Herbuts technique}.\\
+Nonetheless, this interpretation was challenged by Ref.~\ref{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and entangled-plaquette-state ansatz.\\
 
 %
 The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
@@ -175,7 +175,7 @@ and we end with a discussion and prospect of our results in section~\ref{sec:dis
 
 \section{\label{sec:modandmeth}Model and Method}
 %
-We investigate a system of spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
+We investigate a system of spinless electrons hopping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively. 
 %
 The Hamiltonian for this system can be written as
@@ -200,7 +200,9 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 % $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
-we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}. Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
+we use the infinite density matrix renormalzation group algorithm (iDMRG) \cite{M08,W92,KZM13}.
+%
+Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite \cite{papers}. 
 
 A generic quantum state on a chain of length $N$ can be written as a matrix product state (MPS) in the following form
 %
@@ -280,7 +282,7 @@ it is a uniform renormalization of the hopping strength $t$ by interactions.
 %
 Therefore we identify this state as a single particle gapless phase that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
 %
-We note that in such low energy picture and within the renormalisation group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace < t$ is expected.
+We note that in such low energy picture and within the renormalization group approach the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace < t$ is expected.
 %
 Short range interactions are irrelevant~\cite{Shankar?} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
 %
@@ -313,7 +315,7 @@ t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle,
 For $i,j$ being nearest neighbours we find a small ($10^{-2}$ \noteAG{number needed}) asymmetry
 between bonds pointing along and around the cylinder axis.
 %
-Such asymmetry should vanish in a perfect semimetalic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
+Such asymmetry should vanish in a perfect semimetallic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
 This suggests that the explanation for the asymmetry is indeed the cylinder geometry implemented in iDMRG, that artificially differentiates bonds in its two perpendicular directions.
 %
