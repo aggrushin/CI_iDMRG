@@ -41,22 +41,22 @@
 \begin{abstract}
 %
 %
-The emergence of the Haldane Chern insulator state due to strong short range electron-electron interactions in the half-filled spineless honeycomb lattice
+The emergence of the Haldane Chern insulator state due to strong short range electron-electron interactions in the half-filled spinless honeycomb lattice
 model has been proposed and challenged with different methods.
 %
-In this work we revisit the problem using the infinite density matrix renormalisation group method to go beyond existing mean field theory and exact
-diagonalization studies that remain inconclusive so far.
+In this work we revisit the problem using the infinite density matrix renormalisation group method to go beyond previous mean field theory and exact
+diagonalization studies.
 %
 We report numerical evidence supporting 
 i) the absence of the Chern insulator state, 
 ii) two previously unnoticed charge ordered phases, 
 iii) the existence and stability of all the non-topological competing orders that were found previously within mean field and
-iv) the first or second order character of the relevant phase transitions.
+iv) the character of the relevant phase transitions.
 %
 Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
 towards the absence of Chern insulator phase for this model.
 %
-\noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
+%\noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
 %
 \end{abstract}
 %
@@ -69,24 +69,22 @@ Topological phases of matter are remarkably robust states; their responses to ex
 governed by topological invariants and thus many of their most important properties are insensitive to local perturbations~\cite{HK10,QZ11}.
 %
 Topologically protected responses result in intrinsically novel phenomena
-including frationalization of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
-and can lead to diverse applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
+including fractionalization of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
+and can lead to diverse applications, ranging from fault tolerant quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
 these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them 
-and determine when and how can they emerge~\cite{HK10,QZ11}.\\
-\noteAG{Shorten, add other refs}
+and determine when and how can they emerge~\cite{S14}.\\
 %
 
-This work addresses the latter problem, in particular the possibility to induce a topological state from a trivial state via strong interactions.
-%
-The concrete question that we consider has so far
-remained controversial: the realisation of the Chern insulator phases triggered by short-range electron-electron interactions in tight binding models.
+This work is embedded in the latter problem and concerns a concrete question that has so far
+remained controversial: the existence of the Chern insulator phase triggered by short-range electron-electron interactions in the
+spinless half-filled honeycomb tight binding model.
 %
 The Chern insulator state, first identified by Haldane~\cite{H88} in the particular case of the honeycomb lattice, is a zero field analogue of the
 integer quantum Hall effect; the Hall conductivity contribution of each band is quantised in integer units of $e^2/h$ and determined by a topological invariant, the Chern number.
 %
-Realising a Chern insulator in nature is not a trivial task; time-reversal must be broken with
+Realising a Chern insulator in nature is not a trivial task~\cite{CZF13}; time-reversal must be broken with
 the resulting magnetic flux averaging to zero over the unit cell, and thus over the entire sample.
 %
 In a remarkable proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} discussed how the Chern insulator can 
@@ -105,23 +103,21 @@ in mean field with only $V_{1}$ at the expense of enlarging the unit cell and do
 In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{WF10,JGC13}.
 %
 \begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
- %
- \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
- % 
- (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
- %
- Phases (a)-(d) and (g) where found within mean field theory by Refs.~\cite{RQHZ08,WF10,GCC13}.
- %
-The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization in periodic boundary conditions
-by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
- %
- The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
- %
- \label{fig:orders}}
- %
-\end{figure}
 %
+ \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
+ %
+ \caption{The upper panel shows a schematic representation of the interacting tight binding model considered in this work:
+ %
+fermions hoping in a half-filled honeycomb lattice with nearest-neighbour hopping $t$ (full lines) and interacting via
+ nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively (dashed lines) as defined by 
+ \eqref{eq:H}.
+ %
+ The left panel shows the iDMRG unit cell used in this work with 
+ $3 \times 6$ unit cells yielding a cylinder with a circumference of $L=12$ sites depicted in the lower panel. 
+ %
+ }
+\end{figure}
+%% 
 \\
 
 The important question that still remains to be answered is wether the interaction induced Chern state survives 
@@ -185,14 +181,23 @@ The different phase transitions among them are analyzed in section~\ref{sec:phas
 and we end with a discussion and prospect of our results in section~\ref{sec:discconc}.
 %
 \begin{figure}
-%
- \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
+ \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
  %
- \caption{Unit cell used in the iDMRG calculations. It consists of $3 \times 6$ lattice unit cells which yields a cylinder with a circumference of 12 sites. 
+ \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
+ % 
+ (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
  %
- The hoppings and and interactions of Hamiltonian \eqref{eq:H} are shown in the gray inset.  \label{fig:Defs}}
+ Phases (a)-(d) and (g) were found within mean field theory by Refs.~\cite{RQHZ08,WF10,GCC13}.
+ %
+The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization with periodic boundary conditions
+by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
+ %
+ The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
+ %
+ \label{fig:orders}}
+ %
 \end{figure}
-%% 
+%
 
 \section{\label{sec:modandmeth}Model and Method}
 %
