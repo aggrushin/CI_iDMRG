@@ -27,16 +27,36 @@
 %
 \title{Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study}
 %
-\author{Good people}
-\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+%\author{Johannes Motruk}
+%\author{Adolfo. G. Grushin}
+%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+%\author{Fernando de Juan}
+%\affiliation{\mbox{Materials Science Division, Lawrence Berkeley National Laboratories, Berkeley, CA 94720, USA}}
+%\affiliation{\mbox{Department of Physics, University of California, Berkeley, CA 94720, USA}}
+%\author{Frank Pollmann}
+%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
 %
 \date{\today}
 %
 \begin{abstract}
 %
-This is an abstract.
 %
-\noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
+The emergence of the Haldane Chern insulator state due to strong short range electron-electron interactions in the half-filled spinless honeycomb lattice
+model has been proposed and challenged with different methods.
+%
+In this work we revisit the problem using the infinite density matrix renormalisation group method to go beyond previous mean field theory and exact
+diagonalization studies.
+%
+We report numerical evidence supporting 
+i) the absence of the Chern insulator state, 
+ii) two previously unnoticed charge ordered phases, 
+iii) the existence and stability of all the non-topological competing orders that were found previously within mean field and
+iv) the character of the relevant phase transitions.
+%
+Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
+towards the absence of Chern insulator phase for this model.
+%
+%\noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
 %
 \end{abstract}
 %
@@ -49,24 +69,22 @@ Topological phases of matter are remarkably robust states; their responses to ex
 governed by topological invariants and thus many of their most important properties are insensitive to local perturbations~\cite{HK10,QZ11}.
 %
 Topologically protected responses result in intrinsically novel phenomena
-including frationalisation of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
-and can lead to diverse applications, ranging from quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
+including fractionalization of quantum numbers~\cite{Nayak2008} or transport governed by quantum anomalies~\cite{V03}
+and can lead to diverse applications, ranging from fault tolerant quantum computation to spintronics~\cite{HK10,QZ11,Nayak2008}.
 %
 Added to the remarkable experimental discoveries of new topological phases in both two and three dimensions,
 these ideas have boosted a sustained and voluminous scientific effort in the last decade that attempts to classify them 
-and determine when and how can they emerge~\cite{HK10,QZ11}.\\
-\noteAG{Shorten, add other refs}
+and determine when and how can they emerge~\cite{S14}.\\
 %
 
-This work addresses the latter problem, in particular the possibility to induce a topological state from a trivial state via strong interactions.
-%
-The concrete question that we consider has so far
-remained controversial: the realisation of the Chern insulator phases triggered by short-range electron-electron interactions in tight binding models.
+This work is embedded in the latter problem and concerns a concrete question that has so far
+remained controversial: the existence of the Chern insulator phase triggered by short-range electron-electron interactions in the
+spinless half-filled honeycomb tight binding model.
 %
 The Chern insulator state, first identified by Haldane~\cite{H88} in the particular case of the honeycomb lattice, is a zero field analogue of the
 integer quantum Hall effect; the Hall conductivity contribution of each band is quantised in integer units of $e^2/h$ and determined by a topological invariant, the Chern number.
 %
-Realising a Chern insulator in nature is not a trivial task; time-reversal must be broken with
+Realising a Chern insulator in nature is not a trivial task~\cite{CZF13}; time-reversal must be broken with
 the resulting magnetic flux averaging to zero over the unit cell, and thus over the entire sample.
 %
 In a remarkable proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} discussed how the Chern insulator can 
@@ -82,26 +100,24 @@ The latter condition
 was shown not to be a generic requirement; Chern insulator phases can be realized 
 in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system~\cite{CGV11,GCC13}.
 %
-In addition, analogous topological phases have been obtained in other lattices such as the square lattice~ \cite{WF10,JGC13}.
+In addition, analogous topological phases have been obtained in other lattices such as the square lattice~\cite{WF10,JGC13}.
 %
 \begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
- %
- \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
- % 
- (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
- %
- Phases (a)-(d) and (g) where found within mean field theory by Refs.~\cite{RQHZ08,WF10,GCC13}.
- %
-The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization in periodic boundary conditions
-by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
- %
- The existence of phase (c) was challenged with exact diagonalization by Ref.~\cite{DH14}.
- %
- \label{fig:orders}}
- %
-\end{figure}
 %
+ \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
+ %
+ \caption{The upper panel shows a schematic representation of the interacting tight binding model considered in this work:
+ %
+fermions hoping in a half-filled honeycomb lattice with nearest-neighbour hopping $t$ (full lines) and interacting via
+ nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively (dashed lines) as defined by 
+ \eqref{eq:H}.
+ %
+ The left panel shows the iDMRG unit cell used in this work with 
+ $3 \times 6$ unit cells yielding a cylinder with a circumference of $L=12$ sites depicted in the lower panel. 
+ %
+ }
+\end{figure}
+%% 
 \\
 
 The important question that still remains to be answered is wether the interaction induced Chern state survives 
@@ -122,7 +138,7 @@ The CMs phase was corroborated to survive quantum fluctuations in exact diagonal
 %
 However, its exact nature was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
-In addition, at intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
+In addition, at intermediate $V_{1}\lesssim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
 %
 Although numerical evidence consistent with such bond order was found in exact diagonalization~\cite{GGNVC13}, further insights are needed to corroborate its existence in the thermodynamic limit.
@@ -132,6 +148,25 @@ Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable w
 Nonetheless, this interpretation was challenged by Ref.~\cite{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and variational Monte Carlo.\\
 
 %
+%
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
+ %
+ \caption{Different orders allowed in the half-filled spineless Honeycomb lattice considered in this work:
+ % 
+ (a) Semimetal, (b) CDW I, (c) CMs, (d) Kekul\'e, (e) CDW II, (f) CDW III, (g) Haldane phase. 
+ %
+ Phases (a)-(d) and (g) were found within mean field theory by Refs.~\cite{RQHZ08,WF10,GCC13}.
+ %
+The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization with periodic boundary conditions
+by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
+ %
+ The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
+ %
+ \label{fig:orders}}
+ %
+\end{figure}
+%
 The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
 that includes quantum fluctuations while minimizing finite size effects.
 %
@@ -140,7 +175,26 @@ In this work we therefore revisit the controversies left unsolved by previous st
 This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
 what is achievable in exact diagonalization.
 %
-We have mapped a $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for the half-filled honeycomb lattice in such an infinite cylinder geometry and our main findings are as follows.
+Traditionally a method for finding the ground state of one-dimensional systems, there has been recent 
+important progress and reported success of iDMRG applied to two dimensional systems.
+%
+As long as entanglement remains low and the state has short correlation lengths the ground-state
+can be represented faithfully by a product of matrices, termed matrix product state (MPS), with matrices of a finite and computationally affordable
+dimension $\chi$~\cite{M08,W92,KZM13}.
+%
+This requirement is commonly met by gapped systems and in particular by the orders argued above to be expected instabilities in the half-filled 
+honeycomb lattice of interest here.
+%
+Moreover the iDMRG deals with an infinite system and thus, unlike exact diagonalization, it can probe directly ground states that spontaneously break the original symmetries of the Hamiltonian and the phase transitions among them, while allowing for quantum fluctuations to play a role. 
+%
+Recently the infinite and finite DMRG method were indeed shown to be able to characterise the properties of fractional quantum Hall states~\cite{ZMP13},
+$\mathbb{Z}_{2}$ quantum spin liquid~\cite{HSC14}, chiral spin liquid \cite{HSC14b} and bosonic and fermionic fractional Chern insulating states \cite{JWB12,CV13,ZKB13,GMZ15}.
+\\
+ 
+%
+Motivated by these advantages we have mapped with the iDMRG method the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for the half-filled honeycomb lattice in the infinite cylinder geometry.
+%
+Our main findings are summarised next.
 %
 First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
 %
@@ -152,7 +206,7 @@ Third, we provide numerical support for the existence and stability of all the c
 In particular we characterise the two more controversial states, the CMs and Kekul\'{e} states, by computing bond and charge expectation values via the iDMRG method 
 and present further arguments of the existence of the former from the semiclassical large interaction limit.
 %
-Fourth, we determine the first or second order character of the relevant phase transitions.
+Fourth, we provide numerical evidence to asses the first or second order character of the relevant phase transitions.
 %
 Concretely we address this issue by identifying the features that the correlation length $\xi$ and the entanglement entropy $S$ present as a function of $\left\lbrace V_{1},V_{2}\right\rbrace$.\\
 
@@ -163,16 +217,7 @@ characterise the different phases that we find in section~\ref{sec:phasediagram}
 %
 The different phase transitions among them are analyzed in section~\ref{sec:phasetransitions}
 and we end with a discussion and prospect of our results in section~\ref{sec:discconc}.
-%
-\begin{figure}
-%
- \includegraphics[width=\columnwidth]{pdf/unit_cell.pdf}
- %
- \caption{Unit cell used in the iDMRG calculations. It consists of $3 \times 6$ lattice unit cells which yields a cylinder with a circumference of 12 sites. 
- %
- The hoppings and and interactions of Hamiltonian \eqref{eq:H} are shown in the gray inset.  \label{fig:Defs}}
-\end{figure}
-%% 
+
 
 \section{\label{sec:modandmeth}Model and Method}
 %
@@ -203,8 +248,6 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
 we use the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13}.
 %
-Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}\noteAG{maybe we want to move this to the intro and be more specific with examples}.
-
 
 A generic quantum state on a chain of length $N$~\noteAG{What chain? feels a bit of a jump in the explanation} can be written as a matrix product state (MPS) in the following form
 %
@@ -301,9 +344,8 @@ Short range interactions are irrelevant~\cite{S94} and therefore they can only d
 %
 
 %
-Within the iDMRG algorithm we have characterised the semimetal phase in two distinct ways.
-%
-Firstly we compute the charge and bond ground state expectation values.
+Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
+to characterise each phase.
 %
 On the one hand, at each site the charge expectation value is defined by 
 %
@@ -314,7 +356,8 @@ n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,
 %
 where $s=A,B$ is the sublattice index.
 %
-To numerical accuracy we find that $n_{i,A}=n_{i,B}=1/2$, indicating that this phase is not charge ordered.
+For the semimetal phase, and to numerical accuracy, we find that $n_{i,A}=n_{i,B}=1/2$, 
+indicating that this phase is not charge ordered.
 %
 
 The bond ground state expectation value on the other hand is defined as
@@ -333,12 +376,12 @@ This suggests that the cylinder geometry implemented in iDMRG artificially diffe
 since it vanishes as $\chi$ is reduced, and is not a physical effect.
 %
 The uniform bond and charge distribution is consistent with the semimetalic state.
-
-\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
 %
-Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
-entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
-
+%\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
+%%
+%Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
+%entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
+%
 %%
 %Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
 %%
@@ -353,8 +396,6 @@ entanglement spectrum of this phase, to find that its low energy structure coinc
 %%
 %In the appendix...
 %\noteAG{This last paragraph can be removed if we don't need it}
-
-
 %
 We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
 higher interaction strengths.
@@ -363,7 +404,7 @@ We leave the discussion regarding this difference for the discussion in section 
 
 \subsection{Charge density wave (CDW-I)}
 %
-The second state we identify is a charge density wave state labelled CDW-I in the phase diagram of Fig.~\ref{fig:phase diagram}.
+Upon increasing $V_{1}$ we identify a charge density wave state labelled CDW-I in the phase diagram of Fig.~\ref{fig:phase diagram}.
 %
 This state has a two site unit cell that is characterised by a finite order parameter
 %
@@ -456,12 +497,27 @@ All phases that we have described so far do not differ
 from those predicted by mean field and exact diagonalization.
 %
 At high $V_{2}$ but with sufficiently large $V_{1}$ we observe that
-a twelve site unit cell charge order depicted schematically in 
+a twelve site unit cell charge order (CDW-II) depicted schematically in 
 Fig.~\ref{fig:orders}(e) emerges.
 %
-We show the numerically obtained charge order in 
-Fig.~\cite{fig:phase diagram} (b)
+A sample of its charge and bond order, as obtained with iDMRG via \eqref{eq:charge} and \eqref{eq:bond} is
+shown in Fig.~\ref{fig:phase diagram} (b) for $V_{1}/t=$ and $V_{2}/t=$.
+\\
 %
+
+A similar analysis to the one discussed for the CMs phase reveals that
+the CDW-II is a classical strong coupling phase that occurs for $t/V_{1,2}=0$.
+%
+Therefore, if the cluster does not frustrate its ordering the state 
+must be present at sufficiently high $V_{1,2}$.
+%
+However it is interesting to note that the CMs classical ground state as obtained
+by $t/V_{2}$ perturbation theory has lower energy than the CDW-II.
+%
+Therefore, the CDW-II can only be the thermodynamic limit
+
+
+
 
 
 \subsection{Charge density wave - III (CDW-III)}
@@ -521,7 +577,8 @@ With iDMRG it is however not possible to pin point the exact value of $V_{1}$
 where the transition happens via finite size scaling due to the few cylinder sizes 
 we have available, as discussed in section \ref{sec:modandmeth}.
 %
-However, from Fig.~\ref{} it is however possible to define a crossover region $1.4 \leq V_{1}\geq 2$,
+However, from Fig.~\ref{} it is however possible to define a crossover region $1.4 \lesssim V_{1}\lesssim 2$, 
+\noteAG{this region ideally should coincide with color coding in the figure}
 consistent with the quantum Monte Carlo data, where the transition occurs.
 
 \subsection{Cut B: SM--CMs}
@@ -593,19 +650,69 @@ phase transition between these two phases.
 \section{\label{sec:discconc}Discussion and Conclusions}
 %
 
+The spontaneous emergence of the Chern insulator phase due to interactions in the half-filled spineless honeycomb lattice
+model has been questioned by different methods since its proposal~\cite{RQHZ08,WF10,GCC13,GGNVC13,DH14,DCH14}.
+%
+In this work we have gone beyond mean field and exact diagonalization by using the iDMRG, a method that allows for quantum fluctuations
+to play a role but minimises the finite size effects due its intrinsic infinite cylinder geometry.
+%
+We note that all disputed phases are gapped and therefore ideal for iDMRG to asses since correlation lengths and
+entanglement decay rapidly in gapped phases.\\
 
+One of our main results is the absence of the Haldane Chern insulator state in this model.
+%
+It seems therefore that quantum fluctuations indeed jeopardize its emergence and work against
+the naive mean field expectations.
+%
+Although there is no reason to believe that the situation is different for the $\pi-$flux model, that also hosts a
+mean field Chern insulating phase that is absent in exact diagonalization~\cite{WF10,JGC13}, 
+there is more hope for other frustrated models.
+%
+In particular, the interacting Kagome lattice hosts a Chern insulator state when the filling is tuned to
+the quadratic band point touching between the flat band and one of the two dispersive bands.
+%
+Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which should guarantee
+its robustness at sufficiently low interaction strength.\\
+%
+In addition we have theoretically predicted two novel competing phases, the CDW-II and CDW-III.
+%
+These states are topologically trivial charge ordered states that have a twelve site unit cell.
+%
+Such a large unit cell turns their identification within exact diagonalization or mean field studies 
+challenging and highlights the advantages of the iDMRG method.
+%
+The CDW-II in particular can be understood from...
 
-No CI phase\\
+From the evidence presented in this work we can now understand the CMs phase state as occurring from first
+order perturbation theory in powers of $t/V_{2}$ of an otherwise classically degenerate ground state.
 %
-Two new phases not seen before\\
+This part of our work establishes the existence and robustness 
+of this single particle charge order, beyond numerical approximations.
 %
-What determines if $S$ or $\xi$ gives better signatures of phase transitions. \\
+Our semiclassical analysis, corroborated by the iDMRG numerical evidence presented here,
+provides an explanation of why this phase has a many-body gap of the order of the hopping strength $t/V_{2}$ 
+rather than determined by $V_{2}$ as was noticed previously~\cite{GCC13,DH14,DCH14}.
 %
-Expect the same to happen in square lattice.
+
+Finally, we have used an important advantage offered by the iDMRG method to analyse 
+phase transitions using several distinct quantities, in particular the entanglement entropy $S$ and $\xi$.
+%
+Importantly we have provided evidence that suggests that the semimetal to CMs phase transition is of a direct character, consistent with
+the absence of the Haldane Chern insulator phase.\\
+%
+
+To conclude we have established the phase diagram of spinless electrons hoping on the half-filled honey comb lattice
+with nearest and next to nearest hopping interactions.
+%
+Our results provide solid evidence that Chern insulating phases are far more elusive than previously thought and
+so alternative routes are necessary to drive these kind of topological states from strong electronic correlations in general.
+\noteAG{We might want to comment what determines if $S$ or $\xi$ gives better signatures of phase transitions.}
+%
+%
 
 \section{Acknowledgements}
 
-We thank A. Läuchli for discussions and sharing results prior to publication.
+We thank A. Lauchli for discussions and sharing results prior to publication.
 
 \bibliography{CI_iDMRG.bib}
 
