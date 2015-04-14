@@ -138,7 +138,7 @@ The CMs phase was corroborated to survive quantum fluctuations in exact diagonal
 %
 However, its exact nature was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
-In addition, at intermediate $V_{1}\sim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
+In addition, at intermediate $V_{1}\lesssim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
 %
 Although numerical evidence consistent with such bond order was found in exact diagonalization~\cite{GGNVC13}, further insights are needed to corroborate its existence in the thermodynamic limit.
@@ -148,37 +148,6 @@ Finally, the Haldane Chern insulator phase of Fig.~\ref{fig:orders}(g), stable w
 Nonetheless, this interpretation was challenged by Ref.~\cite{DCH14} that observed hints of this phase with exact diagonalization with open boundary conditions and variational Monte Carlo.\\
 
 %
-The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
-that includes quantum fluctuations while minimizing finite size effects.
-%
-In this work we therefore revisit the controversies left unsolved by previous studies using the infinite density matrix renormalization group method (iDMRG)~\cite{M08,W92,KZM13}. 
-%
-This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
-what is achievable in exact diagonalization.
-%
-We have mapped a $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for the half-filled honeycomb lattice in such an infinite cylinder geometry and our main findings are as follows.
-%
-First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
-%
-Second, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
-of these to occur.
-%
-Third, we provide numerical support for the existence and stability of all the competing orders that were found previously within mean field.
-%
-In particular we characterise the two more controversial states, the CMs and Kekul\'{e} states, by computing bond and charge expectation values via the iDMRG method 
-and present further arguments of the existence of the former from the semiclassical large interaction limit.
-%
-Fourth, we determine the first or second order character of the relevant phase transitions.
-%
-Concretely we address this issue by identifying the features that the correlation length $\xi$ and the entanglement entropy $S$ present as a function of $\left\lbrace V_{1},V_{2}\right\rbrace$.\\
-
-This work is structured as follows. 
-%
-After describing the method and model in section~\ref{sec:modandmeth} we
-characterise the different phases that we find in section~\ref{sec:phasediagram}.
-%
-The different phase transitions among them are analyzed in section~\ref{sec:phasetransitions}
-and we end with a discussion and prospect of our results in section~\ref{sec:discconc}.
 %
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/orders}.pdf}
@@ -198,6 +167,57 @@ by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary co
  %
 \end{figure}
 %
+The contradictory numerical evidence regarding the existence of the Chern insulator phase in particular, and other competing phases in general, needs of an alternative approach
+that includes quantum fluctuations while minimizing finite size effects.
+%
+In this work we therefore revisit the controversies left unsolved by previous studies using the infinite density matrix renormalization group method (iDMRG)~\cite{M08,W92,KZM13}. 
+%
+This variational method determines the ground-state of systems of size $L_{x} \times L_{y}$ where $L_{x}$ is in the thermodynamic limit and $L_{y}$ goes beyond
+what is achievable in exact diagonalization.
+%
+Traditionally a method for finding the ground state of one-dimensional systems, there has been recent 
+important progress and reported success of iDMRG applied to two dimensional systems.
+%
+As long as entanglement remains low and the state has short correlation lengths the ground-state
+can be represented faithfully by a product of matrices, termed matrix product state (MPS), with matrices of a finite and computationally affordable
+dimension $\chi$~\cite{M08,W92,KZM13}.
+%
+This requirement is commonly met by gapped systems and in particular by the orders argued above to be expected instabilities in the half-filled 
+honeycomb lattice of interest here.
+%
+Moreover the iDMRG deals with an infinite system and thus, unlike exact diagonalization, it can probe directly ground states that spontaneously break the original symmetries of the Hamiltonian and the phase transitions among them, while allowing for quantum fluctuations to play a role. 
+%
+Recently the infinite and finite DMRG method were indeed shown to be able to characterise the properties of fractional quantum Hall states~\cite{ZMP13},
+$\mathbb{Z}_{2}$ quantum spin liquid~\cite{HSC14}, chiral spin liquid \cite{HSC14b} and bosonic and fermionic fractional Chern insulating states \cite{JWB12,CV13,ZKB13,GMZ15}.
+\\
+ 
+%
+Motivated by these advantages we have mapped with the iDMRG method the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase diagram for the half-filled honeycomb lattice in the infinite cylinder geometry.
+%
+Our main findings are summarised next.
+%
+First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
+%
+Second, we find two new phases not reported previously neither within mean field or exact diagonalization results and give a semiclassical argument for one 
+of these to occur.
+%
+Third, we provide numerical support for the existence and stability of all the competing orders that were found previously within mean field.
+%
+In particular we characterise the two more controversial states, the CMs and Kekul\'{e} states, by computing bond and charge expectation values via the iDMRG method 
+and present further arguments of the existence of the former from the semiclassical large interaction limit.
+%
+Fourth, we provide numerical evidence to asses the first or second order character of the relevant phase transitions.
+%
+Concretely we address this issue by identifying the features that the correlation length $\xi$ and the entanglement entropy $S$ present as a function of $\left\lbrace V_{1},V_{2}\right\rbrace$.\\
+
+This work is structured as follows. 
+%
+After describing the method and model in section~\ref{sec:modandmeth} we
+characterise the different phases that we find in section~\ref{sec:phasediagram}.
+%
+The different phase transitions among them are analyzed in section~\ref{sec:phasetransitions}
+and we end with a discussion and prospect of our results in section~\ref{sec:discconc}.
+
 
 \section{\label{sec:modandmeth}Model and Method}
 %
@@ -228,8 +248,6 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
 we use the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13}.
 %
-Traditionally a method for finding the ground state of one-dimensional systems, it has been proven successful in numerous examples of two-dimensional systems in which the size in one dimension is kept finite~\cite{papers}\noteAG{maybe we want to move this to the intro and be more specific with examples}. 
-
 
 A generic quantum state on a chain of length $N$~\noteAG{What chain? feels a bit of a jump in the explanation} can be written as a matrix product state (MPS) in the following form
 %
@@ -326,9 +344,8 @@ Short range interactions are irrelevant~\cite{S94} and therefore they can only d
 %
 
 %
-Within the iDMRG algorithm we have characterised the semimetal phase in two distinct ways.
-%
-Firstly we compute the charge and bond ground state expectation values.
+Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
+to characterise each phase.
 %
 On the one hand, at each site the charge expectation value is defined by 
 %
@@ -339,7 +356,8 @@ n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,
 %
 where $s=A,B$ is the sublattice index.
 %
-To numerical accuracy we find that $n_{i,A}=n_{i,B}=1/2$, indicating that this phase is not charge ordered.
+For the semimetal phase, and to numerical accuracy, we find that $n_{i,A}=n_{i,B}=1/2$, 
+indicating that this phase is not charge ordered.
 %
 
 The bond ground state expectation value on the other hand is defined as
@@ -358,12 +376,12 @@ This suggests that the cylinder geometry implemented in iDMRG artificially diffe
 since it vanishes as $\chi$ is reduced, and is not a physical effect.
 %
 The uniform bond and charge distribution is consistent with the semimetalic state.
-
-\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
 %
-Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
-entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
-
+%\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
+%%
+%Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
+%entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
+%
 %%
 %Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
 %%
@@ -378,8 +396,6 @@ entanglement spectrum of this phase, to find that its low energy structure coinc
 %%
 %In the appendix...
 %\noteAG{This last paragraph can be removed if we don't need it}
-
-
 %
 We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
 higher interaction strengths.
@@ -388,7 +404,7 @@ We leave the discussion regarding this difference for the discussion in section 
 
 \subsection{Charge density wave (CDW-I)}
 %
-The second state we identify is a charge density wave state labelled CDW-I in the phase diagram of Fig.~\ref{fig:phase diagram}.
+Upon increasing $V_{1}$ we identify a charge density wave state labelled CDW-I in the phase diagram of Fig.~\ref{fig:phase diagram}.
 %
 This state has a two site unit cell that is characterised by a finite order parameter
 %
@@ -481,12 +497,27 @@ All phases that we have described so far do not differ
 from those predicted by mean field and exact diagonalization.
 %
 At high $V_{2}$ but with sufficiently large $V_{1}$ we observe that
-a twelve site unit cell charge order depicted schematically in 
+a twelve site unit cell charge order (CDW-II) depicted schematically in 
 Fig.~\ref{fig:orders}(e) emerges.
 %
-We show the numerically obtained charge order in 
-Fig.~\cite{fig:phase diagram} (b)
+A sample of its charge and bond order, as obtained with iDMRG via \eqref{eq:charge} and \eqref{eq:bond} is
+shown in Fig.~\ref{fig:phase diagram} (b) for $V_{1}/t=$ and $V_{2}/t=$.
+\\
 %
+
+A similar analysis to the one discussed for the CMs phase reveals that
+the CDW-II is a classical strong coupling phase that occurs for $t/V_{1,2}=0$.
+%
+Therefore, if the cluster does not frustrate its ordering the state 
+must be present at sufficiently high $V_{1,2}$.
+%
+However it is interesting to note that the CMs classical ground state as obtained
+by $t/V_{2}$ perturbation theory has lower energy than the CDW-II.
+%
+Therefore, the CDW-II can only be the thermodynamic limit
+
+
+
 
 
 \subsection{Charge density wave - III (CDW-III)}
