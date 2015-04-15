@@ -27,14 +27,14 @@
 %
 \title{Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study}
 %
-% \author{Johannes Motruk}
-% \author{Adolfo. G. Grushin}
-% \affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
-% \author{Fernando de Juan}
-% \affiliation{\mbox{Materials Science Division, Lawrence Berkeley National Laboratories, Berkeley, CA 94720, USA}}
-% \affiliation{\mbox{Department of Physics, University of California, Berkeley, CA 94720, USA}}
-% \author{Frank Pollmann}
-% \affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+%\author{Johannes Motruk}
+%\author{Adolfo. G. Grushin}
+%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+%\author{Fernando de Juan}
+%\affiliation{\mbox{Materials Science Division, Lawrence Berkeley National Laboratories, Berkeley, CA 94720, USA}}
+%\affiliation{\mbox{Department of Physics, University of California, Berkeley, CA 94720, USA}}
+%\author{Frank Pollmann}
+%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
 %
 \date{\today}
 %
@@ -276,19 +276,38 @@ In order to  capture the low energy physics correctly, it is very important that
 
 \section{\label{sec:phasediagram}Phase diagram}
 %
-We have used the iDMRG method presented in the previous section
-to find the groundstate of the half-filled honeycomb lattice in the presence of 
+We have used the iDMRG method to find the groundstate of the half-filled honeycomb lattice in the presence of 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
 %
 As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases, 
 including two novel charge order phases (CDW-II and CDW-III) together with the previously 
-reported Kekul\'{e}, CMs, CDW-I and semimetal phases.
+reported mean field orders: Kekul\'{e}, CMs, CDW-I and semimetal phases.\\
 %
-We describe next their corresponding charge and bond ordering patterns and how these
-are characterised within the iDMRG method.
 %
+Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
+to characterise each phase.
+%
+At each site the charge expectation value is defined by 
+%
+\begin{eqnarray}
+\label{eq:charge}
+n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,  
+\end{eqnarray}
+%
+where $s=A,B$ is the sublattice index. 
+%
+The bond ground state expectation value on the other hand is defined as
+%
+\begin{eqnarray}
+\label{eq:bond}
+t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle.
+\end{eqnarray}
+%
+%
+We describe next the corresponding charge and bond ordering patterns of each phase 
+that characterise them within the iDMRG method.
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
@@ -307,88 +326,53 @@ are characterised within the iDMRG method.
 \end{figure*}
 
 
-
-
 %
 \subsection{Semimetal phase (SM)}
 %
 We start by discussing the semimetal phase, labelled SM in the phase diagram shown in Fig.~\ref{fig:phase diagram}.
 %
-This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
-it is a uniform renormalization of the hopping strength $t$ by interactions.
+At $V_{1}/t=V_{2}/t=0$ the honeycomb lattice with nearest neighbour hopping its 
+known to be described by a low energy theory in terms of two massless Dirac fermions~\cite{CastroNeto2009}.
 %
-Therefore it is a a single particle gapless state that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
+Upon including finite short range interactions, it is possible to show that these are irrelevant in the renormalisation group sense~\cite{S94,KUP12} 
+and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.
 %
-In such low energy picture and within the renormalisation group approach, the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace \lesssim t$ is expected.
-%
-Short range interactions are irrelevant~\cite{S94} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.\\
-%
+Such perturbative analysis guarantees that the semimetal is stable within
+the region $\left\lbrace V_{1},V_{2}\right\rbrace \lesssim t$, only allowing for a uniform renormalization 
+of the hopping strength $t$ by interactions.\\
 
 %
-Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
-to characterise each phase.
+For the SM phase in Fig.~\ref{fig:phase diagram}, and to numerical accuracy, we find by computing the charge expectation value
+\eqref{eq:charge} that $n_{i,A}=n_{i,B}=1/2$, indicating that this phase is not charge ordered.\\
 %
-On the one hand, at each site the charge expectation value is defined by 
-%
-\begin{eqnarray}
-\label{eq:charge}
-n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,  
-\end{eqnarray}
-%
-where $s=A,B$ is the sublattice index.
-%
-For the semimetal phase, and to numerical accuracy, we find that $n_{i,A}=n_{i,B}=1/2$, 
-indicating that this phase is not charge ordered.
-%
-
-The bond ground state expectation value on the other hand is defined as
-%
-\begin{eqnarray}
-\label{eq:bond}
-t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'} + \text{h.c.}\right\rangle.
-\label{eq:hop}
-\end{eqnarray}
-%
-For $i,j$ being nearest neighbours we find a small ($10^{-2}$ \noteAG{number needed}) asymmetry
-between bonds pointing along and around the cylinder axis.
+From \eqref{eq:bond} and choosing $i,j$ to be nearest neighbours we find
+a small ($\sim10^{-2}$) asymmetry between bonds pointing along and around the cylinder axis.
 %
 Such asymmetry should vanish in a perfect semimetallic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
 This suggests that the cylinder geometry implemented in iDMRG artificially differentiates bonds in its two perpendicular directions,
-since it vanishes as $\chi$ is reduced, and is not a physical effect.
+since it vanishes as $\chi$ is increased, and is not a physical effect.
 %
-The uniform bond and charge distribution is consistent with the semimetalic state.
+This is consistent with a semimetal state, since the logarithmic divergence of entanglement of a metallic state requires an matrix product state with $\chi\to\infty$. 
 %
-%\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
-%%
-%Secondly, and to further confirm the semimetalic nature of the state, we have computed the low energy structure of the many-body 
-%entanglement spectrum of this phase, to find that its low energy structure coincides with that of the parent non-interacting critical state.\\
+The bond asymmetry reduces the entanglement by shifting the Dirac cones away from the $\mathbf{K}$ and $\mathbf{K'}$ points~\cite{ACJ15}.
 %
-%%
-%Moreover, we note that the semimetal phase is a critical state and thus in principle requires an infinite $\chi$ to represent the state.
-%%
-%This leads us to the second approach to characterise the semimetal phase that makes use of the its criticality.
-%%
-%For a critical phase the entanglement entropy is expected to show a logarithmic growth with the correlation length.
-%\noteAG{eqn needed}
-%%
-%The proportionality constant $c/3$ defines the central charge of the theory $c$. 
-%%
-%The semimetal has two Dirac cones and therefore it is expected that $c=2$. 
-%%
-%In the appendix...
-%\noteAG{This last paragraph can be removed if we don't need it}
+In addition, we find as well that the bond strength increases with interaction strength, as expected form the renormalisation group analysis. \\
 %
-We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
-higher interaction strengths.
+Together, the previous numerical evidence is consistent with the semimetallic state.
 %
-We leave the discussion regarding this difference for the discussion in section \ref{sec:discconc}.
+We note that numerically this state seems to extend beyond $\left\lbrace V_{1},V_{2}\right\rbrace \lesssim t$ towards
+higher interaction strengths through a narrow SM trench in the phase diagram.
+%
+The size of this region at $L=6$ (not shown) suggest that it is likely to shrink as the circumference of the cylinder is increased but
+a definitive statement requires going beyond the numerically accessible sizes. 
+%
 
 \subsection{Charge density wave (CDW-I)}
 %
 Upon increasing $V_{1}$ we identify a charge density wave state labelled CDW-I in the phase diagram of Fig.~\ref{fig:phase diagram}.
 %
-This state has a two site unit cell that is characterised by a finite order parameter
+This state has a two site unit cell that is characterized by a finite order parameter
 %
 \begin{equation}
 \label{eq:CDW}
@@ -397,16 +381,14 @@ M=\left\langle n_{A} \right\rangle-\left\langle n_{B}\right\rangle,
 %
 \end{equation}
 %
-where $n_{A}$ and $n_{B}$ are the density of electrons in the $A$ and $B$ sublattice sites of the two site unit cell respectively.
+that can be calculated using \eqref{eq:charge}, where $n_{A}$ and $n_{B}$ are the density of electrons in the $A$ and $B$ sublattice sites of the two site unit cell respectively.
 %
-We show a representative charge pattern of this phase Fig.~\ref{fig:phase diagram}(d) for $V_{1}/t = 4$ and $V_{2}/t = 0.4$ 
-calculated numerically using \eqref{eq:charge}.
+The resulting charge order is depicted schematically in Fig.~\ref{fig:orders}(b).
 %
-As evident from this figure there is an appreciable sublattice charge imbalance, i.e. $M\neq 0$, that we observe throughout this phase.
+For instance, at $V_{1}/t = 4$ and $V_{2}/t = 0.4$ we find that $M=$. \noteAG{I mention this as an example since we don't show the order, I don't know}
 %
-The magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
-%
-
+Numerically the magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
+%s
 For large $V_{1}\gg t$ such a state is a natural instability since the energy is minimised by a charge imbalance between the two sub lattices.
 %
 Indeed, it has been found in a mean field approximation~\cite{RQHZ08,WF10,GCC13}, exact diagonalization~\cite{GGNVC13,DH14,DCH14}, 
@@ -426,15 +408,16 @@ attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense o
 determined by $V_{1}$.
 %
 Within exact diagonalization it has been argued that the CMs state survives quantum fluctuations~\cite{GGNVC13,DH14,DCH14} 
-but its nature was challenged in Ref.~\onlinecite{DH14} suggesting that a pinball like state~\cite{HF06,MRF13} cannot be ruled out.\\
+but its single particle nature was challenged in Ref.~\onlinecite{DH14} suggesting that a pinball like state~\cite{HF06,MRF13} cannot be ruled out.\\
 %
-With the iDMRG method we find that directly above the semimetallic phase the CMs occurs [see Fig.~\ref{fig:phase diagram}] .
+With the iDMRG method we find that the CMs appears directly above the semimetallic phase~[see Fig.~\ref{fig:phase diagram}] .
 %
-A sample of the six site unit cell charge pattern for obtained from \eqref{eq:charge} for $V_1/t = 0.8, V_2/t = 3.2 $ is shown in Fig.~\ref{fig:phase diagram}(a).
+A sample of the six site unit cell charge and bond pattern obtained from \eqref{eq:charge} for $V_1/t = 0.8, V_2/t = 3.2 $ is shown in Fig.~\ref{fig:phase diagram}(a).
 %
-We find that this pattern, with the bond ordering associated to the charge order survives in the region labelled CMs of the phase diagram.
+Such pattern, survives in the region labelled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} 
+depicted schematically in Fig.~\ref{fig:orders}(c).
 %
-Such a state coincides with that obtained within mean field theory~\cite{GCC13} depicted schematically in Fig.~\ref{fig:orders}(c).
+We note that the bond ordering of this phase is associated to the charge order 
 
 % 
 Moreover, we now show that the CMs state is expected from a semi-classical analysis as well.
@@ -487,20 +470,15 @@ shown in Fig.~\ref{fig:phase diagram} (b) for $V_{1}/t=$ and $V_{2}/t=$.
 \\
 %
 
-A similar analysis to the one discussed for the CMs phase reveals that
-the CDW-II is a classical strong coupling phase that occurs for $t/V_{1,2}=0$.
+A strong coupling analysis performed in 12 site cluster with the shape of the CDW-II unit cell reveals a set of 8 classical states with the same charge pattern but classical occupations 0 or 1. 
 %
-Therefore, if the cluster does not frustrate its ordering the state 
-must be present at sufficiently high $V_{1,2}$.
+The energy per site of these states does not have first order hopping corrections,
+$E_{CDW-II} = V_2/2+V_1/4 + O(t^2)$, so the CDW-II is a stable strong coupling phase. 
 %
-However it is interesting to note that the CMs classical ground state as obtained
-by $t/V_{2}$ perturbation theory has lower energy than the CDW-II.
+As long as the cluster allows for this charge pattern, it must be present at sufficiently high $V_{1,2}$.
 %
-Therefore, the CDW-II can only be the thermodynamic limit
-
-
-
-
+In fact, the energy of this classical state is always lower than that of the classical CM states, and it is only for low $V_1$ that the quantum corrections make the CM state favored. 
+%
 
 \subsection{Charge density wave - III (CDW-III)}
 %
@@ -536,7 +514,7 @@ for different values of the bond dimension $\chi$ and cylinder with $L=12$ circu
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
  \label{fig:cut_V2_0}
- \caption{Correlation length at $V_2=0$.  \noteAG{could it be useful to show the order parameter M
+ \caption{Correlation length at $V_2=0$. \noteFdJ{Perhaps add: Cut A in fig. 3. Since sections are labeled by the cuts, it could be useful to do this for every figure that represents a cut of fig. 3}  \noteAG{could it be useful to show the order parameter M
  as a function of $V_{1}$ in the same plot (using the right vertical axis?). It might get to crowded)}}
 \end{figure}
 % 
@@ -607,7 +585,10 @@ as a function of $V_{1}$.
 This quantity shows a clear jump at $V_{2}\approx$ signalling a direct first order
 phase transition between these two phases.
 %
-\noteAG{Is this expected semi-classically somehow?}
+
+A first order phase transition is also expected from the strong coupling approach (see appendix). As described in section \ref{}, the energy per site of the CM phase in a 3x3 cluster is $E_{CM} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{CDW II} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. At finite $t$, the CM phase has lower energy due to the first order quantum correction, which is absent for CDW II. But since $E_{CM}$ grows faster with $V_1$ than $E_{CDW II}$, there must be a crossing at a critical $V$ signaling a first order phase transition into the CDW II state. 
+
+\noteAG{Is this expected semi-classically somehow?}\noteFdJ{Yes}
 
 \subsection{Cut D: CDW-I--Kekul\'{e}--SM--CDW-II}
 
@@ -696,7 +677,124 @@ so alternative routes are necessary to drive these kind of topological states fr
 
 We thank A. Lauchli for discussions and sharing results prior to publication.
 
+\section{\label{sec:appendix} Appendix: Strong coupling perturbation theory}
+
+In this Appendix we discuss an alternative method to determine the ground state in the strong coupling limit $t\leq V_1,V_2$. 
+%
+Consider splitting the Hamiltonian in Eq. \ref{eq:H} into $H =H_V + H_t$ with
+\begin{align}
+%
+ H_t &=-t\sum_{\left\langle i,j\right\rangle}(c^{\dagger}_{i}c^{\vphantom{\dagger}}_{j}+ \mathrm{h.c.}) \\
+ %
+H_V &= V_{1}\sum_{\left\langle i,j\right\rangle }n_{i}n_{j}+
+%
+V_{2}\sum_{\left\langle \left\langle i,j\right\rangle \right\rangle }n_{i}n_{j}. 
+%
+\label{eq:Hsplit}
+\end{align}
+%
+In the strong coupling limit, we can obtain the ground state of $H$ by diagonalizing $H_V$ first and considering $H_t$ as a perturbation. 
+%
+The eigenstates of $H_V$
+\begin{equation}
+H_V \psi_{n,m} = E_n \psi_{n,m}
+\end{equation}
+where $m$ accounts for degeneracies, are simple to compute because charge is conserved at every site in the absence of hopping. 
+%
+$H_V$ is thus already diagonal in the occupation basis, i.e.
+\begin{equation}
+\left| \psi^{n,m}\right> = \prod_{C^{n,m}_i = 1} c^\dagger_i \left|0\right>
+\end{equation}
+%
+ with $C^{n,m}_i=0,1$ the occupation coefficients for the $n,m$ eigenstate. 
+ %
+The classical ground state manifold is spanned by $\left|\psi^{0,m}\right>$, with $m=1,\dots,M$.   
+
+For small $t/V_{1,2}$, we can disregard the classical states with $n>0$, and project the $H_t$ Hamiltonian into the classical ground state manifold. 
+%
+Dropping the label $n=0$ from now on
+%
+\begin{equation}
+(\tilde{H}_t)_{m_1m_2} =  \left< \psi^{m_1} \right| H_t \left| \psi^{m_2} \right>
+\end{equation}
+%
+We can now diagonalize $\tilde{H}_t$ and select the eigenstates of lowest energy $\epsilon_0$
+%
+\begin{equation}
+\tilde{H}_t v_\alpha = \epsilon_0 v_\alpha
+\end{equation}
+%
+where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The final ground state of $H$ is spanned by
+%
+\begin{equation}
+\left| GS\right>_\alpha = \sum_{m=1}^M v^m_\alpha \left| \psi^m\right>
+\end{equation}
+%
+Obtaining the coeficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.
+
+We have used this method to diagonalize a cluster of 3x3 unit cells (18 sites), and a cluster with the shape of the unit cell of the CDW II phase (12 sites). 
+%
+(\noteFdJ{The CDW III is not really a strong coupling phase as one can see in the phase diagram, so I don't think it is worth discussing}). 
+
+\noteFdJ{Unfinished from here}
+
+In the case of the CDW cluster...
+
+The 3x3 cluster is non trivial. 
+
+To determine any ground state properties, we recall that in finite size ED there is no spontaneous symmetry breaking, because all states related by symmetry are degenerate and will be present in the ground state manifold. To detect an ordered phase, we resort to computing correlation functions evaluated in the ground state, from which order parameters can be obtained. 
+ 
+Correlation functions for charge order parameters can be expressed in general as
+\begin{equation}
+\rho_{ij\ldots} = {\rm tr} \left< GS \right| c^\dagger_i c_ic^\dagger_j c_j \ldots \left| GS \right> 
+\end{equation}
+which is given explicitly by
+\begin{equation}
+\rho_{ij\ldots} = \sum_{m,\alpha} (v_m^\alpha)^*v_m^\alpha C^m_i C^m_j \dots
+\end{equation}
+while for bond order parameters we have
+
+Appropriate contractions of the indices give scalars corresponding to different order parameters. 
+
+For simplicity, and with the aim of describing the CMs phase, we will consider only correlation functions at zero momentum in the enlarged unit cell of 6 sites (this is equivalent to considering momenta $\Gamma$, $K$, $K'$).
+
+Building all scalars for all momenta is a very complicated task, so an alternative approach is to enlarge the unit cell and consider only $q=0$, effectively selecting only a few momenta of interest (in our case, $K$ and $K'$). 
+
+
+%\begin{figure}[t]
+%\begin{center}
+%\includegraphics[width=8cm]{chargeins.pdf}
+%\caption{All possible charge instabilities in the 6-site cell, with their corresponding label in
+%$C_{6v}''$ and in $C_{6v}$ (in parenthesis). Note the normalization of $B_2$ with respect to $G$ is
+%arbitrary. We have chosen to normalize both to 1.}
+%\label{chargeins}
+%\end{center}
+%\end{figure}
+
+For the CM phase, this is not too complicated. In the 6 site unit cell, the 6 possible order parameters with their symmetry labels are shown in Fig.\ref{chargeins}. The usual CDW is $B_2$ and the four CM belong to the $G$ irrep. We label the components of this representation as $G = (\vec G_1 , \vec G_2) = (G_{1x},G_{1y},G_{2x},G_{2y})$, because $\vec G_i$ are vectors under $C_3$ rotations. It is easier to write scalars using complex numbers $G_i = G_{i,x}+ i G_{i,y}$, and representing $C_3$ rotations as $e^{i2\pi/3}$. 
+
+The analog of the ising case is 
+\begin{align}
+S_1 &= B_2^2 \\
+S_2 &= |G_1|^2+|G_2|^2 
+\end{align}
+
+But this is not enough information to distinguish the different phases. 
+
+All the possible independent scalars made from $B_2$ and $G$ up to order 4 are
+
+
+
+\begin{align}
+S_3 &= {\rm Im}(G_2^3-3G_2 G_1^2)  \\
+S_4 &= B_2 {\rm Im}(G_1G_2) \\
+S_5 &= [{\rm Im}(G_1G_2)]^2 \\
+S_6 &= B_2{\rm Re}(G_1^3-3G_1 G_2^2)
+\end{align}
+The advantage of this approach is that these scalar order parameters can be computed both for DMRG (or mean field) and for ED. 
+
+The CM state, as defined by Castro et al., is characterized by a finite $S_6$. 
+
+
 \bibliography{CI_iDMRG.bib}
-
-
 \end{document}
