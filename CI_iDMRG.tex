@@ -115,7 +115,7 @@ fermions hoping in a half-filled honeycomb lattice with nearest-neighbour hoppin
  The left panel shows the iDMRG unit cell used in this work with 
  $3 \times 6$ unit cells yielding a cylinder with a circumference of $L=12$ sites depicted in the lower panel. 
  %
- }
+ \label{fig:Defs}}
 \end{figure}
 %% 
 \\
@@ -221,7 +221,7 @@ and we end with a discussion and prospect of our results in section~\ref{sec:dis
 
 \section{\label{sec:modandmeth}Model and Method}
 %
-We investigate a system of spinless electrons hoping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
+We investigate a system of spinless electrons hopping on a honeycomb lattice with real nearest neighbor hopping $t$ interacting via nearest and next to nearest neighbor interactions 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ respectively [see Fig.~\ref{fig:Defs}]. 
 %
 The Hamiltonian for this system can be written as
@@ -245,51 +245,34 @@ where $c_{i}^{\vphantom{\dagger}}$ $(c^{\dagger}_{i})$  annihilates (creates) an
 % $\bs{a}_{2}=\bs{\delta}_{3}-\bs{\delta}_{1}$ defined through the three nearest neighbors $\bs{\delta}_{1}=a(0,-1)$,  
 % $\bs{\delta}_{2}=a(\sqrt{3}/2,1/2)$ and $\bs{\delta}_{3}=a(-\sqrt{3}/2,+1/2)$ as shown in Fig.~\ref{fig:Defs}.\\
 %
+
 In order to find the ground state of the system in the $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space
-we use the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13}.
+we employ the infinite density matrix renormalization group algorithm (iDMRG) \cite{M08,W92,KZM13} on an infinite cylinder geometry.
+%
+Feasible system sizes for our purposes are cylinders of circumference $L = 6,8,10$ and $12$.
+%
+For our calculations we choose a unit cell of 36 sites depicted in Fig.~\ref{fig:Defs}.
+%
+It consists of three rings of 12 sites each wrapping around the cylinder.
+%
+We pick this geometry for the following two reasons.
+%
+First, all orders expected to occur in the half-filled honeycomb model are commensurate with the chosen unit cell.
+%
+Second, we have to keep in mind the structure of the reciprocal space.
+%
+Since we work in the thermodynamic in the $x$-direction along the cylinder, momentum in $x$-direction is a continuous quantity.
+%
+However in the $y$-direction around the cylinder, momentum is discretized.
+%
+In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$.
+%
+Any instability caused by interactions will open a gap at these points.
+%
+In order to  capture the low energy physics correctly, it is very important that $k_y= 2 \pi / 3$ is an allowed momentum in our unit cell.
 %
 
-A generic quantum state on a chain of length $N$~\noteAG{What chain? feels a bit of a jump in the explanation} can be written as a matrix product state (MPS) in the following form
-%
-\begin{equation}
-%
- \ket{\psi} = \sum_{j_1, \ldots, j_N} A^{1 \left[j_1\right]} A^{2 \left[j_2\right]} \ldots A^{N \left[j_N\right]} \ket{j_1, \ldots, j_N}
- %
-\end{equation}
-%
-where $A^{n \left[j_n\right]}$ is a $\chi_{n-1} \times \chi_n$ matrix, $\ket{j_n}$ are the local basis states on site $n$ and the $\chi_n$ are called bond dimensions
-\noteAG{Here we define bond dimensions but then we refer to a single bond dimension. Maybe we need to clarify this a bit}. 
-%
-On an infinite chain, the state is represented by an infinite matrix product state (iMPS), that is, an infinite number of matrices. 
-%
-However, if the chain is translationally invariant, the matrices repeat themselves after translating the system by the length of one unit cell. 
-%
-Hence, specifying the set of matrices in one unit cell already completely represents the state. 
-%
-For an arbitrary state on an infinite chain, the bond dimensions are generically also infinite. 
-\noteAG{the last three sentences try to explain something that either needs more space to be explained for it to be clear
-or not be mentioned at all and referred to an iDMRG paper like Jonas's, Frank's and Jens's for details}
-%
-Nevertheless, the ground state of gapped systems can be approximated to any required precision by matrices of a finite bond dimension that grows with the entanglement between two semi-infinite halves of the system. \noteJM{Scaling and references}\noteAG{Can we try to explain briefly why this is so?}
 
-\noteAG{I think this next paragraph can benefit from a topic sentence, i.e. a sentence that kind of summaries the paragraph before going into details.
-Also, we might want to reconsider how we say things. I would say first that we can do any size from L=6 to L=12, then say that some of them allow for K and K', then that we use 
-L=6,12. In other words, explaining from the more general things to the more particular choice we compute, right now is the opposite.}
-We investigate the model on an infinite cylinder geometry and choose a unit cell of three rings of $L=12$ sites wrapping around the cylinder as depicted in Fig.~\ref{fig:Defs}. 
-%
-This size secures that all the possible orders that occur in the range of our study are commensurate with the iMPS unit cell. 
-%
-Another reason to choose this size originates from the single particle momentum discretization in the $y$-direction around the cylinder. 
-%
-In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the $K$ and $K^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$. 
-%
-Only if these two points are allowed momenta of the investigated system, the low energy physics can be captured correctly. 
-%
-This means that from the feasible system sizes only $L=6$ and $12$ are well suited for our purposes whereas $L=8$ and $10$ do not include the momenta of the $K$ and $K^{\prime}$ points.
-%
-\noteAG{we might want to define the entanglement spectrum here also if we ever use it}\\
-\noteAG{Define correlation length as well}
-%
 
 \section{\label{sec:phasediagram}Phase diagram}
 %
@@ -330,18 +313,16 @@ that characterise them within the iDMRG method.
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
  \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$. 
  %
- Right: Density patterns in the different phases. 
+ Right: Density ((a)--(d)) and hopping amplitude ((e)--(h)) patterns in the different phases. 
  %
  The area of the blue circles is proportional to the particle number expectation value on the respective site. 
  %
+ The thickness of the ellipsoids on the bonds is proportional to the hopping amplitude $t_{ij}$ \eqref{eq:hop} between nearest neighbours.
+ %
  The unit cells are depicted by the red polygons. 
  %
- (a) Charge modulated (CMs) phase with $V_1/t = 0.8, V_2/t = 3.2 $, (b) Charge density wave II (CDW II) with $V_1/t = 5.6, V_2/t = 3.2$,  (c) Charge density wave III (CDW III) with $V_1/t = 9.2, V_2/t = 2.5$, (d) Charge density wave I (CDW I) with $V_1/t = 4.0, V_2/t = 0.4 $. 
- %
- Figures (e) and (f) show the density and hopping amplitude patterns of the Kekul\'e phase \noteAG{Values of the interaction strengths?}. 
- %
- The state shows a uniform density but the hopping amplitudes break translational symmetry and form a six site unit cell. \label{fig:phase diagram}
- \noteAG{The axes of the figure should be $V_{1,2}/t$}}
+ ((a)/(e)) Charge modulated (CMs) phase with $V_1/t = 0.8, V_2/t = 3.2 $, ((b)/(f)) Charge density wave II (CDW II) with $V_1/t = 5.6, V_2/t = 3.2$,  ((c)/(g)) Charge density wave III (CDW III) with $V_1/t = 9.2, V_2/t = 2.5$, ((d)/(h)) Kekul\'e phase with $V_1/t = 5.6, V_2/t = 1.6 $. 
+ \label{fig:phase diagram}}
 \end{figure*}
 
 
