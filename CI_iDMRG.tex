@@ -293,19 +293,38 @@ This means that from the feasible system sizes only $L=6$ and $12$ are well suit
 
 \section{\label{sec:phasediagram}Phase diagram}
 %
-We have used the iDMRG method presented in the previous section
-to find the groundstate of the half-filled honeycomb lattice in the presence of 
+We have used the iDMRG method to find the groundstate of the half-filled honeycomb lattice in the presence of 
 $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 Our results are summarised in the phase diagram presented in Fig.~\ref{fig:phase diagram}.
 %
 As a function of $\left\lbrace V_{1},V_{2}\right\rbrace$ we find six different phases, 
 including two novel charge order phases (CDW-II and CDW-III) together with the previously 
-reported Kekul\'{e}, CMs, CDW-I and semimetal phases.
+reported mean field orders: Kekul\'{e}, CMs, CDW-I and semimetal phases.
 %
-We describe next their corresponding charge and bond ordering patterns and how these
-are characterised within the iDMRG method.
 %
+Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
+to characterise each phase.
+%
+At each site the charge expectation value is defined by 
+%
+\begin{eqnarray}
+\label{eq:charge}
+n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,  
+\end{eqnarray}
+%
+where $s=A,B$ is the sublattice index. 
+%
+The bond ground state expectation value on the other hand is defined as
+%
+\begin{eqnarray}
+\label{eq:bond}
+t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle.
+\end{eqnarray}
+%
+%
+We describe next the corresponding charge and bond ordering patterns of each phase 
+that characterise them within the iDMRG method.
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
@@ -326,8 +345,6 @@ are characterised within the iDMRG method.
 \end{figure*}
 
 
-
-
 %
 \subsection{Semimetal phase (SM)}
 %
@@ -336,39 +353,18 @@ We start by discussing the semimetal phase, labelled SM in the phase diagram sho
 This phase is continuously connected to the gapless non-interacting state $V_{1}=V_{2}=0$; 
 it is a uniform renormalization of the hopping strength $t$ by interactions.
 %
-Therefore it is a a single particle gapless state that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
+Therefore it is a single particle gapless state that lacks both charge and bond order and is described by a low energy theory in terms of two massless Dirac fermions.
 %
 In such low energy picture and within the renormalisation group approach, the stability of the semimetal phase in the region $\left\lbrace V_{1},V_{2}\right\rbrace \lesssim t$ is expected.
 %
 Short range interactions are irrelevant~\cite{S94} and therefore they can only drive a transition to an ordered state when they have a magnitude comparable to the nearest neighbour hopping strength $t$.\\
-%
 
 %
-Within the iDMRG algorithm we have computed the charge and bond ground state expectation values
-to characterise each phase.
+For the semimetal phase, and to numerical accuracy, we find by computing the charge expectation value
+\eqref{eq:charge} that $n_{i,A}=n_{i,B}=1/2$, indicating that this phase is not charge ordered.
 %
-On the one hand, at each site the charge expectation value is defined by 
-%
-\begin{eqnarray}
-\label{eq:charge}
-n_{i,s}=\left\langle c^{\dagger}_{i,s}c_{i,s}\right\rangle,  
-\end{eqnarray}
-%
-where $s=A,B$ is the sublattice index.
-%
-For the semimetal phase, and to numerical accuracy, we find that $n_{i,A}=n_{i,B}=1/2$, 
-indicating that this phase is not charge ordered.
-%
-
-The bond ground state expectation value on the other hand is defined as
-%
-\begin{eqnarray}
-\label{eq:bond}
-t^{s,s'}_{i,j}=\left\langle c^{\dagger}_{i,s}c_{j,s'}\right\rangle.
-\end{eqnarray}
-%
-For $i,j$ being nearest neighbours we find a small ($10^{-2}$ \noteAG{number needed}) asymmetry
-between bonds pointing along and around the cylinder axis.
+For $i,j$ being nearest neighbours we find from \eqref{eq:bond} 
+a small ($\sim10^{-2}$) asymmetry between bonds pointing along and around the cylinder axis.
 %
 Such asymmetry should vanish in a perfect semimetallic phase and indeed it is severely reduced as the bond dimension $\chi$ is increased.
 % 
@@ -376,6 +372,11 @@ This suggests that the cylinder geometry implemented in iDMRG artificially diffe
 since it vanishes as $\chi$ is reduced, and is not a physical effect.
 %
 The uniform bond and charge distribution is consistent with the semimetalic state.
+%
+We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
+higher interaction strengths.
+%
+We leave the discussion regarding this difference for the discussion in section \ref{sec:discconc}.
 %
 %\noteJM{From here on, it's more what we would like to see, but don't since DMRG is not well behaved in a critical phase. All we can say, is that the entire region is one phase and doesn't have any features, hence, semimetal.}
 %%
@@ -396,11 +397,6 @@ The uniform bond and charge distribution is consistent with the semimetalic stat
 %%
 %In the appendix...
 %\noteAG{This last paragraph can be removed if we don't need it}
-%
-We finally note that this state seems to extend beyond what is expected from mean field theory~\cite{RQHZ08,WF10,GCC13} towards
-higher interaction strengths.
-%
-We leave the discussion regarding this difference for the discussion in section \ref{sec:discconc}.
 
 \subsection{Charge density wave (CDW-I)}
 %
