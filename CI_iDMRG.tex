@@ -670,18 +670,18 @@ there must be a crossing at a critical $V$ signalling a first order phase transi
 The spontaneous emergence of the Chern insulator phase due to interactions in the half-filled spineless honeycomb lattice
 model has been questioned by different methods since its proposal~\cite{RQHZ08,WF10,GCC13,GGNVC13,DH14,DCH14}.
 %
-In this work we have gone beyond mean field and exact diagonalization by using the iDMRG, a method that allows for quantum fluctuations
+In this work we have gone beyond previous mean field and exact diagonalization by using the iDMRG method, an algorithm that allows for quantum fluctuations
 to play a role but minimises the finite size effects due its intrinsic infinite cylinder geometry.
-%
-We note that all disputed phases are gapped and therefore ideal for iDMRG to asses since correlation lengths and
-entanglement decay rapidly in gapped phases.\\
+%%
+%All disputed phases are gapped and therefore ideal for iDMRG to asses since correlation lengths and
+%entanglement decay rapidly in gapped phases.\\
 
 One of our main results is the absence of the Haldane Chern insulator state in this model.
 %
 It seems therefore that quantum fluctuations indeed jeopardize its emergence and work against
 the naive mean field expectations.
 %
-Although there is no reason to believe that the situation is different for the $\pi-$flux model, that also hosts a
+Although there is no reason to believe that the situation is different for the $\pi-$flux model, which also hosts a
 mean field Chern insulating phase that is absent in exact diagonalization~\cite{WF10,JGC13}, 
 there is more hope for other frustrated models.
 %
@@ -691,16 +691,20 @@ the quadratic band point touching between the flat band and one of the two dispe
 Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which should guarantee
 its robustness at sufficiently low interaction strength.\\
 %
-In addition we have theoretically predicted two novel competing phases, the CDW-II and CDW-III.
+In addition we have theoretically predicted two novel competing phases, the CDW II and CDW III.
 %
 These states are topologically trivial charge ordered states that have a twelve site unit cell.
 %
 Such a large unit cell turns their identification within exact diagonalization or mean field studies 
 challenging and highlights the advantages of the iDMRG method.
 %
-The CDW-II in particular can be understood from...
+On the one hand the CDW II phase is a strong coupling phase that is stable upon perturbation theory in $V_{1,2}/t$.
+%
+Its presence is guaranteed as long as the system does not frustrate its order. 
+%
+The CDW III in turn is not connected to any strong coupling phase.
 
-From the evidence presented in this work we can now understand the CMs phase state as occurring from first
+From the evidence presented in this work we have established that CMs phase state occurs from first
 order perturbation theory in powers of $t/V_{2}$ of an otherwise classically degenerate ground state.
 %
 This part of our work establishes the existence and robustness 
@@ -710,32 +714,31 @@ Our semiclassical analysis, corroborated by the iDMRG numerical evidence present
 provides an explanation of why this phase has a many-body gap of the order of the hopping strength $t/V_{2}$ 
 rather than determined by $V_{2}$ as was previously noticed~\cite{GCC13,DH14,DCH14}.
 %
-
-Finally, we have used an important advantage offered by the iDMRG method to analyse 
-phase transitions using several distinct quantities, in particular the entanglement entropy $S$ and $\xi$.
+The CMs is thus stable for small $V_{1}$ and finite $t$, increasing the former or reducing the latter leads to the CDW II classical ground state
+through a first order phase transition.\\
 %
-Importantly we have provided evidence that suggests that the semimetal to CMs phase transition is of a direct character, consistent with
-the absence of the Haldane Chern insulator phase.\\
+Finally, we have used that the iDMRG method treats an infinite system as opposed to a finite cluster to analyse 
+the different phase transitions using in particular the entanglement entropy $S$ and $\xi$.
+%
+The conclusions drawn from analyzing these quantities have sometimes to be complemented by the continuous 
+or discontinuous dependence of the ground state energy on the $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.
 %
 
 To conclude we have established the phase diagram of spinless electrons hoping on the half-filled honey comb lattice
-with nearest and next to nearest hopping interactions.
+with nearest and next to nearest hopping interactions and characterised the phase transitions among the different phases with iDMRG.
 %
 Our results provide solid evidence that Chern insulating phases are far more elusive than previously thought and
 so alternative routes are necessary to drive these kind of topological states from strong electronic correlations in general.
-\noteAG{We might want to comment what determines if $S$ or $\xi$ gives better signatures of phase transitions.}
 %
-%
-
 \section{Acknowledgements}
 
-We thank A. Lauchli for discussions and sharing results prior to publication.
+We thank A. Lauchli for discussions and sharing results prior to publication. 
 
 \section{\label{sec:appendix} Appendix: Strong coupling perturbation theory}
 
-In this Appendix we discuss an alternative method~\noteAG{Why alternative?} to determine the ground state in the strong coupling limit $t\leq V_1,V_2$. 
+In this Appendix we discuss an alternative method~\noteAG{Why alternative?} to determine the ground state in the strong coupling limit $t\leq V_1,V_2$\noteAG{$t \ll V_{1,2}$?}. 
 %
-Consider splitting the Hamiltonian in Eq. \ref{eq:H} into $H =H_V + H_t$ with
+Consider splitting the Hamiltonian in Eq. \eqref{eq:H} into $H =H_V + H_t$ with
 \begin{align}
 %
  H_t &=-t\sum_{\left\langle i,j\right\rangle}(c^{\dagger}_{i}c^{\vphantom{\dagger}}_{j}+ \mathrm{h.c.}) \\
@@ -751,13 +754,13 @@ In the strong coupling limit, we can obtain the ground state of $H$ by diagonali
 %
 The eigenstates of $H_V$
 \begin{equation}
-H_V \psi_{n,m} = E_n \psi_{n,m}
+H_V \psi_{n,m} = E_n \psi_{n,m},
 \end{equation}
 where $m$ accounts for degeneracies, are simple to compute because charge is conserved at every site in the absence of hopping. 
 %
 $H_V$ is thus already diagonal in the occupation basis, i.e.
 \begin{equation}
-\left| \psi^{n,m}\right> = \prod_{C^{n,m}_i = 1} c^\dagger_i \left|0\right>
+\left| \psi^{n,m}\right> = \prod_{C^{n,m}_i = 1} c^\dagger_i \left|0\right>,
 \end{equation}
 %
  with $C^{n,m}_i=0,1$ the occupation coefficients for the $n,m$ eigenstate. 
@@ -769,19 +772,19 @@ For small $t/V_{1,2}$, we can disregard the classical states with $n>0$, and pro
 Dropping the label $n=0$ from now on
 %
 \begin{equation}
-(\tilde{H}_t)_{m_1m_2} =  \left< \psi^{m_1} \right| H_t \left| \psi^{m_2} \right>
+(\tilde{H}_t)_{m_1m_2} =  \left< \psi^{m_1} \right| H_t \left| \psi^{m_2} \right>,
 \end{equation}
 %
 We can now diagonalize $\tilde{H}_t$ and select the eigenstates of lowest energy $\epsilon_0$
 %
 \begin{equation}
-\tilde{H}_t v_\alpha = \epsilon_0 v_\alpha
+\tilde{H}_t v_\alpha = \epsilon_0 v_\alpha,
 \end{equation}
 %
 where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The final ground state of $H$ is spanned by
 %
 \begin{equation}
-\left| GS\right>_\alpha = \sum_{m=1}^M v^m_\alpha \left| \psi^m\right>
+\left| GS\right>_\alpha = \sum_{m=1}^M v^m_\alpha \left| \psi^m\right>.
 \end{equation}
 %
 Obtaining the coeficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.
