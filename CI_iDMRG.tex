@@ -404,7 +404,7 @@ that can be calculated using \eqref{eq:charge}, where $n_{A}$ and $n_{B}$ are th
 %
 The resulting charge order is depicted schematically in Fig.~\ref{fig:orders}(b).
 %
-For instance, at $V_{1}/t = 4$ and $V_{2}/t = 0.4$ we find that $M=$. \noteAG{I mention this as an example since we don't show the order, I don't know}
+For instance, at $V_{1}/t = 4$ and $V_{2}/t = 0.4$ we find that $M=$. \noteAG{I mention this as an example since we don't show the order, I don't know. Number needed}
 %
 Numerically the magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
 %s
@@ -433,18 +433,23 @@ With the iDMRG method we find that the CMs appears directly above the semimetall
 %
 A sample of the six site unit cell charge and bond pattern obtained from \eqref{eq:charge} for $V_1/t = 0.8, V_2/t = 3.2 $ is shown in Fig.~\ref{fig:phase diagram}(a).
 %
+The circles at each site have their area proportional to the strength of the charge at the given site, while the thickness of the links between the sites
+represent the bond strengths.
+%
 Such pattern, survives in the region labelled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} 
 depicted schematically in Fig.~\ref{fig:orders}(c).
 %
-We note that the bond ordering of this phase is associated to the charge order 
+We note that the bond ordering of this phase is associated to the charge order: two neighbouring sites with similar high (or low) charge densities
+that deviate from half-filling suppress the hopping between them due to the large (small) number of filled (empty) states at that site. \\
 
+%
+These numerical results establish the existence within iDMRG of a CMs phase that is consistent with that predicted with mean field theory~\cite{GCC13}.
 % 
-Moreover, we now show that the CMs state is expected from a semi-classical analysis as well.
+We now show that in fact the CMs state is expected from a semi-classical strong coupling analysis as well.
 %
-For instance, for a given cluster, it is possible to find the number and energy of all the degenerate classical states, assuming $V_{2}\gg t$.
-%
-Within this approach, the hopping can be introduced as a perturbation $t$ to find how the degeneracy is lifted.
-\noteAG{Maybe Fernando can rewrite these two paragraphs better. We may want to be more specific about order parameters etc.} 
+\noteAG{Maybe Fernando can write what goes next. } 
+\noteAG{I think it would be good to introduce the order parameter of the CMs if possible, as simple as we can. Then we can mention that it is finite in
+this region as well, just as we did with the CDW-I}
 
 
 \subsection{Kekul\'{e} bond order}
@@ -453,25 +458,29 @@ The next phase we identify is the Kekul\'{e}
 bond order.
 %
 Like the CMs, it has a six site unit cell depicted schematically in Fig.~\ref{fig:orders}(d)
-with uniform charge order and strong and weak bonds.
+with uniform charge order and two types of bonds, strong and weak.
 %
 Under the mean field approximation the state arises between the CMs and the CDW-I state.
 %
 Although in exact diagonalization hints of this state are also observed,
-the evidence supporting its occurrence is far from conclusive~\cite{GGNVC13} since
+the evidence supporting its occurrence is not entirely conclusive~\cite{GGNVC13} and
 its tripled unit cell turns the analysis of larger clusters problematic.
 %
 
 Within iDMRG we find that these state is stable in a smaller but finite region compared to both 
 exact diagonalization and mean field.
 %
-We show the state's numerically obtained charge and bond order patterns in Fig.~\ref{fig:phase diagram}(e) and (d) 
-calculated with \eqref{eq:charge} \eqref{eq:bond} respectively.
+We show the state's numerically obtained charge and bond order patterns in Fig.~\ref{fig:phase diagram} (?) 
+calculated with eqs. \eqref{eq:charge} and \eqref{eq:bond} respectively.
 %
-The state has indeed two types of bonds (weak and strong) arranged as in Fig.~\ref{fig:orders}(d) 
+The bond thickness is proportional to the its strength.
+%
+It is easy to see that the state has indeed two bond strengths arranged as in Fig.~\ref{fig:orders}(d) 
 and no charge order.
 %
-For instance for $V_{1}/t=$ and $V_{2}/t=$
+The system chooses one of the three different Kekul\'{e} ground states~\cite{WF10}.
+%
+For instance at $V_{1}/t=$ and $V_{2}/t=$\noteAG{number needed} the two bonds are found numerically $t_{1}=$ and $t_{2}=$\noteAG{number needed}.
 
 
 
@@ -481,22 +490,31 @@ All phases that we have described so far do not differ
 from those predicted by mean field and exact diagonalization.
 %
 At high $V_{2}$ but with sufficiently large $V_{1}$ we observe that
-a twelve site unit cell charge order (CDW-II) depicted schematically in 
+a twelve site unit cell charge order (CDW II) depicted schematically in 
 Fig.~\ref{fig:orders}(e) emerges.
 %
 A sample of its charge and bond order, as obtained with iDMRG via \eqref{eq:charge} and \eqref{eq:bond} is
-shown in Fig.~\ref{fig:phase diagram} (b) for $V_{1}/t=$ and $V_{2}/t=$.
+shown in Fig.~\ref{fig:phase diagram} (b) for $V_{1}/t=$ and $V_{2}/t=$\noteAG{number needed}.
+%
+As with the CMs state, we find that the charge order follows directly from its charge order, suppressed for neighbouring sites that have
+the occupation furthest away from half-filling.
+%
 \\
 %
 
-A strong coupling analysis performed in 12 site cluster with the shape of the CDW-II unit cell reveals a set of 8 classical states with the same charge pattern but classical occupations 0 or 1. 
+%
+Remarkably, the CDW II state is connected to a classical strong coupling phase.
+%
+A strong coupling analysis performed in 12 site cluster with the shape of the CDW II 
+unit cell reveals a set of 8 classical states with the same charge pattern but classical occupations 0 or 1. 
 %
 The energy per site of these states does not have first order hopping corrections,
-$E_{CDW-II} = V_2/2+V_1/4 + O(t^2)$, so the CDW-II is a stable strong coupling phase. 
+$E_{\mathrm{CDW II}} = V_2/2+V_1/4 + O(t^2)$, so the CDW II is a stable strong coupling phase. 
 %
 As long as the cluster allows for this charge pattern, it must be present at sufficiently high $V_{1,2}$.
 %
-In fact, the energy of this classical state is always lower than that of the classical CM states, and it is only for low $V_1$ that the quantum corrections make the CM state favored. 
+In fact, the energy of this classical state is always lower than that of the classical CMs states, 
+and it is only for low $V_1/t$ that the quantum corrections make the CMs state favored. 
 %
 
 \subsection{Charge density wave - III (CDW-III)}
@@ -605,9 +623,15 @@ This quantity shows a clear jump at $V_{2}\approx$ signalling a direct first ord
 phase transition between these two phases.
 %
 
-A first order phase transition is also expected from the strong coupling approach (see appendix). As described in section \ref{}, the energy per site of the CM phase in a 3x3 cluster is $E_{CM} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{CDW II} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. At finite $t$, the CM phase has lower energy due to the first order quantum correction, which is absent for CDW II. But since $E_{CM}$ grows faster with $V_1$ than $E_{CDW II}$, there must be a crossing at a critical $V$ signaling a first order phase transition into the CDW II state. 
+A first order phase transition is also expected from the strong coupling approach (see appendix). 
+%
+As described in section \ref{}, the energy per site of the CM phase in a 3x3 cluster is $E_{CM} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\mathrm{CDW II}} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. 
+%
+At finite $t$, the CM phase has lower energy due to the first order quantum correction, which is absent for CDW II. 
+%
+But since $E_{\mathrm{CM}}$ grows faster with $V_1$ than $E_{\mathrm{CDW II}}$, 
+there must be a crossing at a critical $V$ signalling a first order phase transition into the CDW II state. 
 
-\noteAG{Is this expected semi-classically somehow?}\noteFdJ{Yes}
 
 \subsection{Cut D: CDW-I--Kekul\'{e}--SM--CDW-II}
 
