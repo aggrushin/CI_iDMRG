@@ -251,15 +251,18 @@ For our calculations we choose $L_y=12$ and a unit cell of 36 sites depicted in 
 %
 %It consists of three rings of 12 sites each wrapping around the cylinder.
 %
+
 We pick this geometry for the following two reasons.
 %
-First, all orders expected to occur in the half-filled honeycomb model are commensurate with the chosen unit cell.
-\noteAG{I am not sure I like "expected to occur". It sounds that we are biased.
-Can we argue more along the lines that larger unit cells are not computationally costly 
-but do not introduce novel phases? Of course we have not checked all of the phase diagram but we don't 
-expect to have anything. The latter we don't need to mention explicitly probably.}
+First, 
 %
-Second, we have to keep in mind the structure of the reciprocal space.
+% all orders expected to occur in the half-filled honeycomb model are commensurate with the chosen unit cell.
+% \noteAG{I am not sure I like "expected to occur". It sounds that we are biased.
+% Can we argue more along the lines that larger unit cells are not computationally costly 
+% but do not introduce novel phases? Of course we have not checked all of the phase diagram but we don't 
+% expect to have anything. The latter we don't need to mention explicitly probably.}
+%
+we have to keep in mind the structure of the reciprocal space.
 %
 Since we work in the thermodynamic in the $x$-direction along the cylinder, the momentum in $x$-direction is a continuous quantity.
 %
@@ -268,13 +271,20 @@ However in the finite $y$-direction around the cylinder, the momentum is a discr
 In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the 
 $\mathbf{K}$ and $\mathbf{K}^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$.
 %
-Any instability caused by interactions will open a gap at these points.~\noteAG{hmmm...this a very generic statement. I think it is more that the fermi surface (points)
-are here and we don't want to miss them. I think I would remove this sentence and it still makes sense}
+%Any instability caused by interactions will open a gap at these points.~\noteAG{hmmm...this a very generic statement. I think it is more that the fermi surface (points)
+%are here and we don't want to miss them. I think I would remove this sentence and it still makes sense}
 %
-In order to capture the low energy physics correctly, it is of key importance that $k_y= 2 \pi / 3$ is an allowed momentum in our unit cell.
-\noteAG{This only justifies $L=6,12$ but we only show $12$. Can we argue something further? In fact, I think I mention L=6 somewhere below}
-\noteAG{Maybe we want to mention that we have calculated things with all  $\chi=400,800,1200,1600$ but we show plots for $\chi=?$ unless stated otherwise}
+In order to capture the low energy physics correctly, it is of key importance that $k_y= 2 \pi / 3$ is an allowed momentum in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
 %
+Second, we have to make sure that all orders that result from our calculations are commensurate with the chosen unit cell.
+%
+We also performed some calculations for $L_y=6$ at which this problem was present for some of the phases.
+%
+Moreover, $L_y=12$ brings us the closest possible to the thermodynamic limit.
+%
+Considering this reasoning, the unit cell we have chosen represents the computationally least costly geometry that meets the above criteria.
+%
+The data we show in the remainder of the text is all computed for $L_y = 12$ and bond dimension $\chi = 1600$ unless otherwise stated.
 
 
 \section{\label{sec:phasediagram}Phase diagram}
@@ -314,9 +324,9 @@ that characterise them within the iDMRG method.
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{pdf/phase_diagram_ext.pdf}
- \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12$ \noteAG{$\chi=$?}. 
+ \caption{Left: Phase diagram obtained with iDMRG calculations on an infinte cylinder of circumference $L=12, \, \chi = 1600$. 
  %
- Right: Density ((a)--(d)) and hopping amplitude ((e)--(h)) patterns in the different phases. 
+ Right: Density and hopping amplitude patterns in the different phases. 
  %
  The area of the blue circles is proportional to the particle number expectation value on the respective site. 
  %
@@ -324,7 +334,7 @@ that characterise them within the iDMRG method.
  %
  The unit cells are depicted by the red polygons. 
  %
- ((a)/(e)) Charge modulated (CMs) phase with $V_1/t = 0.8, V_2/t = 3.2 $, ((b)/(f)) Charge density wave II (CDW II) with $V_1/t = 5.6, V_2/t = 3.2$,  ((c)/(g)) Charge density wave III (CDW III) with $V_1/t = 9.2, V_2/t = 2.5$, ((d)/(h)) Kekul\'e phase with $V_1/t = 5.6, V_2/t = 1.6 $. 
+ (a) Charge modulated (CMs) phase with $V_1/t = 0.8, V_2/t = 3.2 $, (b) Kekul\'e phase with $V_1/t = 5.6, V_2/t = 1.6 $, (c) Charge density wave II (CDW II) with $V_1/t = 5.6, V_2/t = 3.2$,  (d) Charge density wave III (CDW III) with $V_1/t = 9.2, V_2/t = 2.5$. 
  \label{fig:phase diagram}}
 \end{figure*}
 
