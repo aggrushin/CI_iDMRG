@@ -52,6 +52,7 @@ i) the absence of the Chern insulator state,
 ii) two previously unnoticed charge ordered phases, 
 iii) the existence and stability of all the non-topological competing orders that were found previously within mean field and
 iv) the character of the relevant phase transitions.
+\noteFP{Here will still have several speculative statements. Should we be a bit more careful here? }
 %
 Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
 towards the absence of Chern insulator phase for this model.
@@ -86,7 +87,7 @@ integer quantum Hall effect; the Hall conductivity contribution of each band is 
 Realising a Chern insulator in nature is not a trivial task~\cite{CZF13}; time-reversal must be broken with
 the resulting magnetic flux averaging to zero over the unit cell, and hence over the entire sample.\\
 %
-In a remarkable proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} 
+In a proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} 
 discussed how the Chern insulator can emerge from electron-electron interactions. 
 %
 It was shown that spinless electrons hoping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively 
@@ -110,7 +111,7 @@ In addition, analogous topological phases have been obtained in other lattices s
  \caption{The upper panel shows a schematic representation of the interacting tight binding model considered in this work:
  %
 fermions hoping in a half-filled honeycomb lattice with nearest-neighbour hopping $t$ (full lines) and interacting via
- nearest and next-to-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively (curved lines) as defined by 
+ nearest and next-nearest neighbour interactions, $V_{1}$ and $V_{2}$ respectively (curved lines) as defined by 
  \eqref{eq:H}.
  %
  The left panel shows the iDMRG unit cell used in this work with 
@@ -135,7 +136,7 @@ Being connected to the classical ground state at $V_{1}/t \to \infty$ with only 
 For $V_{2}\gg V_{1}$ on the other hand it was shown under the mean field paradigm~\cite{GCC13} that the phase space originally attributed to the Haldane Chern insulator 
 was severely reduced by the presence of a sub-lattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
-The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14}.
+The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14} .
 %
 However, its exact nature was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. \noteFdJ{Does Daghofer really question the existence of CMs or just reinterprets it?}\noteAG{They are not very clear in their paper but let me check again.}
 %
@@ -267,13 +268,13 @@ However in the finite $y$-direction around the cylinder, the momentum is a discr
 In the non-interacting case, the model forms a Dirac semimetal and the Fermi surface is located at the 
 $\mathbf{K}$ and $\mathbf{K}^{\prime}$ points~\cite{CastroNeto2009}.
 %
-In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
+In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder (given the growth of computational cost with the circumference).
 %
 Second, we have to make sure that all orders that result from our calculations are commensurate with the chosen unit cell.
 %
 We also performed some calculations for $L_y=6$ at which this problem was present for some of the phases.
 %
-Moreover, $L_y=12$ brings us the closest possible to the thermodynamic limit.
+Moreover, $L_y=12$ brings us the closest possible to the thermodynamic limit. \noteFP{I do not understand this statement}
 %
 Considering this reasoning, the unit cell we have chosen represents the computationally least costly geometry that meets the above criteria.
 %
@@ -404,7 +405,7 @@ and quantum Monte Carlo simulations~\cite{WCT14}.
 %
 For small $t \ll V_{2}$ the ground state is classically degenerate. 
 %
-Within mean field it was shown that as long as $V_{2}>V_{1}$ the system chose a charge ordered pattern with charge modulation 
+Within mean field it was shown that as long as $V_{2}>V_{1}$ the system choses a charge ordered pattern with charge modulation 
 of wavevector $\mathbf{K}$ or $\mathbf{K}'$, termed the CMs phase~\cite{GCC13}. 
 %
 The order parameters for any such modulation can be taken as the corresponding Fourier components of the charge expectation values of Eq.~\eqref{eq:charge},
@@ -557,7 +558,7 @@ due to its large unit cell.
 \section{\label{sec:phasetransitions} Phase transitons}
 %
 A crucial advantage of the iDMRG method is that, unlike finite
-size methods such as exact diagonalization it can give information about the order of phase transitions.
+size methods such as exact diagonalization it can give information about the order of phase transitions.\noteFP{I think this needs to be formulated more carefully... Not to annoy ED people :-).}
 %
 In order to unravel their character we now study two quantities that are sensitive
 to a phase change, the entanglement entropy $S$ and the correlation length $\xi$.
@@ -661,7 +662,7 @@ as a function of $V_{1}$.
 This quantity shows a clear jump at $V_{2}/t\approx 2.2$ signalling a direct first order
 phase transition between these two phases.
 %
-We observe the same behaviour when looking at the correlation length not presented here.
+We observe the same behavior when looking at the correlation length not presented here.
 %
 Additionally, the energy of the ground state as a function of $V_2$ shows a kink at the same critical $V_2$ which further supports the presence of a level crossing at that point.
 %
@@ -707,13 +708,13 @@ At $V_{2}/t\approx 2.3 $ we observe a sharp transition
 to a decaying entanglement entropy that does not depend strongly on $\chi$
 as $V_{2}$ is increased.
 %
-However, the change in enganglement entropy is not as abrupt as in the CMs--CDW II case of the previous subsection as would be expected from a level crossing in a first order transition.
+However, the change in entanglement entropy is not as abrupt as in the CMs--CDW II case of the previous subsection as would be expected from a level crossing in a first order transition.
 %
-We can see a kink in $S$, but the points can be extrapolated into a continuous line indicated in Fig~\ref{fig:cut_V1_0.4}.
+We can see a kink in $S$, but the points can be extrapolated into a continuous line indicated in Fig~\ref{fig:cut_V1_0.4}.\noteFP{Should we also in words mention that the energy is smooth?}
 %
 This suggests that the transition from semimetal to the CMs phase is of second order.
 %
-The correlation length not depicted here shows a similar smooth behaviour as in the transition between semimetal and CDW I phase in Fig.~\ref{fig:cut_V2_0} which further supports the claim of a second order transition.
+The correlation length not depicted here shows a similar smooth behavior as in the transition between semimetal and CDW I phase in Fig.~\ref{fig:cut_V2_0} which further supports the claim of a second order transition.
 
 
 
@@ -814,7 +815,7 @@ Although there is no reason to believe that the situation is different for the $
 mean field Chern insulating phase that is absent in exact diagonalization~\cite{WF10,JGC13}, 
 there is more hope for other frustrated models.
 %
-In particular, the interacting Kagome lattice hosts a Chern insulator state when the filling is tuned to
+In particular, the interacting kagome lattice hosts a Chern insulator state when the filling is tuned to
 the quadratic band point touching between the flat band and one of the two dispersive bands.
 %
 Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which should guarantee
