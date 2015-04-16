@@ -163,11 +163,8 @@ The survival of the Haldane Chern insulator phase (g) was challenged within exac
 by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
  %
  The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
- %
- The two sub-lattices are depicted in blue and orange, $+\varrho,-\varrho,0$ refers to the charge above, below or at half filling respectively.
- %
- The parameter $\Delta>0$ together with $\pm\varrho$ distinguishes the four types of occupation in (c).
- \noteAG{shorten the $\Delta,\varrho$ part}
+%
+ The two sub lattices are depicted in blue and orange, $ 0 < \Delta < \varrho$ describe the deviations from half filling per site.
  %
  \label{fig:orders}}
  %
@@ -263,14 +260,14 @@ First,
 %
 we have to keep in mind the structure of the reciprocal space.
 %
-Since we work in the thermodynamic in the $x$-direction along the cylinder, the momentum in $x$-direction is a continuous quantity.
+Since we work in the thermodynamic limit in the $x$-direction along the cylinder, the momentum in $x$-direction is a continuous quantity.
 %
 However in the finite $y$-direction around the cylinder, the momentum is a discrete variable.
 %
-In the non-interacting case, the model forms a Dirac semimetal with the Fermi surface consisting of the 
-$\mathbf{K}$ and $\mathbf{K}^{\prime}$ points which possess momenta $k_y=k_y^{\prime} = 2\pi / 3$~\cite{CastroNeto2009}.
+In the non-interacting case, the model forms a Dirac semimetal and the Fermi surface is located at the 
+$\mathbf{K}$ and $\mathbf{K}^{\prime}$ points~\cite{CastroNeto2009}.
 %
-In order to capture the low energy physics correctly, it is of key importance that $k_y= 2 \pi / 3$ is an allowed momentum in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
+In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
 %
 Second, we have to make sure that all orders that result from our calculations are commensurate with the chosen unit cell.
 %
@@ -331,7 +328,8 @@ that characterises them within the iDMRG method.
 
 
 %
-\subsection{Semimetal phase}
+
+\subsection{Semimetal phase \label{subsec:SM}}
 %
 We start by discussing the semimetal phase in the phase diagram shown in Fig.~\ref{fig:phase diagram}.
 %
@@ -561,21 +559,20 @@ due to its large unit cell.
 A crucial advantage of the iDMRG method is that, unlike finite
 size methods such as exact diagonalization it can give information about the order of phase transitions.
 %
-In order to unravel the character of the phase transitions between
-the phases described above we now study two quantities that are sensitive
+In order to unravel their character we now study two quantities that are sensitive
 to a phase change, the entanglement entropy $S$ and the correlation length $\xi$.
 %
 The entanglement entropy is defined by
 %
 \begin{equation}
- S = \mathrm{Tr} \rho_A \log \rho_A,
+ S = \mathrm{Tr} \rho_L \log \rho_L,
 \end{equation}
 %
-where $\rho_A = \mathrm{Tr}_B \ket{\psi}\bra{\psi}$ is the reduced density matrix of subsystem $A$ and $A$ and $B$ are two semi-infinite halves of our infinite cylinder.
+where $\rho_L = \mathrm{Tr}_R \ket{\psi}\bra{\psi}$ is the reduced density matrix of the left semi-infinite half $L$ of the cylinder after tracing out the right half $R$.
 %
-The correlation length can be computed from the resulting state of the iDMRG calcultion according to Ref.~\cite{KZM13}.
+The correlation length $\xi$ can be computed from the resulting state of the iDMRG calculation according to Ref.~\cite{KZM13}.
 %
-For the sake of capturing all transitions in the parameter space of our investigation, we focus on the lines labelled by cuts A--F in the phase diagram in Fig.~\ref{fig:phase diagram}.
+For the sake of capturing all relevant transitions in the parameter space of our investigation, we focus on the lines labelled by cuts A--E in the phase diagram in Fig.~\ref{fig:phase diagram}.
 %
 \noteFdJ{Perhaps it would be good to explain how to distinguish first from second order phase transitions in general before explaining the examples? As a non DMRG person this wasn't obvious to me.}
 
@@ -584,7 +581,7 @@ For the sake of capturing all transitions in the parameter space of our investig
 The first horizontal cut, labelled A addresses the character of the phase transition between the semi-metallic
 phase and the simplest charge density wave (CDW I) by fixing $V_{2}=0$.
 %
-This phase transition has been previously addressed with the quantum Monte-Carlo method~\ref{WCT14} 
+This phase transition has been previously addressed with the quantum Monte-Carlo method~\cite{WCT14} 
 and was determined to be of second order character.
 %
 The transition point with divergent correlation length was determined to be at $V_{1}/t = 1.356$ via finite size scaling.
@@ -593,57 +590,63 @@ In Fig.~\ref{fig:cut_V2_0} we show the correlation length as a function of $V_{1
 for different values of the bond dimension $\chi$.
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_0}.pdf}
- \caption{Correlation length at $V_2=0$. The dashed grey line at $V_1/t = 1.356$ shows where the transition has been detected in quantum Monte Carlo \cite{WCT14}. \label{fig:cut_V2_0} \noteFdJ{Perhaps add: Cut A in fig. 3. Since sections are labeled by the cuts, it could be useful to do this for every figure that represents a cut of fig. 3}  \noteAG{could it be useful to show the order parameter M
- as a function of $V_{1}$ in the same plot (using the right vertical axis?). It might get to crowded)}}
+ \caption{Correlation length at $V_2=0$, labelled cut A in Fig.~\ref{fig:phase diagram}. The dashed grey line at $V_1/t = 1.356$ shows where the transition has been detected in quantum Monte Carlo \cite{WCT14}. \label{fig:cut_V2_0} }
 \end{figure}
 % 
 %
-Firstly, for $V_{1} \leq 1.5t$ we observe that the correlation length diverges as the bond
+Firstly, for $V_{1} \lesssim 1.5t$ we observe that the correlation length diverges as the bond
 dimension of the MPS is increased.
 %
 This behaviour is expected for a critical state such as the semimetal phase;  
 the logarithmic divergence of entanglement of a metallic state requires an MPS with $\chi\to\infty$.
 %
-For $V_{1}\geq 1.5t$ the correlation length drops significantly and has no longer a significant 
+For $V_{1} \gtrsim 1.5t$ the correlation length drops significantly and has no longer a significant 
 dependence on $\chi$.
 %
 This is characteristic of a gapped phase such as the charge density wave.
 %
 The crossover is smooth, signalling a second order phase transition, in agreement with 
-quantum Monte Carlo studies.
+quantum Monte Carlo studies \cite{WCT14}.
 %
 With iDMRG it is however not possible to pin point the exact value of $V_{1}$ 
 where the transition happens via finite size scaling due to the few cylinder sizes 
 we have available, as discussed in section \ref{sec:modandmeth}.
 %
 However, from Fig.~\ref{fig:cut_V2_0} it is possible to define a crossover region of $1.3 \lesssim V_{1}\lesssim 1.5$, 
-consistent with the quantum Monte Carlo data, where the transition occurs.
+%<<<<<<< HEAD
+%consistent with the quantum Monte Carlo data, where the transition occurs.
+%
+%\subsection{Cut B: semimetal--CMs}
+%%
+%The cut at $V_{1}=0.4t$, labelled cut B in Fig.~\ref{fig:phase diagram}, 
+%probes the transition between the semimetal phase and the CMs phase.
+%%
+%In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$, the interaction that drives the phase transition.
+%
+%\begin{figure}
+% \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
+% \caption{Entanglement entropy at $V_1=0.4$. \label{fig:cut_V1_0.4}}
+%\end{figure}
+%%
+%As expected from the previous analysis the entanglement entropy of 
+%the semimetal phase depends strongly on the MPS bond dimension $\chi$.
+%%
+%At $V_{2}/t\approx 2.3 $ we observe a sharp transition
+%to a decaying entanglement entropy that does not depend strongly on $\chi$
+%as $V_{2}$ is increased from the transtion.
+%%
+%However, the change in enganglement entropy is continuous and does not show a jump as would be expected from a level crossing in a first order transition.
+%%
+%This suggests that the transition from semimetal to the CMs phase is of second order.
+%
+%
+%\subsection{Cut C: CMs--CDW II}
+%=======
+consistent with the quantum Monte Carlo data \cite{WCT14}, where the transition occurs.
 
-\subsection{Cut B: semimetal--CMs}
-%
-The cut at $V_{1}=0.4t$, labelled cut B in Fig.~\ref{fig:phase diagram}, 
-probes the transition between the semimetal phase and the CMs phase.
-%
-In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$, the interaction that drives the phase transition.
 
-\begin{figure}
- \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
- \caption{Entanglement entropy at $V_1=0.4$. \label{fig:cut_V1_0.4}}
-\end{figure}
-%
-As expected from the previous analysis the entanglement entropy of 
-the semimetal phase depends strongly on the MPS bond dimension $\chi$.
-%
-At $V_{2}/t\approx 2.3 $ we observe a sharp transition
-to a decaying entanglement entropy that does not depend strongly on $\chi$
-as $V_{2}$ is increased from the transtion.
-%
-However, the change in enganglement entropy is continuous and does not show a jump as would be expected from a level crossing in a first order transition.
-%
-This suggests that the transition from semimetal to the CMs phase is of second order.
-
-
-\subsection{Cut C: CMs--CDW II}
+\subsection{Cut B: CMs--CDW II}
+%>>>>>>> 3a9846ccbba2d5ddce9dfd61a1e42044880bfa12
 
 In cut C we fix $V_{2}=3.6t$ and study the phase transition between
 the CMs and the CDW II phase.
@@ -652,67 +655,115 @@ The entanglement entropy is shown in Fig.~\ref{fig:cut_V2_3.6}
 as a function of $V_{1}$.
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V2_3.6}.pdf}
- \caption{Entanglement entropy at $V_2=3.6t$. \label{fig:cut_V2_3.6}}
+ \caption{Entanglement entropy at $V_2/t=3.6$, labelled cut B in Fig.~\ref{fig:phase diagram}. \label{fig:cut_V2_3.6}}
 \end{figure}
 % 
 This quantity shows a clear jump at $V_{2}/t\approx 2.2$ signalling a direct first order
 phase transition between these two phases.
 %
-We observe the same when looking at the correlation length not shown here.
+We observe the same behaviour when looking at the correlation length not presented here.
 %
 Additionally, the energy of the ground state as a function of $V_2$ shows a kink at the same critical $V_2$ which further supports the presence of a level crossing at that point.
 %
 As expected for gapped phases, the entanglement entropy only depends very weakly on the bond dimension, in the CDW II phase even the low $\chi$ of 400 is sufficient to faithfully represent the state.
 %
 
-A first order phase transition is also expected from the strong coupling approach (see appendix~\ref{sec:appendix}). 
+%<<<<<<< HEAD
+%A first order phase transition is also expected from the strong coupling approach (see appendix~\ref{sec:appendix}). 
+%%
+%As described in section \ref{}, the energy per site of the CMs phase in a 3x3 cluster is $E_{\text{CMs}} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\text{CDW II}} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. 
+%%
+%At finite $t$, the CMs phase has lower energy due to the first order quantum correction, which is absent for CDW II. 
+%%
+%Since $E_{\text{CMs}}$ grows faster with $V_1$ than $E_{\text{CDW II}}$, there must be a crossing at a critical $V$ signalling a first order phase transition into the CDW II state. 
+%=======
+A first order phase transition is also expected from the strong coupling approach (see appendix).
 %
-As described in section \ref{}, the energy per site of the CMs phase in a 3x3 cluster is $E_{\text{CMs}} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\text{CDW II}} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. 
+As described in section \ref{sec:appendix}, the energy per site of the CM phase in a 3x3 cluster is $E_{\text{CMs}} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\text{CDW II}} = V_2/2+V_1/4$.
 %
-At finite $t$, the CMs phase has lower energy due to the first order quantum correction, which is absent for CDW II. 
+At $t=0$, $V_1=0$ both states have the same energy.
 %
-Since $E_{\text{CMs}}$ grows faster with $V_1$ than $E_{\text{CDW II}}$, there must be a crossing at a critical $V$ signalling a first order phase transition into the CDW II state. 
+At finite $t$, the CM phase has lower energy due to the first order quantum correction, which is absent for CDW II. 
+%
+Since $E_{\text{CMs}}$ grows faster with $V_1$ than $E_{\text{CDW II}}$, there must be a crossing at a critical $V$ signalling a first order phase transition into the CDW II state.
+
+
+\subsection{Cut C: SM--CMs}
+%
+The cut at $V_{1}/t=0.4$, labelled cut B in Fig.~\ref{fig:phase diagram}, 
+probes the transition between the semimetal phase and the CMs phase.
+%
+In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$, the interaction that drives the phase transition.
+
+\begin{figure}
+ \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
+ \caption{Entanglement entropy at $V_1/t=0.4$, labelled cut C in Fig.~\ref{fig:phase diagram}. \label{fig:cut_V1_0.4}}
+\end{figure}
+%
+As explained in Sec.~\ref{subsec:SM}, the entanglement entropy of 
+the semimetal phase depends strongly on the MPS bond dimension $\chi$.
+%
+At $V_{2}/t\approx 2.3 $ we observe a sharp transition
+to a decaying entanglement entropy that does not depend strongly on $\chi$
+as $V_{2}$ is increased.
+%
+However, the change in enganglement entropy is not as abrupt as in the CMs--CDW II case of the previous subsection as would be expected from a level crossing in a first order transition.
+%
+We can see a kink in $S$, but the points can be extrapolated into a continuous line indicated in Fig~\ref{fig:cut_V1_0.4}.
+%
+This suggests that the transition from semimetal to the CMs phase is of second order.
+%
+The correlation length not depicted here shows a similar smooth behaviour as in the transition between semimetal and CDW I phase in Fig.~\ref{fig:cut_V2_0} which further supports the claim of a second order transition.
+
 
 
 \subsection{Cut D: CDW I--Kekul\'{e}--semimetal--CDW II}
 
-The next line we focus on is cut D at $V_1 = 6t$. The correlation length in dependence of $V_2$ is shown in Fig.~\ref{fig:cut_V1_6}.
+The next cut we focus on is labelled cut D in Fig.~\ref{fig:phase diagram} at $V_1/t = 6$. The correlation length as a function of $V_2$ is shown in Fig.~\ref{fig:cut_V1_6}.
 %
 \begin{figure}
  \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_6}.pdf}
- \caption{Correlation length at $V_1=6t$. \label{fig:cut_V1_6}}
+ \caption{Correlation length at $V_1/t=6$, labelled cut D in Fig.~\ref{fig:phase diagram}. \label{fig:cut_V1_6}}
 \end{figure}
 %
 Starting from low $V_2$ we first cross the phase boundary between the charge density wave CDW I and the bond-ordered Kekul\'e phase.
 %
-The strongly increasing correlation length which peaks at $V_2/t \approx 1.5$ suggests a second order transition.
+As expected for a gapped phase, the correlation length deep in the CDW I phase depends only weakly on the bond dimension.
 %
-Moreover, we can see the presence of a remnant charge order in the Kekul\'e phase close to the phase transition which signals a slow onset of charge ordering coming from the Kekul\'e side as a finite size effect.
+As we approach the phase transition, this behaviour changes since the many body gap is closing.
 %
-This is in contradiction to a level crossing at which the charge order should change suddenly.
+The strongly increasing correlation length which peaks at $V_2/t \approx 1.5$ suggests a second order transition between the CDW I and Kekul\'e phase.
 %
-As expected, the correlation length deep in the CDW I phase depends only weakly on the bond dimension.
+Moreover, we can see the presence of a remnant charge order on top of the bond modulation in the Kekul\'e phase close to the critical point.
 %
-As we approach the phase transition, this changes since the many body gap is closing.
+This signals a slow onset of charge ordering as a finite size effect as we approach the phase boundary from the Kekul\'e side which would be in contradiction to a level crossing for which the charge order should change suddenly.
 %
-In the Kekul\'e phase on the other hand, the correlation length scales with $\chi$ even in the center of the phase.
+In the Kekul\'e phase, the correlation length scales with $\chi$ even in the center of the phase.
 %
-This is due to the fact that it is not a strong coupling phase in which the gap is determined by the interaction but rather by the hopping energy scale.
+This can be attributed to the fact that it is not a strong coupling phase in which the gap is determined by the interaction but rather by the hopping energy scale.
 
-The next phase transition we cross goes from the Kekul\'e phase into the semimetal phase at $V_2/t \approx 1.9$.
+The next phase boundary we cross is between the Kekul\'e and the semimetal phase at $V_2/t \approx 1.9$.
 %
-\noteJM{I'm really not sure about this one. From here it could be 2nd order. But there is also a little jump in the entanglement entropy. It feels like it's just guessing.}\noteFdJ{If this may help, the semimetal-Kekule transition must be first order from the Landau theory perspective. This because the Kekule bond order is in the $E_1'$ representation (this is just a name) and the lowest order term in the Landau free energy is of third order $(E_{1x}')^3-3E_{1y}'(E_{1x}')^2$. This does not happen for the CDW mass, which has a regular fourth order term.}
+From the data presented in Fig.~\ref{fig:cut_V1_6} it is not possible reach a conclusion about the nature of the transition.
 %
+However, from the Landau theory perspective the semimetal--Kekul\'e transition has to be first order for the following reason.
+%
+The Kekul\'e bond order is in the $E_1'$ representation and the lowest order term in the Landau free energy is of third order $(E_{1x}')^3-3E_{1y}'(E_{1x}')^2$.
+\noteJM{Fernando, can you rewrite the last two sentences and add an explanatory sentence maybe? Thanks for the commment!}
+%
+The assumption of a first order transition also agrees with the entanglement entropy which displays a small jump when crossing the phase boundary.
+%
+
 In the semimetal phase, we observe an astonishingly small correlation length for a critical state.
 %
-The reason for that, as we explained in Sec.~\ref{sec:phasediagram}, is that the hopping strengths around and along the cylinder are strongly renormalized leading to an effectively gapped state for a finite cylinder circumference.
+The reason for that, as we explained in Sec.~\ref{subsec:SM}, is that the hopping strengths around and along the cylinder are strongly renormalized leading to an effectively gapped state for a finite cylinder circumference.
 %
 
 Finally, at $V_2/t \approx 2.4$ the semimetal turns into the CDW II.
 %
 The clearly diverging correlation length on the CDW II side of the transition strongly points toward a second order phase transition.
 %
-Moreover, the strong dependence of $\xi$ on the bond dimension suggests that the state is becoming critical as we approch the phase transition, especially compared to the behaviour of $\xi$ deep in the phase.
+Moreover, the strong dependence of $\xi$ on the bond dimension suggests that the ground state is becoming critical as we approach the critical point, especially compared to the behaviour of $\xi$ deep in the phase.
 
 
 \subsection{Cut E: CDW I--Kekul\'e--CDW III--CDW II}
