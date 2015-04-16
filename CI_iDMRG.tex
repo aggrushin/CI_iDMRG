@@ -27,14 +27,14 @@
 %
 \title{Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study}
 %
-%\author{Johannes Motruk}
-%\author{Adolfo. G. Grushin}
-%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
-%\author{Fernando de Juan}
-%\affiliation{\mbox{Materials Science Division, Lawrence Berkeley National Laboratories, Berkeley, CA 94720, USA}}
-%\affiliation{\mbox{Department of Physics, University of California, Berkeley, CA 94720, USA}}
-%\author{Frank Pollmann}
-%\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+\author{Johannes Motruk}
+\author{Adolfo. G. Grushin}
+\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
+\author{Fernando de Juan}
+\affiliation{\mbox{Materials Science Division, Lawrence Berkeley National Laboratories, Berkeley, CA 94720, USA}}
+\affiliation{\mbox{Department of Physics, University of California, Berkeley, CA 94720, USA}}
+\author{Frank Pollmann}
+\affiliation{\mbox{Max-Planck-Institut f\"ur Physik komplexer Systeme, N\"othnitzer Str.\ 38, 01187 Dresden, Germany}}
 %
 \date{\today}
 %
@@ -51,8 +51,10 @@ We report numerical evidence supporting
 i) the absence of the Chern insulator state, 
 ii) two previously unnoticed charge ordered phases, 
 iii) the existence and stability of all the non-topological competing orders that were found previously within mean field and
-iv) the character of the relevant phase transitions.
-\noteFP{Here will still have several speculative statements. Should we be a bit more careful here? }
+%iv) the character of the relevant phase transitions.
+%
+In addition, we discuss the nature of the corresponding phase transitions based on our numerical data.
+%\noteFP{Here will still have several speculative statements. Should we be a bit more careful here? }
 %
 Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
 towards the absence of Chern insulator phase for this model.
@@ -251,7 +253,8 @@ we employ the iDMRG algorithm~\cite{M08,W92,KZM13} on an infinite cylinder geome
 As discussed above, such infinite geometry allows to probe ground states with spontaneous 
 symmetry breaking while taking into account quantum fluctuations.
 %
-Feasible system sizes for our purposes are cylinders of circumference $L_{y} = 6,8,10$ and $12$.
+Feasible system sizes for our purposes are cylinders of circumference $L_{y} = 6,8,10$ and $12$, 
+given the exponential growth of computational cost with the circumference.
 %
 For our calculations we choose $L_y=12$ and a unit cell of 36 sites depicted in Fig.~\ref{fig:Defs}.
 %
@@ -268,7 +271,7 @@ However in the finite $y$-direction around the cylinder, the momentum is a discr
 In the non-interacting case, the model forms a Dirac semimetal and the Fermi surface is located at the 
 $\mathbf{K}$ and $\mathbf{K}^{\prime}$ points~\cite{CastroNeto2009}.
 %
-In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder (given the growth of computational cost with the circumference).
+In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
 %
 Second, we have to make sure that all orders that result from our calculations are commensurate with the chosen unit cell.
 %
@@ -557,10 +560,7 @@ due to its large unit cell.
 
 \section{\label{sec:phasetransitions} Phase transitons}
 %
-A crucial advantage of the iDMRG method is that, unlike finite
-size methods such as exact diagonalization it can give information about the order of phase transitions.\noteFP{I think this needs to be formulated more carefully... Not to annoy ED people :-).}
-%
-In order to unravel their character we now study two quantities that are sensitive
+In order to unravel the character of the corresponding phase transitions we now study two quantities that are sensitive
 to a phase change, the entanglement entropy $S$ and the correlation length $\xi$.
 %
 The entanglement entropy is defined by
