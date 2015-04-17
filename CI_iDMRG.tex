@@ -256,6 +256,7 @@ given the exponential growth of computational cost with the circumference.
 %
 For our calculations we choose $L_y=12$ and a unit cell of 36 sites depicted in Fig.~\ref{fig:Defs}.
 %
+
 We pick this geometry for the following two reasons.
 %
 First, 
@@ -271,15 +272,13 @@ $\mathbf{K}$ and $\mathbf{K}^{\prime}$ points~\cite{CastroNeto2009}.
 %
 In order to capture the low energy physics correctly, it is of key importance that $\mathbf{K}$ and $\mathbf{K}^{\prime}$ are allowed momenta in our unit cell which implies that only $L_y=6$ and $12$ are suitable circumferences of our cylinder.
 %
-Second, we have to make sure that all orders that result from our calculations are commensurate with the chosen unit cell. \noteFdJ{I would think this is kind of the other way round: the chosen unit cell determines what instabilities we have access to with this method. One cannot know the possible orders in advance. I would maybe try to rephrase this.}
+From these two sizes, we chose the largest computationally tractable.
+
+Second, we have a freedom of fixing the length of our unit cell in the $x$-direction since the computational for that only scales linearly.
 %
-We also performed some calculations for $L_y=6$ at which this problem was present for some of the phases.
+By choosing three rings of 12 sites, all orders are commensurate with our unit cell and a further enlargement would not lead to different results in the parameter region we investigated.
 %
-Moreover, $L_y=12$ brings us the closest possible to the thermodynamic limit. \noteFP{I do not understand this statement}
-%
-Considering this reasoning, the unit cell we have chosen represents the computationally least costly geometry that meets the above criteria.
-%
-The data we show in the remainder of the text is all computed for $L_y = 12$ and bond dimension $\chi = 1600$ unless otherwise stated.
+All data we show in the remainder of the text is computed for $L_y = 12$ and bond dimension $\chi = 1600$ unless otherwise stated.
 
 
 \section{\label{sec:phasediagram}Phase diagram}
@@ -391,7 +390,7 @@ that can be calculated using \eqref{eq:charge}, where $n_{A}$ and $n_{B}$ are th
 %
 The resulting charge order is depicted schematically in Fig.~\ref{fig:orders}(b). 
 %
-For instance, at $V_{1}/t = 4$ and $V_{2}/t = 0.4$ we find that $M=$. \noteAG{Number needed}
+For instance, at $V_{1}/t = 4$ and $V_{2}/t = 0.4$ we find that $M=0.817$.
 %
 Numerically the magnitude of $M$ increases with $V_{1}$ and to numerical accuracy this phase has no appreciable bond order.\\
 %s
@@ -437,8 +436,7 @@ A sample of the six site unit cell charge and bond pattern obtained from \eqref{
 The circles at each site have an area proportional to the strength of the charge at the given site, while the thickness of the links between the sites
 represent the bond strengths.
 %
-Such pattern survives in the region labelled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} 
-depicted schematically in Fig.~\ref{fig:orders}(c).
+Such pattern survives in the region labelled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} depicted schematically in Fig.~\ref{fig:orders}(c).
 %
 We note that the bond ordering of this phase is associated to the charge order: two neighbouring sites with similar high (or low) charge densities
 that deviate from half-filling suppress the hopping between them due to the large (small) number of filled (empty) states at that site. \\
@@ -483,7 +481,7 @@ Therefore the system chooses to break the $C_{6v}''$ symmetry down to a $C_{3}$
 falling into one of the three distinct Kekul\'{e} ground states~\cite{WF10}. \noteFdJ{Strictly speaking, this Kekule breaks $C_{6v}''$ to $C_{6v}$ in the notation of Basko. When we consider the six site unit cell, the two primitive translations $a_1$ and $a_2$ become part of the point group $C_{6v}$, which is now called  $C_{6v}''$. If you look at the pattern, Kekule really doesn't break any $C_6$ rotation or reflection, so the residual symmetry is $C_{6v}$. If this is too complicated, we can just say Kekule breaks translational symmetry.}
 %
 At $V_{1}/t=5.6$ and $V_{2}/t=1.6$ the two types bonds are found numerically to be 
-$t_{1}=$ and $t_{2}=$~\noteAG{number needed}.
+$t_{1}=0.522$ and $t_{2}=0.428$.
 
 \subsection{Charge density wave II (CDW II)}
 %
@@ -499,8 +497,8 @@ shown in Fig.~\ref{fig:phase diagram} (c).
 %
 It presents two distinct charge occupations as schematically shown in Fig.~\ref{fig:orders}(e).
 %
-For $V_{1}/t=5.6$ and $V_{2}/t=3.2$ 
-take the values $\varrho_{\pm}=1/2\pm\varrho$ with $\varrho=$~\noteAG{number needed}.
+For $V_{1}/t=5.6$ and $V_{2}/t=3.2$ they
+take the values $\varrho_{\pm}=1/2\pm\varrho$ with $\varrho=0.438$.
 %
 As with the CMs state, we find that its bond order follows directly from its charge order, suppressed for neighbouring sites that have
 the occupation furthest away from half-filling.\\
@@ -566,9 +564,12 @@ where $\rho_L = \mathrm{Tr}_R \ket{\psi}\bra{\psi}$ is the reduced density matri
 %
 The correlation length $\xi$ can be computed from the resulting state of the iDMRG calculation according to Ref.~\cite{KZM13}.
 %
+Both quantities are expected to show a finite jump when crossing a first order tranisition while the correlation length diverges with increasing bond dimension at a second order critical point \cite{KZM13}.
+
+%
 For the sake of capturing all relevant transitions in the parameter space of our investigation, we focus on the lines labelled by cuts A--E in the phase diagram in Fig.~\ref{fig:phase diagram}.
 %
-\noteFdJ{Perhaps it would be good to explain how to distinguish first from second order phase transitions in general before explaining the examples? As a non DMRG person this wasn't obvious to me.}
+% \noteFdJ{Perhaps it would be good to explain how to distinguish first from second order phase transitions in general before explaining the examples? As a non DMRG person this wasn't obvious to me.}
 
 \subsection{Cut A: semimetal--CDW-I}
 
@@ -703,9 +704,9 @@ as $V_{2}$ is increased.
 %
 However, the change in entanglement entropy is not as abrupt as in the CMs--CDW II case of the previous subsection as would be expected from a level crossing in a first order transition.
 %
-We can see a kink in $S$, but the points can be extrapolated into a continuous line indicated in Fig~\ref{fig:cut_V1_0.4}.\noteFP{Should we also in words mention that the energy is smooth?}
+We can see a kink in $S$, but for decreasing $V_2$ it smoothly approches the value of the semimetal phase.
 %
-This suggests that the transition from semimetal to the CMs phase is of second order.
+In addition, the energy is a smooth function $V_2$ which together with the previously mentioned behaviour of $S$ strongly suggests that the transition is of second order.
 %
 The correlation length not depicted here shows a similar smooth behavior as in the transition between semimetal and CDW I phase in Fig.~\ref{fig:cut_V2_0} which further supports the claim of a second order transition.
 
@@ -777,12 +778,16 @@ The entanglement data shown in Fig.~\ref{fig:cut_V1_9.2} supports this statement
 
 At $V_2/t \approx 2.4$ the system undergoes the tranisition to the CDW III phase.
 %
-Unfortunately, a conclusive statement about the order of the critical point cannot be drawn from the present data; especially since the entanglement entropy in the CDW III phase still shows a significant dependence on the bond dimension. \noteJM{Any ideas from theory?}
+Unfortunately, a conclusive statement about the order of the critical point cannot be drawn from the present data; especially since the entanglement entropy in the CDW III phase still shows a significant dependence on the bond dimension.
 %
 
-The last phase boundary in this cut lies between the CDW III and CDW II phases. Here, we can see a clear jump of the entanglement entropy, similar to that in cut~B (Fig.~\ref{fig:cut_V2_3.6}).
+The last phase boundary in this cut lies between the CDW III and CDW II phases.
 %
-We conclude that the this tranisition is of first order.
+Here, we can see a clear jump of the entanglement entropy, similar to that in cut~B (Fig.~\ref{fig:cut_V2_3.6}).
+%
+Moreover, we see a kink in the energy when crossing the critical point.
+%
+So, we conclude that the this tranisition is of first order.
 
 
 
