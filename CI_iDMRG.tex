@@ -416,10 +416,10 @@ It is convenient to arrange these order parameters in a basis that has well defi
 Under the action of the symmetry group $C_{6v}''$, these order parameters transform as the four dimensional $G'$ representation \cite{Basko08,deJuan13}
 %
 \begin{align}
-G_{1x}' = {\rm Re}[n_{A}(\mathbf{K}) -n_{B}(\mathbf{K})] \\
-G_{1y}' =  {\rm Im}[n_{A}(\mathbf{K}) -n_{B}(\mathbf{K})] \\
-G_{2x}' =  {\rm Im}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})] \\
-G_{2y}' =  {\rm Re}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})]
+G_{1x}' = {\rm Re}[n_{A}(\mathbf{K}) -n_{B}(\mathbf{K})], \\
+G_{1y}' =  {\rm Im}[n_{A}(\mathbf{K}) -n_{B}(\mathbf{K})], \\
+G_{2x}' =  {\rm Im}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})], \\
+G_{2y}' =  {\rm Re}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})].
 \end{align}
 %
 The CMs state corresponds to a finite expectation value of both the $B_2$ order parameter and $G' = (1,0,0,0)$ and the states generated from these by operations of the symmetry group. 
@@ -582,7 +582,7 @@ For the sake of capturing all relevant transitions in the parameter space of our
 %
 \noteFdJ{Perhaps it would be good to explain how to distinguish first from second order phase transitions in general before explaining the examples? As a non DMRG person this wasn't obvious to me.}
 
-\subsection{Cut A: semimetal--CDW-I}
+\subsection{Cut A: semimetal--CDW I}
 
 The first horizontal cut, labeled A addresses the character of the phase transition between the semi-metallic
 phase and the simplest charge density wave (CDW I) by fixing $V_{2}=0$.
@@ -893,7 +893,7 @@ where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The fin
 %
 Obtaining the coefficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.\\
 %
-%\noteFdJ{How about this? If I discuss the CDW-II first, it's easier to explain that the intermediate phase plays no role.}
+%\noteFdJ{How about this? If I discuss the CDW I first, it's easier to explain that the intermediate phase plays no role.}
 We have used this method to diagonalize two clusters: a cluster with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
 %
 The results for the spectra can be summarized as follows. \\
@@ -909,8 +909,8 @@ The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern 
 The second is the CDW state, where the two states have a single sub-lattice (A or B) fully occupied. The energy per site of these states is given by
 %
 \begin{align}
-E_{\mathrm{CDW-II}} &=& \frac{1}{2}V_2 + \frac{1}{4}V_1 & & \tfrac{V_1}{V_2} < 4 \\
-E_{\mathrm{CDW}} &=& \frac{3V_2}{2}   & & 4 < \tfrac{V_1}{V_2}
+E_{\mathrm{CDWII}} &= \frac{1}{2}V_2 + \frac{1}{4}V_1 & & \tfrac{V_1}{V_2} < 4 \\
+E_{\mathrm{CDWI}} &= \frac{3V_2}{2}   & & 4 < \tfrac{V_1}{V_2}
 \end{align}
 %
 In the case of the $3\times3$ cluster, at $t=0$ we find four possible classical ground states as a function of increasing $V_1$, with degeneracies 234, 108, 36, 2.
@@ -927,16 +927,17 @@ The third state is an intermediate classical state, and the fourth is again the 
 The energies per site of the three phases in the $3\times3$ cluster are given by
 %
 \begin{eqnarray}
-E_{\mathrm{CMs}} &=& \left\{ \begin{array}{c} \frac{V_2}{2} + \frac{V_1}{3} -0.248t \hspace{8mm} \tfrac{V_1}{V_2} < \tfrac{3}{2} \\  \frac{2V_2}{3} + \frac{2V_1}{9} -0.055t \hspace{5mm}   \tfrac{3}{2} <\tfrac{V_1}{V_2} < 3\end{array} \right. \\
+E_{\mathrm{CMs}} &=& \left\{ \begin{array}{c} \frac{V_2}{2} + \frac{V_1}{3} -0.248t \hspace{8mm} \tfrac{V_1}{V_2} < \tfrac{3}{2} \\  
+\frac{2V_2}{3} + \frac{2V_1}{9} -0.055t \hspace{5mm}   \tfrac{3}{2} <\tfrac{V_1}{V_2} < 3\end{array} \right. \\
 E_{\mathrm{int}} &=& \frac{V_2}{2} + \frac{V_1}{4} \hspace{22mm}   3 <\tfrac{V_1}{V_2} < 4 \\
-E_{\mathrm{CDW}} &=& \frac{3V_2}{2}   \hspace{29mm}   4 < \tfrac{V_1}{V_2} 
+E_{\mathrm{CDWI}} &=& \frac{3V_2}{2}   \hspace{29mm}   4 < \tfrac{V_1}{V_2} 
 \end{eqnarray}
 %
-As explained in the main text, the energy per site of the CDW-II phase is lower than the classical energies of any state of the $3\times3$ cluster. 
+As explained in the main text, the energy per site of the CDW II phase is lower than the classical energies of any state of the $3\times3$ cluster. 
 %
-Since the intermediate state does not have quantum corrections, its energy remains higher than CDW-II and thus the intermediate state is never realized. 
+Since the intermediate state does not have quantum corrections, its energy $E_{\mathrm{int}}$ remains higher than CDW II and thus the intermediate state is never realized. 
 %
-The CMs state, however, has lower energy than CDW-II for small enough $V_1$ once the quantum corrections are included. 
+The CMs state, however, has lower energy than CDW II for small enough $V_1$ once the quantum corrections are included. 
 %
 In the two clusters studied with perturbation theory, only the state we have labeled as the CMs state is non trivial in the sense that it has first order quantum corrections.
 %
@@ -948,13 +949,17 @@ Therefore, to detect an ordered phase we resort to computing correlation functio
 %
  
 Correlation functions for charge order parameters can be expressed in general as
+%
 \begin{equation}
-\rho_{ij\ldots} = {\rm tr} \left< GS \right| c^\dagger_i c_ic^\dagger_j c_j \ldots \left| GS \right> 
+\rho_{ij\ldots} = {\rm tr} \left< GS \right| c^\dagger_i c_ic^\dagger_j c_j \ldots \left| GS \right>, 
 \end{equation}
+%
 which is given explicitly by
+%
 \begin{equation}
 \rho_{ij\ldots} = \sum_{m,\alpha} (v_m^\alpha)^*v_m^\alpha C^m_i C^m_j \dots
 \end{equation}
+%
 Fourier transforming the real space indices $ij\ldots$ and taking the combinations defined in the main text for the representations $B_2$ and $G$, we can compute any correlation function of order parameters $\left< GS \right| O_1 O_2 \ldots \left| GS \right> $ with $O = G, B_2$. 
 %
 The simplest scalars that signal the presence of an order parameter are simply the two point functions
@@ -976,10 +981,10 @@ However, this is not enough information to distinguish the CMs phase. We have al
 %\end{figure}
 
 \begin{align}
-S_3 &= {\rm Im}(G_2^3-3G_2 G_1^2)  \\
-S_4 &= B_2 {\rm Im}(G_1G_2) \\
-S_5 &= [{\rm Im}(G_1G_2)]^2 \\
-S_6 &= B_2{\rm Re}(G_1^3-3G_1 G_2^2)
+S_3 &= {\rm Im}(G_2^3-3G_2 G_1^2),  \\
+S_4 &= B_2 {\rm Im}(G_1G_2), \\
+S_5 &= [{\rm Im}(G_1G_2)]^2, \\
+S_6 &= B_2{\rm Re}(G_1^3-3G_1 G_2^2),
 \end{align}
 and found that only $S_6$ is finite, therefore confirming the presence of the CMs phase with the strong coupling approach for $V_1<3V_2$. 
 
