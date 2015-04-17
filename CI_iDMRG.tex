@@ -422,13 +422,21 @@ G_{2x}' =  {\rm Im}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})] \\
 G_{2y}' =  {\rm Re}[n_{A}(\mathbf{K}) +n_{B}(\mathbf{K})]
 \end{align}
 %
-The CMs state corresponds to a finite expectation value of both the $B_2$ order parameter and $G' = (1,0,0,0)$ and the states generated from these by operations of the symmetry group. A scalar order parameter for the CMs phase can be defined as $B_2 {\rm Re}[(G_1')^3-3G_1'(G_2')^2]$, where $G_i' = G_{ix}'+iG_{iy}'$ (see Appendix A). 
+The CMs state corresponds to a finite expectation value of both the $B_2$ order parameter and $G' = (1,0,0,0)$ and the states generated from these by operations of the symmetry group. 
 %
-Such order is schematically shown in Fig.~\ref{fig:orders}(c). It minimizes the large cost
-attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost determined by $V_{1}$.
+A scalar order parameter for the CMs phase can be defined as $B_2 {\rm Re}[(G_1')^3-3G_1'(G_2')^2]$, where $G_i' = G_{ix}'+iG_{iy}'$ (see Appendix A).
 %
-Within exact diagonalization it has been argued that the CMs state survives quantum fluctuations~\cite{GGNVC13,DH14,DCH14} 
-but its single particle nature was challenged in Ref.~\onlinecite{DH14} suggesting that a pinball like state~\cite{HF06,MRF13} cannot be ruled out.\\
+The CMs structure is schematically shown in Fig.~\ref{fig:orders}(c). 
+%
+It minimizes the large cost attributed to $V_{2}$ by reversing two nearest neighbour dimers at the expense of paying the small energetic cost determined by $V_{1}$.
+%
+Within exact diagonalization it has been argued that the CMs state survives quantum fluctuations~\cite{GGNVC13,DH14,DCH14}.
+% 
+However, the sub-lattice charge imbalance predicted in mean field~\cite{GCC13} was suggested to be absent in Ref.~\onlinecite{DH14} 
+due to the absence of an enhanced Fourier component of the charge structure factor at the $\Gamma$ point.
+%
+We note the CMs scalar order parameter defined above probes the charge imbalance since $B_{2}$ has to be non-zero for it not to vanish. 
+\noteAG{Fer, please check this statement}\\
 %
 With the iDMRG method we find that the CMs appears directly above the semimetallic phase~[see Fig.~\ref{fig:phase diagram}].
 %
@@ -437,11 +445,12 @@ A sample of the six site unit cell charge and bond pattern obtained from \eqref{
 The circles at each site have an area proportional to the strength of the charge at the given site, while the thickness of the links between the sites
 represent the bond strengths.
 %
-Such pattern survives in the region labeled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} 
+This bond and charge pattern survives in the region labeled CMs of the phase diagram and coincides with that obtained within mean field theory~\cite{GCC13} 
 depicted schematically in Fig.~\ref{fig:orders}(c).
 %
 We note that the bond ordering of this phase is associated to the charge order: two neighbouring sites with similar high (or low) charge densities
-that deviate from half-filling suppress the hopping between them due to the large (small) number of filled (empty) states at that site. \\
+that deviate from half-filling suppress the hopping between them due to the large (small) number of filled (empty) states at that site. 
+\\
 % 
 We have also reproduced the existence of the CMs state from a strong coupling perturbation theory analysis. 
 %
@@ -608,40 +617,10 @@ where the transition happens via finite size scaling due to the few cylinder siz
 we have available, as discussed in section \ref{sec:modandmeth}.
 %
 However, from Fig.~\ref{fig:cut_V2_0} it is possible to define a crossover region of $1.3 \lesssim V_{1}\lesssim 1.5$, 
-%<<<<<<< HEAD
-%consistent with the quantum Monte Carlo data, where the transition occurs.
-%
-%\subsection{Cut B: semimetal--CMs}
-%%
-%The cut at $V_{1}=0.4t$, labeled cut B in Fig.~\ref{fig:phase diagram}, 
-%probes the transition between the semimetal phase and the CMs phase.
-%%
-%In Fig.~\ref{fig:cut_V1_0.4} we present the entanglement entropy $S$ as a function of $V_{2}$, the interaction that drives the phase transition.
-%
-%\begin{figure}
-% \includegraphics[width=\columnwidth]{{pdf/plot_cut_V1_0.4}.pdf}
-% \caption{Entanglement entropy at $V_1=0.4$. \label{fig:cut_V1_0.4}}
-%\end{figure}
-%%
-%As expected from the previous analysis the entanglement entropy of 
-%the semimetal phase depends strongly on the MPS bond dimension $\chi$.
-%%
-%At $V_{2}/t\approx 2.3 $ we observe a sharp transition
-%to a decaying entanglement entropy that does not depend strongly on $\chi$
-%as $V_{2}$ is increased from the transtion.
-%%
-%However, the change in enganglement entropy is continuous and does not show a jump as would be expected from a level crossing in a first order transition.
-%%
-%This suggests that the transition from semimetal to the CMs phase is of second order.
-%
-%
-%\subsection{Cut C: CMs--CDW II}
-%=======
 consistent with the quantum Monte Carlo data \cite{WCT14}, where the transition occurs.
 
 
 \subsection{Cut B: CMs--CDW II}
-%>>>>>>> 3a9846ccbba2d5ddce9dfd61a1e42044880bfa12
 
 In cut C we fix $V_{2}=3.6t$ and study the phase transition between
 the CMs and the CDW II phase.
@@ -798,7 +777,7 @@ mean field Chern insulating phase that is absent in exact diagonalization~\cite{
 there is more hope for other frustrated models.
 %
 In particular, the interacting kagome lattice hosts a Chern insulator state when the filling is tuned to
-the quadratic band point touching between the flat band and one of the two dispersive bands.
+the quadratic band point touching between the flat band and one of the two dispersive bands~\cite{WRW10}.
 %
 Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which should guarantee
 its robustness at sufficiently low interaction strength.\\
@@ -812,8 +791,6 @@ challenging and highlights the advantages of the iDMRG method.
 %
 On the one hand the CDW II phase is a strong coupling phase that is stable upon perturbation theory in $V_{1,2}/t$.
 %
-%Its presence is guaranteed as long as the system does not frustrate its order. \noteFdJ{The system frustrates the order? Perhaps finite size effects, or boundaries?}
-%
 The CDW III in turn is not connected to any strong coupling phase.
 
 From the evidence presented in this work we have established that CMs phase state occurs from first
@@ -825,6 +802,9 @@ of this single particle charge order, beyond numerical approximations.
 Our semiclassical analysis, corroborated by the iDMRG numerical evidence presented here,
 provides an explanation of why this phase has a many-body gap of the order of the hopping strength $t/V_{2}$ 
 rather than determined by $V_{2}$ as was previously noticed~\cite{GCC13,DH14,DCH14}.
+%
+Both the semiclassical treatment and the numerical data we obtain establish that the CMs state
+has a finite sub-lattice imbalance.
 %
 The CMs is thus stable for small $V_{1}$ and finite $t$, increasing the former or reducing the latter leads to the CDW II classical ground state
 through a first order phase transition.\\
