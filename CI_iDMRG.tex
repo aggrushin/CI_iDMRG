@@ -51,15 +51,11 @@ We report numerical evidence supporting
 i) the absence of the Chern insulator state, 
 ii) two previously unnoticed charge ordered phases, 
 iii) the existence and stability of all the non-topological competing orders that were found previously within mean field
-%iv) the character of the relevant phase transitions.
 %
 In addition, we discuss the nature of the corresponding phase transitions based on our numerical data.
-%\noteFP{Here will still have several speculative statements. Should we be a bit more careful here? }
 %
 Our work establishes the phase diagram of the half-filled honeycomb lattice model tilting the balance
 towards the absence of Chern insulator phase for this model.
-%
-%\noteAG{There are specific commands to leave comments like this one}\noteFP{or this}\noteJM{or this}\noteFdJ{or this}
 %
 \end{abstract}
 %
@@ -97,7 +93,8 @@ It was shown that spinless electrons hoping in the half-filled honeycomb lattice
 %
 The non-interacting realization of this Chern insulator phase has complex next to nearest neighbour hopings [see Fig.~\ref{fig:orders}(g)].
 %
-Therefore within the mean field paradigm it can only occur in the region where $V_{2}>V_{1}$ \noteFdJ{This sounds very specific, does this really follow from the previous statement?} such that $V_{2}$ spontaneously breaks time reversal symmetry generating complex second nearest hopping strengths.
+Within the mean field paradigm it occurs in the region where $V_{2}>V_{1}$ where $V_{2}$ spontaneously breaks time reversal symmetry 
+generating complex second nearest hopping strengths.
 %
 The latter condition was shown not to be a generic requirement; Chern insulator phases can be realized 
 in mean field with only $V_{1}$ at the expense of enlarging the unit cell and doping the system~\cite{CGV11,GCC13}.
@@ -115,7 +112,7 @@ fermions hoping in a half-filled honeycomb lattice with nearest-neighbour hoppin
  \eqref{eq:H}.
  %
  The left panel shows the iDMRG unit cell used in this work with 
- $3 \times 6$ unit cells yielding a cylinder with a circumference of $L=12$ \noteFdJ{Should this be $L_y$} sites depicted in the lower panel. 
+ $3 \times 6$ unit cells yielding a cylinder with a circumference of $L_{y}=12$ sites depicted in the lower panel. 
  %
  \label{fig:Defs}}
 \end{figure}
@@ -136,9 +133,12 @@ Being connected to the classical ground state at $V_{1}/t \to \infty$ with only 
 For $V_{2}\gg V_{1}$ on the other hand it was shown under the mean field paradigm~\cite{GCC13} that the phase space originally attributed to the Haldane Chern insulator 
 was severely reduced by the presence of a sub-lattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
-The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14} .
+The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DCH14} and within a variational Monte Carlo approach~\cite{DCH14}.
 %
-However, its exact nature was questioned by Ref.~\cite{DH14} where it was argued that a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. \noteFdJ{Does Daghofer really question the existence of CMs or just reinterprets it?}\noteAG{They are not very clear in their paper but let me check again.}
+The exact nature the phase was further discussed in Ref.~\cite{DH14} by computing the charge structure factor; 
+its suppressed Fourier component at $\Gamma$ suggested the absence of charge imbalance between the sub-lattices.
+% 
+%a pinball liquid state~\cite{HF06,MRF13} --a state where a fraction of electrons remains pinned to fixed lattice sites while the remaining fermions explore the unoccupied sites-- cannot be discarded. 
 %
 In addition, at intermediate $V_{1}\lesssim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,WF10,RH10,RJH13} depicted in Fig.~\ref{fig:orders}(d), that triples the original honeycomb two atom unit cell, 
 was found to be stable within mean field theory.
@@ -163,7 +163,7 @@ Nonetheless, this interpretation was challenged by Ref.~\cite{DCH14} that observ
 The survival of the Haldane Chern insulator phase (g) was challenged within exact diagonalization with periodic boundary conditions
 by Refs.~\cite{GGNVC13,DH14} but found in Ref.~\cite{DCH14} for open boundary conditions.
  %
- The exact nature of phase (c) was questioned within exact diagonalization by Ref.~\cite{DH14}.
+ The generic charge imbalance between the sub-lattices in phase (c) was not found within exact diagonalization~\cite{DH14}.
 %
  The two sub lattices are depicted in blue and orange, $ 0 < \Delta < \varrho$ describe the deviations from half filling per site.
  %
@@ -479,8 +479,9 @@ The bond thickness is proportional to its strength.
 From Fig.~\ref{fig:phase diagram} (b) it is apparent that the state has indeed two bond strengths arranged as in Fig.~\ref{fig:orders}(d) 
 and no charge order.
 %
-Therefore the system chooses to break the $C_{6v}''$ symmetry down to a $C_{3}$
-falling into one of the three distinct Kekul\'{e} ground states~\cite{WF10}. \noteFdJ{Strictly speaking, this Kekule breaks $C_{6v}''$ to $C_{6v}$ in the notation of Basko. When we consider the six site unit cell, the two primitive translations $a_1$ and $a_2$ become part of the point group $C_{6v}$, which is now called  $C_{6v}''$. If you look at the pattern, Kekule really doesn't break any $C_6$ rotation or reflection, so the residual symmetry is $C_{6v}$. If this is too complicated, we can just say Kekule breaks translational symmetry.}
+Therefore the system chooses to break the original two site unit cell translational symmetry 
+falling into one of the three distinct Kekul\'{e} ground states~\cite{WF10}. 
+%\noteFdJ{Strictly speaking, this Kekule breaks $C_{6v}''$ to $C_{6v}$ in the notation of Basko. When we consider the six site unit cell, the two primitive translations $a_1$ and $a_2$ become part of the point group $C_{6v}$, which is now called  $C_{6v}''$. If you look at the pattern, Kekule really doesn't break any $C_6$ rotation or reflection, so the residual symmetry is $C_{6v}$. If this is too complicated, we can just say Kekule breaks translational symmetry.}
 %
 At $V_{1}/t=5.6$ and $V_{2}/t=1.6$ the two types bonds are found numerically to be 
 $t_{1}=$ and $t_{2}=$~\noteAG{number needed}.
@@ -662,15 +663,6 @@ Additionally, the energy of the ground state as a function of $V_2$ shows a kink
 As expected for gapped phases, the entanglement entropy only depends very weakly on the bond dimension, in the CDW II phase even the low $\chi$ of 400 is sufficient to faithfully represent the state.
 %
 
-%<<<<<<< HEAD
-%A first order phase transition is also expected from the strong coupling approach (see appendix~\ref{sec:appendix}). 
-%%
-%As described in section \ref{}, the energy per site of the CMs phase in a 3x3 cluster is $E_{\text{CMs}} = V_2/2+V_1/3$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\text{CDW II}} = V_2/2+V_1/4$. At $t=0$, $V_1=0$ both states have the same energy. 
-%%
-%At finite $t$, the CMs phase has lower energy due to the first order quantum correction, which is absent for CDW II. 
-%%
-%Since $E_{\text{CMs}}$ grows faster with $V_1$ than $E_{\text{CDW II}}$, there must be a crossing at a critical $V$ signalling a first order phase transition into the CDW II state. 
-%=======
 A first order phase transition is also expected from the strong coupling approach (see appendix~\ref{sec:appendix}).
 %
 As described in section \ref{sec:appendix}, the energy per site of the CM phase in a 3x3 cluster is $E_{\text{CMs}} = V_2/2+V_1/3-0.248t$ for $V_1/V_2<3/2$, while the energy per site of the CDW II phase is $E_{\text{CDW II}} = V_2/2+V_1/4$.
@@ -794,9 +786,7 @@ model has been questioned by different methods since its proposal~\cite{RQHZ08,W
 %
 In this work we have gone beyond previous mean field and exact diagonalization by using the iDMRG method, an algorithm that allows for quantum fluctuations
 to play a role but minimises the finite size effects due its intrinsic infinite cylinder geometry.
-%%
-%All disputed phases are gapped and therefore ideal for iDMRG to asses since correlation lengths and
-%entanglement decay rapidly in gapped phases.\\
+%
 
 One of our main results is the absence of the Haldane Chern insulator state in this model.
 %
@@ -822,7 +812,7 @@ challenging and highlights the advantages of the iDMRG method.
 %
 On the one hand the CDW II phase is a strong coupling phase that is stable upon perturbation theory in $V_{1,2}/t$.
 %
-Its presence is guaranteed as long as the system does not frustrate its order. \noteFdJ{The system frustrates the order? Perhaps finite size effects, or boundaries?}
+%Its presence is guaranteed as long as the system does not frustrate its order. \noteFdJ{The system frustrates the order? Perhaps finite size effects, or boundaries?}
 %
 The CDW III in turn is not connected to any strong coupling phase.
 
@@ -914,7 +904,7 @@ where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The fin
 %
 Obtaining the coefficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.\\
 %
-\noteFdJ{How about this? If I discuss the CDW-II first, it's easier to explain that the intermediate phase plays no role.}
+%\noteFdJ{How about this? If I discuss the CDW-II first, it's easier to explain that the intermediate phase plays no role.}
 We have used this method to diagonalize two clusters: a cluster with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
 %
 The results for the spectra can be summarized as follows. \\
@@ -927,7 +917,7 @@ The first can be identified with the classical version of the CDW II state, wher
 %
 The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern in the given unit cell. 
 %
-The second is the CDW state, where the two states have a single sublattice (A or B) fully occupied. The energy per site of these states is given by
+The second is the CDW state, where the two states have a single sub-lattice (A or B) fully occupied. The energy per site of these states is given by
 %
 \begin{align}
 E_{\mathrm{CDW-II}} &=& \frac{1}{2}V_2 + \frac{1}{4}V_1 & & \tfrac{V_1}{V_2} < 4 \\
@@ -945,7 +935,7 @@ Further evidence to support this claim is also shown below.
 %
 The third state is an intermediate classical state, and the fourth is again the CDW. 
 %
-The energies per site of the three phases in the 3x3 cluster are given by
+The energies per site of the three phases in the $3\times3$ cluster are given by
 %
 \begin{eqnarray}
 E_{\mathrm{CMs}} &=& \left\{ \begin{array}{c} \frac{V_2}{2} + \frac{V_1}{3} -0.248t \hspace{8mm} \tfrac{V_1}{V_2} < \tfrac{3}{2} \\  \frac{2V_2}{3} + \frac{2V_1}{9} -0.055t \hspace{5mm}   \tfrac{3}{2} <\tfrac{V_1}{V_2} < 3\end{array} \right. \\
@@ -983,7 +973,7 @@ The simplest scalars that signal the presence of an order parameter are simply t
 S_1 &= B_2^2, \\
 S_2 &= |G_1|^2+|G_2|^2.
 \end{align}
-We have computed these correlation functions in the ground states of the 3x3 cluster with $V_1<3V_2$ and finite $t$ and found that they are both finite. 
+We have computed these correlation functions in the ground states of the $3\times3$ cluster with $V_1<3V_2$ and finite $t$ and found that they are both finite. 
 %
 However, this is not enough information to distinguish the CMs phase. We have also computed the correlation functions of higher order for this ground state
 %\begin{figure}[t]
