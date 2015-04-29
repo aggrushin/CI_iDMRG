@@ -85,7 +85,7 @@ integer quantum Hall effect; the Hall conductivity contribution of each band is 
 Realising a Chern insulator in nature is not a trivial task~\cite{CZF13}; time-reversal must be broken with
 the resulting magnetic flux averaging to zero over the unit cell, and hence over the entire sample.\\
 %
-In a proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,GCC13} 
+In a proof of principle, a set of mean field studies~\cite{RQHZ08,WF10,PR12,GCC13} 
 discussed how the Chern insulator can emerge from repulsive short range interactions. 
 %
 It was shown that spinless fermions hopping in the half-filled honeycomb lattice with nearest and next-to-nearest neighbor interactions, $V_{1}$ and $V_{2}$ respectively 
@@ -134,10 +134,11 @@ For $V_{2}\gg V_{1}$ on the other hand it was shown under the mean field paradig
 was severely reduced by the presence of a sublattice charge modulated state (or CMs) depicted in Fig.~\ref{fig:orders}(c).
 %
 The CMs phase was corroborated to survive quantum fluctuations in exact diagonalization~\cite{GGNVC13,DH14,DCH14} 
-and within a variational Monte Carlo approach~\cite{DCH14}.
+and within a variational Monte Carlo approach~\cite{HFC14,DCH14}.
 %
 The exact nature of the phase was further discussed in Ref.~\cite{DH14} by computing the charge structure factor; 
-its suppressed Fourier component at $\Gamma$ suggested the absence of charge imbalance between the sublattices.
+its suppressed Fourier component at $\Gamma$ suggested the absence of charge imbalance between the sublattices and 
+was therefore termed CM phase.
 %
 In addition, at intermediate $V_{1}\gtrsim V_{2}$ a Kekul\'e bond order~\cite{C00,HCM07,RH10,RJH13} 
 depicted in Fig.~\ref{fig:orders}(d) was found to be stable within mean field theory~\cite{WF10}.
@@ -206,8 +207,7 @@ Our main findings are summarized next.
 %
 First we show compelling numerical evidence that supports the absence of the Chern insulator state in a wide region of $\left\lbrace V_{1},V_{2}\right\rbrace$ phase space.
 %
-Second, we find two new phases not reported previously neither within mean field nor exact diagonalization results and give a semiclassical argument for one 
-of these to occur.
+Second, we find two new phases not reported previously neither within mean field nor exact diagonalization results and give a semiclassical arguments for them to occur.
 %
 Third, we provide numerical support for the existence and stability of all the competing orders that were found previously within mean field.
 %
@@ -444,7 +444,7 @@ This bond and charge pattern survives in the region labeled CMs of the phase dia
 %
 The corresponding charge values for $V_1/t = 0.8, V_2/t = 3.2 $ are given by $\varrho=0.364$ and $\Delta = 0.092$.
 %
-Moreover, we find a clear sublattice imbalance that grows as $V_{2}$ is increased.
+Moreover, we find a clear sublattice imbalance that grows as $V_{2}$ is increased that justifies the label CMs rather than the simpler CM phase.
 %
 We note also that the bond ordering of this phase is associated to the charge order: two neighboring sites with similar high (or low) charge densities
 that deviate from half-filling suppress the hopping between them due to the large (small) number of filled (empty) states at that site. 
@@ -532,9 +532,7 @@ and it is only for low $V_1/t$ that the quantum corrections make the CMs state f
 \subsection{Charge density wave III (CDW III)}
 %
 At high $V_{1}$ and between the previously discussed CDW II and CDW I states
-we find a third type of charge order labeled CDW III.
-%
-This phase has a twelve site unit cell but in this case it cannot be connected to a classical strong coupling state.
+we find a third type of charge order with a twelve site unit cell labeled CDW III.
 %
 A representative pattern of its charge and bond order as obtained numerically 
 with \eqref{eq:charge} and \eqref{eq:bond} respectively
@@ -553,7 +551,19 @@ identification in the original mean field~\cite{RQHZ08,WF10,GCC13}
 and the first subsequent exact diagonalization~\cite{GGNVC13,DH14,DCH14} studies 
 due to its large unit cell.
 %
+ \noteAG{Semiclassics:}
  
+ The emergence of the CDW III can also be understood from a semiclassics point of view.
+ %
+ At strong coupling analysis reveals that at $V_{1}=4V_{2}$ the classical ground state manifold is largely degenerate
+ (see Appendix A).
+ %
+ This line is special; it separates the classical CDW I ground state from the part of the phase diagram
+ where the CDW II is more stable. 
+ %
+ Unlike for the CDW II, first order perturbation theory $t/V_{1,2}$ is able to lift this degeneracy
+ and stabilise a charge ordered phase around a region $V_{1}\sim4V_{2}$.
+ \noteAG{To be completed with Fernando's comments}
 
 
 
@@ -693,7 +703,7 @@ the semimetal and CDW I phases in Fig.~\ref{fig:cut_V2_0} which provides further
 
 
 
-\subsection{Cut D: CDW I--Kekul\'{e}--semimetal--CDW II}
+\subsection{Cut D: CDW I--Kekul\'{e}--Semimetal--CDW II}
 
 The next cut we focus on is labeled cut D in Fig.~\ref{fig:phase diagram} at $V_1/t = 6$. The correlation length as a function of $V_2$ is shown in Fig.~\ref{fig:cut_V1_6}.
 %
@@ -820,7 +830,10 @@ challenging and highlights the advantages of the iDMRG method.
 %
 On the one hand the CDW II phase is a strong coupling phase that has no first order correction in powers of $t/V_{1,2}$.
 %
-The CDW III in turn is not connected to any strong coupling phase.
+\noteAG{To be completed} On the other hand, the CDW III occurs in the region close to the classical transition between
+the CDW I and II states.
+%
+In this region, the first order corrections $t/V_{1,2}$ lift the classical degeneracy and stabilize CDW III state in that region. 
 %
 Both phases present as well a distinctive bond ordering that can be understood from their charge order.
 
@@ -835,7 +848,7 @@ provides an explanation of why this phase has a many-body gap of the order of th
 as was previously noticed~\cite{DH14,DCH14}, rather than determined by $V_{2}$ .
 %
 Both the semiclassical treatment and the numerical data we obtain establish that the CMs state
-has a finite sublattice imbalance, a feature that was still in dispute~\cite{GCC13,DH14}.
+has a finite sublattice imbalance, a feature that was still under dispute~\cite{GCC13,DH14}.
 %
 Moreover, we have reported a characteristic bond order not addressed in previous studies.
 %
