@@ -277,7 +277,7 @@ In order to capture the low energy physics correctly, it is of key importance th
 %
 Second, we have the freedom of fixing the length of our unit cell in the $x$-direction since the computational for that only scales linearly.
 %
-By choosing three rings of 12 sites, all orders are commensurate with our unit cell and a further enlargement would not lead to different results in the parameter region we investigated.
+By choosing three rings of 12 sites each, all orders are commensurate with our unit cell and a further enlargement would not lead to different results in the parameter region we investigated.
 %
 All data we show in the remainder of the text is computed for $L_y = 12$ and bond dimension $\chi = 1600$ unless otherwise stated.
 
@@ -869,33 +869,38 @@ the naive mean field expectations.
 %
 Although there is no reason to believe that the situation is different for the $\pi-$flux model, which also hosts a
 mean field Chern insulating phase that is absent in exact diagonalization~\cite{WF10,JGC13}, 
-there is more hope for other frustrated models.
+there is more hope for other models with quadratic band point touchings.
 %
 In particular, the interacting kagome lattice hosts a Chern insulator state within mean field theory when the filling is tuned to
 the quadratic band point touching between the flat band and one of the two dispersive bands~\cite{WRW10}.
 %
 Its presence is predicted within the renormalization group approach~\cite{SF08,SYF09} which guarantees
-its robustness at sufficiently low interaction strength.\\
+its robustness at sufficiently low interaction strength.
 %
-In addition, we have theoretically predicted two novel competing phases, the CDW II and CDW III.
+Adequate substrate engineering can also lead to such quadratic band point touching, potentially favouring the Chern insulator state~\cite{MVB14}.
+\\
 %
-These states are topologically trivial charge ordered states that have a twelve site unit cell.
+In addition, we have theoretically accounted for two novel competing phases, the CDW II and CDW III.
 %
-Such a large unit cell turns their identification within exact diagonalization or mean field studies 
-challenging and highlights the advantages of the iDMRG method.
+Their potentially large unit cells turns their identification within exact diagonalization or mean field studies 
+challenging.
 %
 On the one hand the CDW II phase stems from a degenerate strong coupling phase that has no first order correction in powers of $t/V_{1,2}$.
 %
-To determine its exact charge order \noteAG{To be completed...} 
+Although the degenerate manifold includes a distinguishable stripe-like phase, our iDMRG calculations find that a superposition state 
+between classical ground states has lower energy.
 %
 The CDW III on the other hand, occurs in a finite region around the classical transition between
-the CDW I and II states $V_{1}=4V_{2}$.
+the CDW I and II states defined by the line $V_{1}=4V_{2}$, and has a clear twelve site unit cell.
 %
-In this region, the first order corrections $t/V_{1,2}$ lift the classical degeneracy and stabilize CDW III state. 
+In this region, the first order corrections $t/V_{1,2}$ lift the classical degeneracy and stabilize CDW III state.
 %
-Both phases present as well a distinctive bond ordering that can be understood from their charge order.
+The calculated charge structure factor agrees between the semiclassical limit and with our numeriical iDMRG data 
+reconciling these two results.
+%
+The CDW III phase presents as well a distinctive bond ordering that can be understood from its charge order.
 
-From the evidence presented in this work we have established that CMs state occurs from first
+From the evidence presented in this work we have established that the CMs state occurs from first
 order perturbation theory in powers of $t/V_{2}$ of an otherwise classically degenerate ground state.
 %
 This part of our work establishes the existence and robustness 
@@ -914,15 +919,15 @@ As in the CDW II and CDW III cases such bond order is determined by the CMs char
 %
 Our results show that the CMs is stable for small $V_{1}$ and finite $t$.
 % 
-Increasing the former or reducing the latter leads to the CDW II classical ground state through a first order phase transition.\\
+Increasing the former or reducing the latter leads to the CDW II ground state through a first order phase transition.\\
 %
 Furthermore, we have established the existence of the Kekul\'{e} bond order which occurs in a region of the phase 
 diagram that appears to be smaller than that predicted by mean field and exact diagonalization.\\
 %
-Finally, we have used that the iDMRG method treats an infinite system as opposed to a finite cluster to analyse 
+Finally, we have used the fact that the iDMRG method treats an infinite system as opposed to a finite cluster to analyse 
 the different phase transitions using in particular the entanglement entropy $S$ and correlation length $\xi$.
 %
-The conclusions drawn from analyzing these quantities have sometimes to be complemented by the continuous 
+The conclusions drawn from analyzing these quantities have been complemented by the continuous 
 or discontinuous dependence of the ground state energy on the $\left\lbrace V_{1},V_{2}\right\rbrace$ interactions.\\
 %
 
@@ -936,13 +941,13 @@ so alternative routes are necessary to drive these kind of topological states fr
 
 We thank A. L\"auchli for discussions, sharing results prior to publication
 and useful insights regarding the nature of the CDW II and CDW III phase,
-both reported simultaneously within exact diagonalization~\cite{Andreas}.
+that we find consistent with what is reported simultaneously within exact diagonalization~\cite{Andreas}.
 
 \appendix
 
 \section{\label{sec:appendix} Strong coupling perturbation theory}
 
-In this Appendix we discuss the exact diagonalization method to determine the ground state in the strong coupling limit $t \ll V_{1,2}$. 
+In this appendix we discuss the exact diagonalization method to determine the ground state in the strong coupling limit $t \ll V_{1,2}$. 
 %
 Consider splitting the Hamiltonian in Eq. \eqref{eq:H} into $H =H_V + H_t$ with
 \begin{align}
@@ -995,7 +1000,10 @@ where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The fin
 %
 Obtaining the coefficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.\\
 %
-We have used this method to diagonalize two clusters: a cluster with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
+We have used this method to diagonalize two clusters: a 12 site cluster, 
+%with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), 
+%
+and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
 %
 The results for the spectra can be summarized as follows. \\
 
@@ -1005,7 +1013,9 @@ The projection of $H_t$ in these subspaces is zero for both cases, which means t
 %
 The first can be identified with the classical version of the CDW II state, where the two values of the occupancies are 0 or 1.
 %
-The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern in the given unit cell. 
+The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern in the given unit cell: two of them correspond to the stripe-like phase
+shown schematically in Fig.~\ref{fig:phase diagram}(c) while the other six correspond to those states with defect lines determined by rotated hexagons, 
+as described in sec.~\ref{sec:phasediagram} E. 
 %
 The second is the CDW I state, where the two states have a single sublattice (A or B) fully occupied. The energy per site of these states is given by
 %
