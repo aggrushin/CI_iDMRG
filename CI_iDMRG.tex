@@ -502,7 +502,7 @@ from those predicted by mean field~\cite{RQHZ08,WF10,PR12,GCC13}
 and the first exact diagonalization studies~\cite{GGNVC13,DH14,DCH14}.
 %
 At finite $V_{1}$ and sufficiently large $V_{2}$ we observe
-a different charge order state (CDW II), see Fig.~\ref{fig:phase diagram}.\\
+a different charge order state (CDW II), see Fig.~\ref{fig:phase diagram} left panel.\\
 %
 To gain a first insight on this phase before analyzing the numerical data it is instructive to discuss its classical limit.
 %
@@ -515,13 +515,13 @@ At $V_{1}=4V_{2}$ there exists a classically degenerate ground state manifold, t
 %
 The analysis for $V_{1}<4V_{2}$ with $t=0$ reveals that there are essentially two types of degenerate states according to their translational symmetry.
 %
-First a stripe-like phase with a four atom unit cell~\noteAG{~Fig.~\ref{fig:orders}(?)} \footnote{We thank A. Lauchli for important insights on the stripe-like.} that is six fold
+First a stripe-like phase with a four atom unit cell depicted in~\noteAG{~Fig.~\ref{fig:orders}(?)} \footnote{We thank A. Lauchli for important insights on the stripe-like.} that is six fold
 degenerate in the thermodynamic limit.
 %
-Second, a set of states that can be understood by enriching the stripe-like phase with lines of hexagons rotated $60^{\circ}$ which form defect lines that wrap
+Second, a set of states that can be understood by taking the stripe-like phase and rotating $60^{\circ}$ hexagons along a defect line that should wrap
 around the chosen cluster.
 %
-The energy per site of these two types of states does not have first order hopping corrections and it is given by
+Classically, the energy per site of these two types of states does not have first order hopping corrections and it is given by
 $E_{\mathrm{CDW~II}} = V_2/2+V_1/4 + \mathcal{O}(t^2/V_{1,2})$ (see appendix \ref{sec:appendix} for details). 
 %
 The first nontrivial order in perturbation theory depends on the chosen cluster; eventually 
@@ -538,19 +538,22 @@ even close to the transition to the semimetal phase.
 %
 A sample of one of this charge ordered patterns is shown in Fig.~\ref{fig:phase diagram}(c) for $V_{1}/t=5.6$ and $V_{2}/t=3.2$.
 %
-This state has one defect lines that wrap twice around the cluster (indicated by dashed lines); rotating the hexagons along these
+This particular sample state has one defect line that wraps twice around the cluster (indicated by dashed lines); rotating the hexagons along these
 lines by $60^{\circ}$ in an anticlockwise direction we recover the more symmetric stripe-like configuration in ~\noteAG{~Fig.~\ref{fig:orders}(?)}.
 %
 As with the CMs state, we find that its bond order follows directly from its charge order, suppressed for neighboring sites that have
 equal filling.\\
 %
 By initializing the algorithm with each inequivalent classical ground state configuration it is possible to calculate to high precision each 
-energy to then find by comparison the lowest energy state at that particular $\left\lbrace V_{1},V_{2}\right\rbrace$.
+energy to then find, by comparison, the lowest energy state at that particular $\left\lbrace V_{1},V_{2}\right\rbrace$.
 %
-At $V_{1}=$ $V_{2}=$ for instance the lowest energy is achieved by a superposition of two classical ground states.
-
-
-
+We have determined that within the CDW-II phase the lowest energy is often achieved by what seems to be 
+a superposition of classical ground states.
+%
+As expected from general arguments~\cite{KZM13} this state shows a degenerate low energy entanglement spectrum but we find no 
+recognizable pattern by numerically examining two point density-density correlation functions.
+%
+Unfortunately, these features precludes us to draw any further conclusion on the nature of the state.
 %
 %At high $V_{2}$ but with sufficiently large $V_{1}$ we observe that
 %a twelve site unit cell charge order (CDW II) depicted schematically in 
