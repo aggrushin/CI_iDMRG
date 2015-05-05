@@ -515,7 +515,7 @@ At $V_{1}=4V_{2}$ there exists a classically degenerate ground state manifold, t
 %
 The analysis for $V_{1}<4V_{2}$ with $t=0$ reveals that there are essentially two types of degenerate states according to their translational symmetry.
 %
-First a stripe-like phase with a four atom unit cell depicted in~\noteAG{~Fig.~\ref{fig:orders}(?)} \footnote{We thank A. Lauchli for important insights on the stripe-like.} that is six fold
+First a stripe-like phase with a four atom unit cell depicted in~Fig.~\ref{fig:orders}(e) (see also~\cite{CL15}) that is six fold
 degenerate in the thermodynamic limit.
 %
 Second, a set of states that can be understood by taking the stripe-like phase and rotating $60^{\circ}$ hexagons along a defect line that should wrap
@@ -526,7 +526,7 @@ $E_{\mathrm{CDW~II}} = V_2/2+V_1/4 + \mathcal{O}(t^2/V_{1,2})$ (see appendix \re
 %
 The first nontrivial order in perturbation theory depends on the chosen cluster; eventually 
 the degeneracy between the six-fold degenerate stripe-like phase and the phase with defects will be lifted, 
-making one of them more favourable at finite $t$~\noteAG{Here we can cite Andreas~\cite{Andreas}}.
+making one of them more favourable at finite $t$~\cite{CL15}.
 %
 The question then becomes which type of ground state does the system choose in the thermodynamic limit.\\
 %
@@ -539,7 +539,7 @@ even close to the transition to the semimetal phase.
 A sample of one of this charge ordered patterns is shown in Fig.~\ref{fig:phase diagram}(c) for $V_{1}/t=5.6$ and $V_{2}/t=3.2$.
 %
 This particular sample state has one defect line that wraps twice around the cluster (indicated by dashed lines); rotating the hexagons along these
-lines by $60^{\circ}$ in an anticlockwise direction we recover the more symmetric stripe-like configuration in ~\noteAG{~Fig.~\ref{fig:orders}(?)}.
+lines by $60^{\circ}$ in an anticlockwise direction we recover the more symmetric stripe-like configuration in Fig.~\ref{fig:orders}(e).
 %
 As with the CMs state, we find that its bond order follows directly from its charge order, suppressed for neighboring sites that have
 equal filling.\\
@@ -547,43 +547,14 @@ equal filling.\\
 By initializing the algorithm with each inequivalent classical ground state configuration it is possible to calculate to high precision each 
 energy to then find, by comparison, the lowest energy state at that particular $\left\lbrace V_{1},V_{2}\right\rbrace$.
 %
-We have determined that within the CDW-II phase the lowest energy is often achieved by what seems to be 
-a superposition of classical ground states.
+We have determined that within the CDW-II phase the lowest energy is often achieved by a superposition of two classical ground states
+and their particle-hole conjugates.
 %
-As expected from general arguments~\cite{KZM13} this state shows a degenerate low energy entanglement spectrum but we find no 
-recognizable pattern by numerically examining two point density-density correlation functions.
+As expected from general arguments~\cite{KZM13} this state shows a degenerate low energy entanglement spectrum.
 %
-Unfortunately, these features precludes us to draw any further conclusion on the nature of the state.
-%
-%At high $V_{2}$ but with sufficiently large $V_{1}$ we observe that
-%a twelve site unit cell charge order (CDW II) depicted schematically in 
-%Fig.~\ref{fig:orders}(e) emerges.
-%%
-%A sample of its charge and bond order, as obtained with iDMRG via \eqref{eq:charge} and \eqref{eq:bond} is
-%shown in Fig.~\ref{fig:phase diagram}(c).
-%%
-%It presents two distinct charge occupations as schematically shown in Fig.~\ref{fig:orders}(e).
-%%
-%For $V_{1}/t=5.6$ and $V_{2}/t=3.2$ they
-%take the values $\varrho_{\pm}=1/2\pm\varrho$ with $\varrho=0.438$.
-%%
-%As with the CMs state, we find that its bond order follows directly from its charge order, suppressed for neighboring sites that have
-%equal filling.\\
-%%
-
-%
-%Remarkably, the CDW II state is connected to a classical strong coupling phase.
-%%
-%A strong coupling analysis performed in a twelve site cluster with the shape of the CDW~II 
-%unit cell reveals a set of eight classical states with the same charge pattern but classical occupations 0 or 1. 
-%%
-%The energy per site of these states does not have first order hopping corrections,
-%$E_{\mathrm{CDW~II}} = V_2/2+V_1/4 + \mathcal{O}(t^2/V_{1,2})$ (see appendix \ref{sec:appendix} for details). 
-%%
-%As long as the cluster geometry allows for this charge pattern, it must be present at sufficiently high $V_{1,2}$.
-%%
-%In fact, the energy of this classical state is always lower than that of the classical CMs states, 
-%and it is only for low $V_1/t$ that the quantum corrections make the CMs state favored. 
+Inspection of the two point density-density correlation functions indicates that 
+the more favoured superposition of classical ground states are those which favour a uniform charge density pattern that at the same time
+distinguishes the bonds around and along the cylinder geometry.
 %
 
 \subsection{Charge density wave III (CDW III)}
@@ -601,22 +572,25 @@ different occupations: half-filling and $1/2\pm\varrho$.
 For the particular case of $V_{1}/t=9.2$ and $V_{2}/t=2.5$ we find that $\varrho=0.223$.
 %
 Its bond order is determined by the charge occupations 
-as occurs with the CMs and CDW II phases.
+similar to the CMs and CDW II phases.
 %
 As with the CDW II phase, this phase escaped
 identification in the original mean field~\cite{RQHZ08,WF10,GCC13} 
 and the first subsequent exact diagonalization~\cite{GGNVC13,DH14,DCH14} studies 
 due to its large unit cell.\\
 %
- The emergence of the CDW III can also be understood from a semiclassics point of view (see appendix A).
- %
+The emergence of the CDW III can also be understood from a semiclassical point of view (see appendix A).
+%
 At $t=0$, the classical ground state of lowest energy for a cluster commensurate with this phase is either CDW II or CDW I, and the two phases are separated by the line $V_{1}=4V_{2}$. 
 %
 Exactly at this line, however, a third classical state with the same energy appears, which, unlike the previous two, is affected by first order quantum corrections. 
 %
 This implies that around the line $V_{1}\sim4V_{2}$ there is a finite strip of a new phase in the phase diagram once finite $t$ is included. 
 %
-By computing the correlation function, it can be shown that this phase indeed has the charge distribution of the CDW III. 
+We have checked that the two point correlation function calculated numerically from the iDMRG data and semiclassically 
+agree qualitatively, resulting in the charge distribution of the CDW III shown in Fig.~\ref{fig:phase diagram}(d).
+%
+We find furthermore that these are consistent with those reported in the latest exact diagonalization study~\cite{CL15}. 
 
 \section{\label{sec:phasetransitions} Phase transitions}
 %
@@ -884,12 +858,15 @@ On the one hand the CDW II phase stems from a degenerate strong coupling phase t
 Although the degenerate manifold includes a distinguishable stripe-like phase, our iDMRG calculations find that a superposition state 
 between classical ground states has lower energy.
 %
+The particular superposition that is realized seems to be determined by the cylinder geometry where bond strength along
+and around the cylinder are different. 
+%
 The CDW III on the other hand, occurs in a finite region around the classical transition between
 the CDW I and II states defined by the line $V_{1}=4V_{2}$, and has a clear twelve site unit cell.
 %
 In this region, the first order corrections $t/V_{1,2}$ lift the classical degeneracy and stabilize CDW III state.
 %
-The calculated charge structure factor agrees between the semiclassical limit and with our numeriical iDMRG data 
+The calculated charge structure factor agrees between the semiclassical limit and with our numerical iDMRG data 
 reconciling these two results.
 %
 The CDW III phase presents as well a distinctive bond ordering that can be understood from its charge order.
@@ -933,9 +910,8 @@ so alternative routes are necessary to drive these kind of topological states fr
 %
 \section{Acknowledgements}
 
-We thank A. L\"auchli for discussions, sharing results prior to publication
-and useful insights regarding the nature of the CDW II and CDW III phases,
-that we find consistent with what is reported simultaneously within exact diagonalization~\cite{Andreas}.
+We thank A. L\"auchli for discussions, sharing recent exact diagonalization results prior to publication~\cite{CL15}
+and useful insights regarding the nature of the CDW II and CDW III phases.
 
 \appendix
 
@@ -1015,7 +991,6 @@ which is given explicitly by
 The behavior of correlation functions can then be used to identify the different phases. 
 %
 We have used this method to diagonalize three different clusters: two 12 site clusters with the periodicities of the CDW-II and CDW-III phases, 
-%with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), 
 %
 and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
 %
@@ -1048,14 +1023,14 @@ This energy is always higher than $E_{\mathrm{CDW~II}}$ or $E_{\mathrm{CDW~I}}$,
 %
 The reason why this state must be considered is that quantum corrections split it to first order in $t$, thus lowering its energy. Since neither CDW II or CDW I is affected by $t$ to first order, there is a small region around $V_1=4V_2$ where the energy of this state is lowest. 
 %
-Inspection of the phase diagram in Fig.~\ref{} suggests that this is the CDW~III phase. The ground state of this phase has degeneracy 1 and energy
+Inspection of the phase diagram in Fig.~\ref{fig:phase diagram} suggests that this is the CDW~III phase. The ground state of this phase has degeneracy one and energy
 %
 \begin{align}
 E_{\mathrm{CDW~III}} &= \frac{5V_2}{6} + \frac{V_1}{6} - 0.236t   & & \tfrac{V_1}{V_2} \sim 4 \label{cdwiii}
 \end{align}
 %
-To confirm the nature of this state, we have computed the Fourier transform of the correlation function $C(q) = \sum_{ij} e^{i(x_i-x_j)q} \rho_{ij}$, and confirmed that it compares favorably with the Fourier transform of the charge pattern of CDW~III. \noteFdJ{How explicit do we want to be here? If we have plots, will it look too much like their paper? Should we have plots of the CM structure factor as well?}
-
+To confirm the nature of this state, we have computed the Fourier transform of the correlation function $C(q) = \sum_{ij} e^{i(x_i-x_j)q} \rho_{ij}$, and confirmed that it compares favorably with the Fourier transform of the charge pattern of CDW~III shown in Fig.~\ref{fig:phase diagram}(d).\\
+%
 In the case of the $3\times3$ cluster, at $t=0$ we find four possible classical ground states as a function of increasing $V_1$, with degeneracies 234, 108, 36, 2.
 %
 The projection of $H_t$ into these classical ground states is finite only for the first two, and the pattern of degeneracies at low energies becomes $(4,10,4,\ldots)$ for both.
