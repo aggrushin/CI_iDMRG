@@ -608,21 +608,15 @@ identification in the original mean field~\cite{RQHZ08,WF10,GCC13}
 and the first subsequent exact diagonalization~\cite{GGNVC13,DH14,DCH14} studies 
 due to its large unit cell.\\
 %
- \noteAG{Semiclassics:} 
- The emergence of the CDW III can also be understood from a semiclassics point of view.
+ The emergence of the CDW III can also be understood from a semiclassics point of view (see appendix A).
  %
- At strong coupling analysis reveals that at $V_{1}=4V_{2}$ the classical ground state manifold is largely degenerate
- (see appendix A).
- %
- This line is special, it separates the classical CDW I ground state from the part of the phase diagram
- where the CDW II is more stable. 
- %
- Unlike for the CDW II, first order perturbation theory $t/V_{1,2}$ is able to lift this degeneracy
- and stabilise a charge ordered phase around a region $V_{1}\sim4V_{2}$.
- \noteAG{To be completed with Fernando's comments}
-
-
-
+At $t=0$, the classical ground state of lowest energy for a cluster commensurate with this phase is either CDW II or CDW I, and the two phases are separated by the line $V_{1}=4V_{2}$. 
+%
+Exactly at this line, however, a third classical state with the same energy appears, which, unlike the previous two, is affected by first order quantum corrections. 
+%
+This implies that around the line $V_{1}\sim4V_{2}$ there is a finite strip of a new phase in the phase diagram once finite $t$ is included. 
+%
+By computing the correlation function, it can be shown that this phase indeed has the charge distribution of the CDW III. 
 
 \section{\label{sec:phasetransitions} Phase transitions}
 %
@@ -998,65 +992,14 @@ where $\alpha = 1,\ldots,D$ and $D$ is the true ground state degeneracy. The fin
 \left| GS\right>_\alpha = \sum_{m=1}^M v^m_\alpha \left| \psi^m\right>.
 \end{equation}
 %
-Obtaining the coefficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.\\
+Obtaining the coefficients $v^m_\alpha$ is relatively simple because the effective size of the Hilbert space $M$ is much smaller than the full size of the Hilbert space of $H$.
 %
-We have used this method to diagonalize two clusters: a 12 site cluster, 
-%with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), 
+To distinguish different phases, we recall that in finite size exact diagonalization there is no spontaneous symmetry breaking, because all states related by symmetry are degenerate and will be present in the ground state manifold. 
 %
-and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
+In the simpler case when first order quantum corrections are zero, a phase can be characterized by inspection of the classical charge patterns of every eigenstate. 
 %
-The results for the spectra can be summarized as follows. \\
-
-In the case of the CDW II cluster, we find only two possible classical ground states with degeneracies 8 and 2.
-% 
-The projection of $H_t$ in these subspaces is zero for both cases, which means that both are stable strong coupling phases.
+With quantum corrections, however, the ground state can only be characterized by computing correlation functions evaluated in the ground state, from which order parameters can be obtained. 
 %
-The first can be identified with the classical version of the CDW II state, where the two values of the occupancies are 0 or 1.
-%
-The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern in the given unit cell: two of them correspond to the stripe-like phase
-shown schematically in Fig.~\ref{fig:phase diagram}(c) while the other six correspond to those states with defect lines determined by rotated hexagons, 
-as described in sec.~\ref{sec:phasediagram} E. 
-%
-The second is the CDW I state, where the two states have a single sublattice (A or B) fully occupied. The energy per site of these states is given by
-%
-\begin{align}
-E_{\mathrm{CDW~II}} &= \frac{1}{2}V_2 + \frac{1}{4}V_1 & & \tfrac{V_1}{V_2} < 4 \\
-E_{\mathrm{CDW~I}} &= \frac{3V_2}{2}   & & 4 < \tfrac{V_1}{V_2}
-\end{align}
-%
-In the case of the $3\times3$ cluster, at $t=0$ we find four possible classical ground states as a function of increasing $V_1$, with degeneracies 234, 108, 36, 2.
-%
-The projection of $H_t$ into these classical ground states is finite only for the first two, and the pattern of degeneracies at low energies becomes $(4,10,4,\ldots)$ for both.
-%
-This low energy pattern is the same as the one that is obtained for the CMs phase in exact diagonalization \cite{GGNVC13}, 
-pointing to the fact that these two states represent the CMs phase (further evidence to support this claim is also shown below.).  
-%
-The third state is an intermediate classical state, and the fourth is again the CDW~I. 
-%
-The energies per site of the three phases in the $3\times3$ cluster are given by
-%
-\begin{eqnarray}
-E_{\mathrm{CMs}} &=& \left\{ \begin{array}{c} \frac{V_2}{2} + \frac{V_1}{3} -0.248t \hspace{8mm} \tfrac{V_1}{V_2} < \tfrac{3}{2} \\  
-\frac{2V_2}{3} + \frac{2V_1}{9} -0.055t \hspace{5mm}   \tfrac{3}{2} <\tfrac{V_1}{V_2} < 3\end{array} \right. \\
-E_{\mathrm{int}} &=& \frac{V_2}{2} + \frac{V_1}{4} \hspace{22mm}   3 <\tfrac{V_1}{V_2} < 4 \\
-E_{\mathrm{CDW~I}} &=& \frac{3V_2}{2}   \hspace{29mm}   4 < \tfrac{V_1}{V_2} 
-\end{eqnarray}
-%
-As explained in the main text, the energy per site of the CDW II phase $E_{\mathrm{CDW~II}}$ is lower than the classical energies of any state of the $3\times3$ cluster. 
-%
-Since the intermediate state does not have quantum corrections, its energy satisfies $E_{\mathrm{int}}>E_{\mathrm{CDW~II}}$ and it is never realized. 
-%
-The CMs state, however, has $E_{\mathrm{CMs}} < E_{\mathrm{CDW~II}}$ for small enough $V_1$ once the quantum corrections are included. 
-%
-In the two clusters studied with perturbation theory, only the state we have labeled as the CMs state is non trivial in the sense that it has first order quantum corrections.\\
-%
-We now show that this state is in fact the CMs state. 
-%
-To do so, we recall that in finite size exact diagonalization there is no spontaneous symmetry breaking, because all states related by symmetry are degenerate and will be present in the ground state manifold.
-%
-Therefore, to detect an ordered phase we resort to computing correlation functions evaluated in the ground state, from which order parameters can be obtained. 
-%
- 
 Correlation functions for charge order parameters can be expressed in general as
 %
 \begin{equation}
@@ -1068,6 +1011,78 @@ which is given explicitly by
 \begin{equation}
 \rho_{ij\ldots} = \sum_{m,\alpha} (v_m^\alpha)^*v_m^\alpha C^m_i C^m_j \dots
 \end{equation}
+%
+The behavior of correlation functions can then be used to identify the different phases. 
+%
+We have used this method to diagonalize three different clusters: two 12 site clusters with the periodicities of the CDW-II and CDW-III phases, 
+%with the shape of the unit cell of the CDW II phase (12 sites, as shown in Fig.~\ref{fig:phase diagram}(c)), 
+%
+and a cluster of $3\times3$ unit cells or 18 sites, i.e. the $L_y=6$ version of the cluster in Fig.~\ref{fig:Defs}. 
+%
+The results can be summarized as follows. \\
+
+In the case of the CDW II cluster, we find only two possible classical ground states with degeneracies 8 and 2 for generic values of $V_1/V_2$. 
+% 
+The projection of $H_t$ in these subspaces is zero for both cases, which means that both are stable strong coupling phases.
+%
+The first can be identified with the classical version of the CDW II state, where the two values of the occupancies are 0 or 1.
+%
+The 8 states correspond to the 8 equivalent ways to ensemble the CDW II pattern in the given unit cell: two of them correspond to the stripe-like phase
+shown schematically in Fig.~\ref{fig:phase diagram}(c) while the other six correspond to those states with defect lines determined by rotated hexagons, as described in sec.~\ref{sec:phasediagram} E. 
+%
+The second is the CDW I state, where the two states have a single sublattice (A or B) fully occupied. The energy per site of these states is given by
+%
+\begin{align}
+E_{\mathrm{CDW~II}} &= \frac{1}{2}V_2 + \frac{1}{4}V_1 & & \tfrac{V_1}{V_2} < 4 \label{cdwii} \\
+E_{\mathrm{CDW~I}} &= \frac{3V_2}{2}   & & 4 < \tfrac{V_1}{V_2}\label{cdwi}
+\end{align}
+\\
+%
+In the case of the CDW III cluster, for generic values of $V_1/V_2$ we find two possible classical ground states with degeneracies 2 and 2. 
+%
+The first correspond to the stripe-like phase mentioned before, which is also commensurate with this cluster, and is therefore assigned the label CDW II. The second corresponds to CDW I. The energies per site remain the same as those in Eqs.\ref{cdwii}-\ref{cdwi}. 
+%
+In addition, in this cluster there is another classical state with degeneracy 18 and energy $E^*=\frac{5}{6}V_2 + \frac{1}{6}V_1$ which requires consideration.  
+%
+This energy is always higher than $E_{\mathrm{CDW~II}}$ or $E_{\mathrm{CDW~I}}$, except at the special point $V_1=4V_2$ where the three cross, $E_{\mathrm{CDW~II}}=E_{\mathrm{CDW~I}}=E^*$. 
+%
+The reason why this state must be considered is that quantum corrections split it to first order in $t$, thus lowering its energy. Since neither CDW II or CDW I is affected by $t$ to first order, there is a small region around $V_1=4V_2$ where the energy of this state is lowest. 
+%
+Inspection of the phase diagram in Fig.~\ref{} suggests that this is the CDW~III phase. The ground state of this phase has degeneracy 1 and energy
+%
+\begin{align}
+E_{\mathrm{CDW~III}} &= \frac{5V_2}{6} + \frac{V_1}{6} - 0.236t   & & \tfrac{V_1}{V_2} \sim 4 \label{cdwiii}
+\end{align}
+%
+To confirm the nature of this state, we have computed the Fourier transform of the correlation function $C(q) = \sum_{ij} e^{i(x_i-x_j)q} \rho_{ij}$, and confirmed that it compares favorably with the Fourier transform of the charge pattern of CDW~III. \noteFdJ{How explicit do we want to be here? If we have plots, will it look too much like their paper? Should we have plots of the CM structure factor as well?}
+
+In the case of the $3\times3$ cluster, at $t=0$ we find four possible classical ground states as a function of increasing $V_1$, with degeneracies 234, 108, 36, 2.
+%
+The projection of $H_t$ into these classical ground states is finite only for the first two, and the pattern of degeneracies at low energies becomes $(4,10,4,\ldots)$ for both.
+%
+This low energy pattern is the same as the one that is obtained for the CMs phase in exact diagonalization \cite{GGNVC13}, 
+pointing to the fact that these two states represent the CMs phase (further evidence to support this claim is also shown below.).  
+%
+The third state is an intermediate state with the same energy as the CDW III classical states, but which is not corrected by quantum fluctuations at any $V_1/V_2$.  
+%
+The fourth is again the CDW~I. 
+%
+The energies per site of the three phases in the $3\times3$ cluster are given by
+%
+\begin{eqnarray}
+E_{\mathrm{CMs}} &=& \left\{ \begin{array}{c} \frac{V_2}{2} + \frac{V_1}{3} -0.248t \hspace{8mm} \tfrac{V_1}{V_2} < \tfrac{3}{2} \\  
+\frac{2V_2}{3} + \frac{2V_1}{9} -0.055t \hspace{5mm}   \tfrac{3}{2} <\tfrac{V_1}{V_2} < 3\end{array} \right. \\
+E^* &=& \frac{5V_2}{6} + \frac{V_1}{6} \hspace{22mm}   3 <\tfrac{V_1}{V_2} < 4 \\
+E_{\mathrm{CDW~I}} &=& \frac{3V_2}{2}   \hspace{29mm}   4 < \tfrac{V_1}{V_2} 
+\end{eqnarray}
+%
+As explained in the main text, the energy per site of the CDW II phase $E_{\mathrm{CDW~II}}$ is lower than the classical energies of any state of the $3\times3$ cluster. 
+%
+Since the intermediate state does not have quantum corrections, its energy satisfies $E_{\mathrm{int}}>E_{\mathrm{CDW~II}}$ and it is never realized. 
+%
+The CMs state, however, has $E_{\mathrm{CMs}} < E_{\mathrm{CDW~II}}$ for small enough $V_1$ once the quantum corrections are included. 
+%
+Further evidence that this is the CM state can be obtained by computing correlation functions. 
 %
 Fourier transforming the real space indices $ij\ldots$ and taking the combinations defined in the main text for the representations $B_2$ and $G$, we can compute any correlation function of order parameters $\left< GS \right| O_1 O_2 \ldots \left| GS \right> $ with $O = G, B_2$. 
 %
