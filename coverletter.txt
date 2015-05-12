@@ -9,7 +9,7 @@ Since the first proposal in 2008, the accumulated body of knowledge regarding th
 
 In this work we address this problem using state-of-the-art infinite density matrix 
 renormalization group (iDMRG) method for the first time. 
-This algorightm has been successfully used by now to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time. 
+This algorithm has been successfully used by now to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time. 
 
 We are  confident that this manuscript presents an important step towards establishing the phase diagram of short-range interacting fermions hoping in the half-filled honeycomb lattice, an important problem since the early days of graphene. We therefore believe that it meets the standards for publication in Physical Review X.
 
