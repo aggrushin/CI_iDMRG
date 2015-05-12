@@ -1,0 +1,20 @@
+Dear Editor,
+
+We are submitting the manuscript entitled  “Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study” to be considered for publication in Physical Review X.
+
+Topological phases of matter are remarkable phases of matter; their robust properties are not affected by local perturbations, and thus are potentially ideal for technological applications. Unfortunately, they are far less common than trivial states of matter and thus a widespread scientific effort is devoted into finding ways in which these phases can emerge.
+
+One intriguing route which has been discussed thoroughly is the possible emergence of lattice analogues of the integer quantum Hall effect, known as Chern insulators, in simple, topologically trivial, systems with strong electron-electron interactions. An important example is electrons hopping in the honeycomb lattice with short range nearest and next-to-nearest electron repulsion. 
+Since the first proposal in 2008, the accumulated body of knowledge regarding this problem is extremely controversial. First, simple mean field predict the Chern insulator phase to occur, but exact diagonalization results, that do take into account quantum fluctuations, are contradictory and seem to suffer from strong finite size effects. Quantum Monte Carlo suffers from the sign problem and other methods, such as variational cluster can be biased. The problem calls for an innovative technique beyond existing approaches that can establish whether this interaction induced mechanism is viable so as to generate Chern insulator phases in the honeycomb lattice and related systems.
+
+In this work we address this problem using state-of-the-art infinite density matrix 
+renormalization group (iDMRG) method for the first time. 
+This algorightm has been successfully used by now to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time. 
+
+We are  confident that this manuscript presents an important step towards establishing the phase diagram of short-range interacting fermions hoping in the half-filled honeycomb lattice, an important problem since the early days of graphene. We therefore believe that it meets the standards for publication in Physical Review X.
+
+Yours faithfully,
+
+The authors
+
+Johannes Motruk, Adolfo G. Grushin, Fernando de Juan and Frank Pollmann
