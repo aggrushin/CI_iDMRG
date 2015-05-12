@@ -1,0 +1,8 @@
+Popular summary:
+
+Topological phases of matter are remarkable; they posses robust properties that are not affected by local perturbations (e.g. impurities), and thus are potentially ideal for technological applications. Unfortunately, they are far less common than trivial states of matter and thus a widespread scientific effort is devoted into finding ways in which these phases can emerge. 
+
+One intriguing possibility is using collective behaviour to drive a common trivial phase into a more rare topological state. For instance, atoms arranging themselves in a honeycomb lattice (like in graphene) can in principle make strongly interacting electrons form collectively a topological state. Although this was shown in the simplest approximation to be possible, the accumulated body of knowledge using more sophisticated techniques is extremely controversial. 
+Understanding what is the lowest energy state of a strongly interacting particle system is complicated; one is required to make crude approximations or assess very small system sizes. In the worst worst possible case these approaches lead to contradictory results, and this is precisely what happens for the case of electrons hoping the honeycomb lattice.  
+
+In this work we use a state-of-the-art algorithm to tackle this problem that focuses only on finding the lowest energy state of the system. Thanks to this restriction it can address infinite two-dimensional systems wrapped around a cylinder geometry. Our findings portray the absence of the topological phase but suggest that other novel phases occur. We  assess transitions between the different phases, establishing the phase diagram of electrons in the honeycomb lattice.
