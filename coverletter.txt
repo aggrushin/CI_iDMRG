@@ -1,6 +1,6 @@
 Dear Editor,
 
-We are submitting the manuscript entitled  “Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study” to be considered for publication in Physical Review X.
+We are submitting the manuscript entitled  “Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study” to be considered for publication in Physical Review B.
 
 Topological states are remarkable phases of matter; their robust properties are not affected by local perturbations, and thus are potentially ideal for technological applications. Unfortunately, they are far less common than trivial states of matter and thus a widespread scientific effort is devoted into finding ways in which these phases can emerge.
 
@@ -10,7 +10,7 @@ Since the first proposal in 2008, the accumulated body of knowledge regarding th
 In this work we address this problem using state-of-the-art infinite density matrix renormalization group (iDMRG) method for the first time. 
 This algorithm has by now been successfully used to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time. 
 
-We are  confident that this manuscript presents an important step towards establishing the phase diagram of short-range interacting fermions hopping in the half-filled honeycomb lattice, an important problem since the early days of graphene. We therefore believe that it meets the standards for publication in Physical Review X.
+We are  confident that this manuscript presents an important step towards establishing the phase diagram of short-range interacting fermions hopping in the half-filled honeycomb lattice, an important problem since the early days of graphene. We therefore believe that it meets the standards for publication in Physical Review B.
 
 Yours faithfully,
 
