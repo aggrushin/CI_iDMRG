@@ -8,7 +8,11 @@ One intriguing route which has been discussed thoroughly is the possible emergen
 Since the first proposal in 2008, the accumulated body of knowledge regarding this problem is extremely controversial. First, simple mean field theory predicts the Chern insulator phase to occur, but exact diagonalization results, that do take into account quantum fluctuations, are contradictory and seem to are subject to strong finite size effects. Quantum Monte Carlo suffers from the sign problem and other methods, such as variational cluster can be biased. The problem calls for an innovative technique beyond existing approaches that can establish whether this interaction induced mechanism is viable so as to generate Chern insulator phases in the honeycomb lattice and related systems.
 
 In this work we address this problem using state-of-the-art infinite density matrix renormalization group (iDMRG) method for the first time. 
-This algorithm has by now been successfully used to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time. 
+This algorithm has by now been successfully used to describe numerous two-dimensional topological phases but has not been applied to this problem. Our findings portray the absence of the Chern insulator state but also two previously unnoticed charge ordered phases as well as the existence and stability of all the non-topological competing orders that were found previously within mean field. In addition, since this method addresses an infinite system we are able to discuss the nature of the corresponding phase transitions for the first time.
+
+At the time of completion of this work, we became aware of a related work by Sylvain Capponi and Andreas Läuchli (Ref. 40) who have used the
+exact diagonalization method to address this problem. Both works present consitent results obtained with complementary techinques.
+We therefore suggest that they could be forwarded to the same referees and/or published back to back to enhance their visibility. 
 
 We are  confident that this manuscript presents an important step towards establishing the phase diagram of short-range interacting fermions hopping in the half-filled honeycomb lattice, an important problem since the early days of graphene. We therefore believe that it meets the standards for publication in Physical Review B.
 
@@ -17,3 +21,9 @@ Yours faithfully,
 The authors
 
 Johannes Motruk, Adolfo G. Grushin, Fernando de Juan and Frank Pollmann
+
+
+
+
+
+
