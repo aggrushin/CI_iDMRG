@@ -1,0 +1,167 @@
+\documentclass[aps,prb,superscriptaddress]{revtex4}
+\usepackage{amsmath}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+\usepackage[pdftex]{color}
+\usepackage{epsfig}
+\usepackage{graphicx}% Include figure files
+%\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amssymb}%
+\usepackage{ulem}
+%\normalem
+\usepackage[letterpaper,left=2cm,right=2cm,top=2cm,bottom=3cm]{geometry}
+\pagestyle{plain}
+
+\newcommand{\bs}[1]{{\boldsymbol{#1}}} 
+\newcommand{\red}[1]{{\textcolor{red}{#1}}}
+\newcommand{\blue}[1]{{\textcolor{blue}{#1}}}
+\newcommand{\magenta}[1]{{\textcolor{magenta}{#1}}}
+\newcommand{\green}[1]{{\textcolor[rgb]{0,0.5,0}{#1}}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{center}
+{\bf Reply to Referees: Interaction driven phases in the half-filled honeycomb lattice: an infinite density matrix renormalization group study}
+
+\end{center}
+\begin{flushright}
+Ref: BE13041 / Motruk
+\end{flushright}
+
+\vspace{0.2cm}
+%\section*{For editors:}
+
+
+We thank both referees for considering our work sound and relevant.
+We address their comments below. Changes in the manuscript file are marked in \blue{blue}.
+\\
+
+\section*{Referee $ A$}
+
+\begin{itemize}
+
+\item{\tt In this paper, the authors studied the spinless fermion model on the
+honeycomb lattice at half-filling, using iDMRG method. A phase diagram
+was also mapped out as functions of V1 and V2. Consistent with
+previous studies, the authors claimed the absence of Haldane Chern
+insulating phase that was previously proposed by mean-field theory.
+Furthermore, two additional symmetry breaking CDW phases are found.
+These results are interesting and the paper is well written. However,
+I do have a few questions and comments:}
+
+We thank the referee for considering our results interesting and our manuscript well written.
+
+\item{\tt It seems to me that the definition of the charge expectation value
+in Eq. (2) is not consistent with what the authors actually calculated
+and presented, for instance in Figure 2 and 3. This is because, in
+principle, according to the definition in Eq. (2), the charge
+expectation value should be larger than zero, i.e., $n_i \geq 0$. It will be
+great if the authors could clarify this.}
+
+The charge expectation value is indeed always positive. The numbers $\varrho$ and $\Delta$ in Fig.~2 quantify the deviation from half filling, so $1/2$ has to be added to any density label in Fig.~2. Since $0<\Delta<\varrho<1/2$, the charge expectation value is always positive (see last sentence in the figure caption). In Fig.~3, the area of the blue circles, which is always positive, is proportional to $n$.
+
+\item{\tt In identifying the phase transitions, the authors have utilized the
+entanglement entropy and correlation length. However, it is clear that
+in the gapless semimetal phase and in the putative continuous phase
+transitions, the correlation length is divergent, and the entanglement
+entropy is logarithmic divergent (also stated by the authors), which
+will be impossible for iDMRG to correctly include in principle, while
+a finite bond dimension scaling will be helpful. However, in the
+current simulations, the bond dimension is very limited to 1600; the
+finite bond dimension scaling was also absent. Some parts of the
+conclusion, in particular, the nature of the phase transition lack
+clear evidence. Therefore, in order to gain a better insight of the
+phase and putative continuous phase transition, the authors should
+improve their simulations with larger bond dimension together with a
+scaling; for instance, the correlation length vs bond dimension in
+Fig.4.}
+
+\item{\tt Another problem that limits our understanding of the nature of the
+putative continuous phase transition is that the number of data points
+is not enough. It will be great if the authors could add more data
+points in Fig. 7 and Fig. 8, in particular, when approaching the
+putative continuous phase transition.}
+
+\item{\tt In section IV, subsection D, the end of the second paragraph, the
+authors mentioned that “A first order transition is also consistent
+with the entanglement entropy which displays a small jump when
+crossing the phase boundary”. However, entanglement entropy results
+were not shown. It will be great if the authors could provide these
+results.}
+
+
+
+
+
+
+\end{itemize}
+
+\section*{Referee $B$}
+
+\begin{itemize}
+
+\item{\tt In this paper the authors study the phase diagram of interacting
+spinless fermions on the honeycomb lattice by means of the infinite
+DMRG method. This model has attracted much attention because of the
+possible existence of a Haldane Chern insulator state which was
+previously predicted by mean-field theory. However, on the basis of
+accurate numerical simulations the authors conclude that this phase is
+absent (in agreement also with some of the previous numerical
+studies). The authors provide detailed results of the phase diagram of
+the model as a function of nearest- and next-nearest neighbor
+repulsion strengths. They also reveal two new types of CDW phases
+which have not been predicted before.}
+
+\item{\tt The paper is well written and the results are very interesting and
+presented in a clear way. Given the high accuracy of their approach
+and system sizes which cannot be reached with exact diagonalization,
+their results provide a significant contribution in understanding the
+physics of this important problem. For these reasons I can recommend
+publication of this manuscript in Physical Review B.
+
+I have a few questions and comments which the authors may address in
+the revised version:}
+
+We thank the referee for these positive statements and for recommending the publication of our manuscript in Physical Review B. 
+
+
+\item{\tt Even if the Chern insulator state is not the lowest energy state I
+am wondering whether the authors have nevertheless found any signs of
+the state, at least as a metastable, competing state? For example,
+have the authors tried to initialize the infinite MPS in this phase
+and verified that the state does not remain stable upon performing the
+optimization?}
+
+We have initialized the algorithm with a Chern insulator state in a parameter region that included the area in which the CI was predicted to occur in previous mean field studies. However, upon performing the DMRG procedure, the state did not prove to be stable and evolved away from the CI phase into the respective phases that we report in our phase diagram.
+ 
+\item{\tt The accuracy of the phase boundaries is not very high (due to the
+lack of finite-size scaling) for 2nd order phase transitions. This is
+however not visible in the phase diagram in Fig.3 where all the
+transitions are drawn by sharp lines. It would be good if the authors
+could add an estimate of the uncertainty of the phase boundaries by
+some error bar (or by making the lines thicker).}
+
+The lines in the phase diagram in Fig.~3 are to be taken with some error. We did not include error bars or thick lines for the sake of better clarity. To clarify this, we now added a sentence in the caption of Fig.~3 indicating that the phase boundaries should be read with an error.
+
+\item{\tt The authors mention on page 4 that “the cylinder geometry
+artificially differentiates bonds in its two perpendicular
+directions”, and that “this asymmetry vanishes as chi is increased and
+thus it is not a physical effect.” I agree that a too small bond
+dimension may play a role here, but I assume that even in the exact
+limit (chi->infinity) there should be a remaining asymmetry due to the
+cylindrical geometry which vanishes only in the infinite Ly limit. Is
+this correct?}
+
+We thank the referee for this insight. In the analytically solvable non-interacting case, there is indeed a small asymmetry between bonds around and along the cylinder axis. Since the semimetal phase is adiabatically connected to the non-interacting point, we suppose this is also the case in the entire semimetal region. However, this asymmetry is weaker than the one we observe for low bond dimensions. We have modified our statement in the text and included the fact that has been pointed out by the referee.
+
+\end{itemize}
+
+
+With the above changes we think we have replied to all comments of the referees and believe that our manuscript is now suited for publication in Physical Review B. 
+
+
+
+\end{document}
