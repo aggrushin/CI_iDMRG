@@ -165,7 +165,7 @@ by Refs.~\onlinecite{GGNVC13,DH14} but found in Ref.~\onlinecite{DCH14} for open
  %
  The generic charge imbalance between the sublattices in phase (c) was not found within exact diagonalization.\cite{DH14}
 %
- The two sublattices are depicted in blue and orange, $0 < \Delta < \varrho < 1/2$ describe the deviations from half-filling per site.
+ \textcolor{blue}{The two sublattices are depicted in blue and orange, $0 < \Delta < \varrho < 1/2$ with $\varrho + \Delta < 1/2$ describe the deviations from half-filling per site, i.e. $\langle n \rangle = 1/2 \pm \alpha$ with $\alpha \in \{\varrho, \varrho \pm \Delta \}$.}
  %
  \label{fig:orders}}
  %
@@ -310,7 +310,11 @@ Next we discuss the features of the different phases in the phase diagram in Fig
 
 \begin{figure*}
  \includegraphics[width=\textwidth]{phase_diagram_ext.pdf}
- \caption{Left: Phase diagram obtained with iDMRG calculations on an infinite cylinder of circumference $L_{y}=12, \, \chi = 1600$. 
+ \caption{Left: Phase diagram obtained with iDMRG calculations on an infinite cylinder of circumference $L_{y}=12, \, \chi = 1600$.
+ %
+ \textcolor{blue}{The phase boundaries, especially at second order transitions (see Sec.~\ref{sec:phasetransitions}) are to be taken with some error which can be estimated from Figs.~\ref{fig:cut_V2_0} to \ref{fig:cut_V1_9.2}.
+ %
+ We draw sharp lines here for better clarity.}
  %
  Right: Representative charge and bond strength patterns for the four phases with largest unit cell discussed in the main text. 
  %
@@ -357,7 +361,7 @@ Such asymmetry should \textcolor{blue}{--up to a very small effect due to the cy
 % 
 This suggests that the cylinder geometry implemented in iDMRG artificially differentiates bonds in its two perpendicular directions.
 %
-The asymmetry induced by the finite bond dimension vanishes as $\chi$ is increased and thus it is not a physical effect.
+\textcolor{blue}{The asymmetry induced by the finite bond dimension vanishes} as $\chi$ is increased and thus it is not a physical effect.
 %
 This is consistent with a semimetal state; the logarithmic divergence of entanglement of a metallic state requires a matrix product state with $\chi\to\infty$. 
 %
@@ -845,6 +849,8 @@ The algorithm allows for quantum fluctuations to play a role but minimizes the f
 %
 
 One of our main results is the absence of the Haldane Chern insulator state in this model.
+%
+\textcolor{blue}{Even when initializing the iDMRG calculations with a time reversal symmetry broken Chern insulator wave function, the state did not remain stable and evolved into the respective competing phases upon performing the algorithm.}
 %
 It seems therefore that quantum fluctuations indeed jeopardize its emergence and work against
 the naive mean field expectations.

@@ -61,7 +61,7 @@ principle, according to the definition in Eq. (2), the charge
 expectation value should be larger than zero, i.e., $n_i \geq 0$. It will be
 great if the authors could clarify this.}
 
-The charge expectation value is indeed always positive. The numbers $\varrho$ and $\Delta$ in Fig.~2 quantify the deviation from half filling, so $1/2$ has to be added to any density label in Fig.~2. Since $0<\Delta<\varrho<1/2$, the charge expectation value is always positive (see last sentence in the figure caption). In Fig.~3, the area of the blue circles, which is always positive, is proportional to $n$.
+The charge expectation value is indeed always positive. The numbers $\varrho$ and $\Delta$ in Fig.~2 quantify the deviation from half filling, so $1/2$ has to be added to any density label in Fig.~2. Since $0<\Delta<\varrho<1/2$, the charge expectation value is always positive (see last sentence in the figure caption). The different notation might have been a bit confusing. We added an explanatory sentence in the caption of Fig.~2 to avoid any confusion. In Fig.~3, the area of the blue circles, which is always positive, is proportional to $n$.
 
 \item{\tt In identifying the phase transitions, the authors have utilized the
 entanglement entropy and correlation length. However, it is clear that
@@ -79,11 +79,17 @@ improve their simulations with larger bond dimension together with a
 scaling; for instance, the correlation length vs bond dimension in
 Fig.4.}
 
+Concerning the gapless semimetal (SM) phase, it is true that the phase cannot be represented by a state of any finite bond dimension. However, the phase is stable to finite interactions from RG arguments. Since we did not see any signs of phase transitions in the parameter region that we identified as the SM, together with the lack of any order we conclude that the entire region is indeed in the SM phase. The exact point of the phase transition between CDW I and SM on the $V_2=0$ line is very hard to pin down from DMRG results. The transition is known to be of second order from quantum Monte Carlo (QMC) calculations and the correlation length data we present in Fig.~4 is consistent with the QMC results.
+
+The model we investigate possesses particle number conservation as its only exploitable symmetry for DMRG calculations and the many competing orders make the computations very challenging. Since we do not believe that going to higher bond dimensions would give further insights into the SM phase and the continuous phase transitions, we have not pushed our calculations further into that direction.
+
 \item{\tt Another problem that limits our understanding of the nature of the
 putative continuous phase transition is that the number of data points
 is not enough. It will be great if the authors could add more data
 points in Fig. 7 and Fig. 8, in particular, when approaching the
 putative continuous phase transition.}
+
+We added more data points around the putative continuous transitions in Fig.~7 and 8. The development of correlation length and entanglement entropy when crossing the phase transition is now better visible. 
 
 \item{\tt In section IV, subsection D, the end of the second paragraph, the
 authors mentioned that “A first order transition is also consistent
@@ -92,7 +98,7 @@ crossing the phase boundary”. However, entanglement entropy results
 were not shown. It will be great if the authors could provide these
 results.}
 
-
+We added an inset to Fig.~7 that shows the jump in the entanglement entropy at the Kekul\'e--Semimetal transition.
 
 
 
@@ -135,7 +141,7 @@ have the authors tried to initialize the infinite MPS in this phase
 and verified that the state does not remain stable upon performing the
 optimization?}
 
-We have initialized the algorithm with a Chern insulator state in a parameter region that included the area in which the CI was predicted to occur in previous mean field studies. However, upon performing the DMRG procedure, the state did not prove to be stable and evolved away from the CI phase into the respective phases that we report in our phase diagram.
+We have initialized the algorithm with a Chern insulator state in a parameter region that included the area in which the CI was predicted to occur in previous mean field studies. However, upon performing the DMRG procedure, the state did not prove to be stable and evolved away from the CI phase into the respective phases that we report in our phase diagram. We added a sentence commenting on that to the discussion.
  
 \item{\tt The accuracy of the phase boundaries is not very high (due to the
 lack of finite-size scaling) for 2nd order phase transitions. This is
