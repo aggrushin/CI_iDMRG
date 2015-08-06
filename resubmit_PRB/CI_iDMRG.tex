@@ -608,7 +608,12 @@ We find furthermore that these are consistent with those reported in the latest 
  The smooth behavior of $\xi$ indicates a second order transition. 
  %
  The dashed grey line at $V_1/t = 1.356$ shows where the transition has been detected in quantum Monte Carlo simulations.\cite{WCT14,LJY14b}
- \textcolor{blue}{Inset: Scaling of the entanglement entropy $S$ with the bond dimension $\chi$.}
+ %
+ \textcolor{blue}{Inset: Scaling of the entanglement entropy $S$ with the bond dimension $\chi$ for two values of $V_{1}$ in the semimetal and CDW phase. 
+ %
+ Unlike the CDW-I, the semimetal phase presents the typical critical entanglement scaling $S\propto \log\chi$.
+ }
+ %
  \label{fig:cut_V2_0} }
 \end{figure}
 %
@@ -625,7 +630,7 @@ where $\rho_L = \mathrm{Tr}_R \ket{\psi}\bra{\psi}$ is the reduced density matri
 %
 The correlation length $\xi$ can be computed from the resulting state of the iDMRG calculation according to Ref.~\onlinecite{KZM13}.
 %
-Both quantities are expected to show a finite jump when crossing a first order transition while the correlation length diverges with increasing bond dimension at a second order critical point.\cite{KZM13}
+Both quantities are expected to show a finite discontinuity when crossing a first order transition while the correlation length diverges with increasing bond dimension at a second order critical point.\cite{KZM13}
 %
 In what follows, we focus on the lines labelled by cuts A--E in the phase diagram in Fig.~\ref{fig:phase diagram}.
 %
@@ -657,9 +662,14 @@ dependence on $\chi$.
 %
 This is characteristic of a gapped phase such as the charge density wave.
 %
+%\textcolor{blue}{In the inset of Fig.~\ref{fig:cut_V2_0}, we plot the entanglement entropy as a function of the logarithm of the bond dimension for two values of $V_1$ representative for the two phases.
+%%
+%In the critical SM phase for $V_1=0.8$, we observe the characteristic finite entanglement scaling of $S \propto \log \chi$,\cite{FES2009} whereas the entanglement entropy at $V_1=2.8$ in the CDW I phase stays constant with increasing bond dimension.} 
+%
 \textcolor{blue}{In the inset of Fig.~\ref{fig:cut_V2_0}, we plot the entanglement entropy as a function of the logarithm of the bond dimension for two values of $V_1$ representative for the two phases.
 %
-In the critical SM phase for $V_1=0.8$, we observe the characteristic finite entanglement scaling of $S \propto \log \chi$,\cite{FES2009} whereas the entanglement entropy at $V_1=2.8$ in the CDW I phase stays constant with increasing bond dimension.} 
+In the SM phase for $V_1=0.8$, we observe a finite entanglement scaling of $S \propto \log \chi$ characteristic of a critical phase,\cite{FES2009} whereas the entanglement entropy at $V_1=2.8$ in the gapped 
+CDW I phase is independent of the bond dimension.} 
 
 %
 The crossover between the two phases is smooth, signaling a second order phase transition, in agreement with 
@@ -674,7 +684,7 @@ consistent with the quantum Monte Carlo data, \cite{WCT14,LJY14b} where the tran
 %
 \begin{figure}[t]
  \includegraphics[width=\columnwidth]{{plot_cut_V2_3.6}.pdf}
- \caption{Entanglement entropy at $V_2/t=3.6$, labeled cut B in Fig.~\ref{fig:phase diagram}. The finite jump of $S$ at $V_{2}/t\approx 2.2$ clearly signals a first oder transition between the CMs and CDW~II phases. \label{fig:cut_V2_3.6}}
+ \caption{Entanglement entropy at $V_2/t=3.6$, labeled cut B in Fig.~\ref{fig:phase diagram}. The finite discontinuity of $S$ at $V_{2}/t\approx 2.2$ clearly signals a first oder transition between the CMs and CDW~II phases. \label{fig:cut_V2_3.6}}
 \end{figure}
 
 
@@ -687,7 +697,7 @@ the CMs and the CDW~II phases.
 The entanglement entropy is shown in Fig.~\ref{fig:cut_V2_3.6} 
 as a function of $V_{1}$.
 % 
-This quantity shows a clear jump at $V_{2}/t\approx 2.2$ signaling a direct first order
+This quantity shows a clear discontinuity at $V_{2}/t\approx 2.2$ signaling a direct first order
 phase transition between these two phases.
 %
 We observe the same behavior when looking at the correlation length not presented here.
@@ -756,7 +766,7 @@ The next cut we focus on is labeled cut D in Fig.~\ref{fig:phase diagram} at $V_
  %
  The transition from semimetal to CDW~II can be identified by the peak in the correlation length. 
  %
- \textcolor{blue}{Inset: Jump of the entanglement entropy at the Kekul\'e--SM transition.}\label{fig:cut_V1_6}}
+ \textcolor{blue}{Inset:  The vicinity the Kekul\'e--SM transition showing the discontinuity of the entanglement entropy as a function of $V_{2}$ }\label{fig:cut_V1_6}}
 \end{figure}
 %
 Starting from low $V_2$ we first cross the phase boundary between the charge density wave CDW~I and the bond-ordered Kekul\'e phase.
@@ -788,7 +798,7 @@ However, from the Landau theory perspective the semimetal--Kekul\'e transition h
 %
 The Kekul\'e bond order is in the twofold representation $E_1' = (E_{11}',E_{12}')$ \cite{Basko08} and the lowest order non-trivial term in the Landau free energy is the scalar $(E_{11}')^3-3E_{12}'(E_{11}')^2$ which is of third order, therefore signaling a first order transition. 
 %
-A first order transition is also consistent with the entanglement entropy which displays a small jump when crossing the phase boundary \textcolor{blue}{(see inset of Fig.~\ref{fig:cut_V1_6})}.
+A first order transition is also consistent with the entanglement entropy which displays a small discontinuity when crossing the phase boundary \textcolor{blue}{(see inset of Fig.~\ref{fig:cut_V1_6})}.
 %
 \begin{figure}
  \includegraphics[width=\columnwidth]{{plot_cut_V1_9.2}.pdf}
@@ -797,7 +807,7 @@ A first order transition is also consistent with the entanglement entropy which 
  The smooth behavior of $S$ at the phase boundary between CDW~I and Kekul\'e phase indicates a second order transition in accordance with the data of the correlation length in 
  Fig.~\ref{fig:cut_V1_6}. 
  %
- At $V_2/t \approx 2.8$, the entanglement entropy jumps which clearly indicates a first order transition between the CDW~III and CDW~II phases. 
+ At $V_2/t \approx 2.8$, the entanglement entropy is discontinous, which clearly indicates a first order transition between the CDW~III and CDW~II phases. 
   \label{fig:cut_V1_9.2}}
 \end{figure}
 
@@ -839,7 +849,7 @@ Unfortunately, a conclusive statement about the order of the critical point cann
 
 The last phase boundary in this cut lies between the CDW~III and CDW~II phases at $V_2/t \approx 2.8$.
 %
-Here, we can see a clear jump of the entanglement entropy, similar to that in cut~B (Fig.~\ref{fig:cut_V2_3.6}).
+Here, we can see a clear discontinuity of the entanglement entropy, similar to that in cut~B (Fig.~\ref{fig:cut_V2_3.6}).
 %
 Moreover, we see a kink in the energy when crossing the phase boundary.
 %
@@ -860,7 +870,8 @@ The algorithm allows for quantum fluctuations to play a role but minimizes the f
 
 One of our main results is the absence of the Haldane Chern insulator state in this model.
 %
-\textcolor{blue}{Even when initializing the iDMRG calculations with a time reversal symmetry broken chiral wave function, the state did not remain stable and evolved into the respective competing phases upon performing the algorithm.}
+\textcolor{blue}{Even when initializing the iDMRG calculations with a time reversal symmetry broken chiral wave function, the state did not remain stable and evolved into the respective 
+competing phases upon applying the algorithm.}
 %
 It seems therefore that quantum fluctuations indeed jeopardize emergence of the CI phase and work against
 the naive mean field expectations.
